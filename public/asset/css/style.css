@@ -1,0 +1,36 @@
+/* video  */
+
+video{
+    position: relative;
+    
+  
+   top: 0;
+   left: 0;
+    max-width: 100%;
+    height: auto;
+    -ms-transform: translateY(-30%);
+    -moz-transform:translateY(-30%) ;
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
+}
+
+
+.container_video{
+position: relative;
+}
+
+.main-menu{
+    background-color: #19334a;
+}
+
+.button{
+    color: #19334a;
+  
+}
+
+.bg-image{
+   background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
