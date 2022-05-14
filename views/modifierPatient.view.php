@@ -14,6 +14,7 @@ ob_start();
         <label for="image">Changer la photo:</label>
         <input type="file" class="form-control-file" id="image" name="image">
     </div>
+    <input type="hidden" name="identifiant" value="<?= $patient->getIdPatient() ?>">
     <br>
     <div class=" form-group">
         <label for="idpatient">IdPatient:</label>
@@ -66,7 +67,7 @@ ob_start();
     <div class="form-group">
         <label for="dateInscription">Date Inscription Patient:</label>
         <input type="date" class="form-control" id="dateInscription" name="dateInscription"
-            value="<?= $patient->getDateInscription() ?>">
+            value="<?= $patient->getDateInscriptionPatient() ?>">
 
     </div>
     <br>

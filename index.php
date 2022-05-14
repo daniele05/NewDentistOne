@@ -1,8 +1,15 @@
 <?php
+session_start();
 define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[PHP_SELF]"));
 
-require_once("controllers/PatientController.controller.php");
+require_once("controllers/PagesStatiquesController.php");
+$pagesStatiquesController = new PagesStatiquesController;
+
+require_once("controllers/PatientController.php");
 $patientController = new PatientController;
+
+
+
 
 
 
@@ -14,27 +21,35 @@ try {
 
         switch ($url['0']) {
             case "Home":
+                $pagesStatiquesController->afficherHome();
                 require "views/home.view.php";
                 break;
             case "notre-histoire":
+                $pagesStatiquesController->afficherNotreHistoire();
                 require "views/notre-histoire.view.php";
                 break;
             case "notre-savoir-faire":
+                $pagesStatiquesController->afficherNotreSavoirFaire_1();
                 require "views/notre-savoir-faire-1.view.php";
                 break;
             case "notre-savoir-faire":
+                $pagesStatiquesController->afficherNotreSavoirFaire_2();
                 require "views/notre-savoir-faire-2.view.php";
                 break;
             case "notre-savoir-faire":
+                $pagesStatiquesController->afficherNotreSavoirFaire_3();
                 require "views/notre-savoir-faire-3.view.php";
                 break;
             case "notre-savoir-faire":
+                $pagesStatiquesController->afficherNotreSavoirFaire_4();
                 require "views/notre-savoir-faire.view-4.php";
                 break;
             case "notre-savoir-faire":
+                $pagesStatiquesController->afficherNotreSavoirFaire_5();
                 require "views/notre-savoir-faire.view-5.php";
                 break;
             case "nous-contacter":
+                $pagesStatiquesController->afficherContact();
                 require "views/nous-contacter.view.php";
                 break;
             case "connexion":
@@ -51,6 +66,8 @@ try {
                     $patientController->suppressionPatient($url[2]);
                 } elseif ($url[1] === "av") {
                     $patientController->ajoutPatientValidation();
+                } elseif ($url[1] === "mv") {
+                    $patientController->modificationPatientValidation();
                 } else {
                     throw new Exception("La page n'existe pas");
                 }
@@ -64,10 +81,12 @@ try {
                 require "views/galerie.view.php";
                 break;
             case "mentions":
+                $pagesStatiquesController->afficherMentions();
                 require "views/mentions.view.php";
                 break;
         }
     }
 } catch (Exception $e) {
-    echo $e->getMessage();
+    $msg = $e->getMessage();
+    require "views/error.view.php";
 }

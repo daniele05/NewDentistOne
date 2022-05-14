@@ -39,7 +39,7 @@ class PatientManager extends Model
         $req->closeCursor();
 
         foreach ($patients as $patient) {
-            $p = new Patient($patient["photo"], $patient["idpatient"], $patient["istname"], $patient["lastname"], $patient["birthdate"], $patient["sex"], $patient["tel"], $patient["email"], $patient["address"], $patient["date_inscription_patient"], $patient["idsoins_dentaires"], $patient["idordonnance"]);
+            $p = new Patient($patient["photo"], $patient["idPatient"], $patient["istName"], $patient["lastName"], $patient["birthDate"], $patient["sex"], $patient["tel"], $patient["email"], $patient["address"], $patient["dateInscriptionPatient"], $patient["idSoinsDentaires"], $patient["idordonnance"]);
             $this->ajouterPatient($p);
         }
     }
@@ -51,14 +51,18 @@ class PatientManager extends Model
                 return $this->patients[$i];
             }
         }
+        // Cas pas le patient recherché , trouvé 
+        //  exception 
+
+        throw new Exception("ce patient n'existe pas dans notre base de données");
     }
 
 
-    public function ajouterPatientBd($photo, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscription, $idSoinsDentaires, $idOrdonnance)
+    public function ajouterPatientBd($photo, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
     {
         $req = "
-        INSERT INTO connexions (photo,irstName,lastName,birthDate, sex, tel,email, address, dateInscription,:idSoinsDentaires,  idOrdonnance)
-        values(:photo, :irstName, :lastName, :birthDate, :sex, :tel, :email, :address, :dateInscription,:idSoinsDentaires, :idOrdonnance)";
+        INSERT INTO connexions (photo,irstName,lastName,birthDate, sex, tel,email, address, dateInscriptionPatient,:idSoinsDentaires,  idOrdonnance)
+        values(:photo, :irstName, :lastName, :birthDate, :sex, :tel, :email, :address, :dateInscriptionPatient,:idSoinsDentaires, :idOrdonnance)";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->binValue(":photo", $photo, PDO::PARAM_STR);
         $stmt->binValue(":irstName", $irstName, PDO::PARAM_STR);
@@ -68,7 +72,7 @@ class PatientManager extends Model
         $stmt->binValue(":tel", $tel, PDO::PARAM_INT);
         $stmt->binValue(":email", $email, PDO::PARAM_STR);
         $stmt->binValue(":address", $address, PDO::PARAM_STR);
-        $stmt->binValue(":dateInscription", $dateInscription, PDO::PARAM_INT);
+        $stmt->binValue(":dateInscriptionPatient", $dateInscriptionPatient, PDO::PARAM_INT);
         $stmt->binValue(":idSoinsDentaires", $idSoinsDentaires, PDO::PARAM_INT);
         $stmt->binValue(":idOrdonnance", $idOrdonnance, PDO::PARAM_INT);
 
@@ -80,7 +84,7 @@ class PatientManager extends Model
 
         if ($resultat > 0) {
             // instancier une nouvelle insertion connexion patient si > 0
-            $patient = new Patient($photo, $this->getBdd()->secondInsertId(), $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscription, $idSoinsDentaires, $idOrdonnance);
+            $patient = new Patient($photo, $this->getBdd()->secondInsertId(), $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance);
             $this->ajouterPatient($patient);
         }
     }
@@ -100,6 +104,47 @@ class PatientManager extends Model
         if ($resultat > 0) {
             $patient = $this->getPatientById($idPatient);
             unset($patient);
+        }
+    }
+
+    public function modificationPatientBD($photo, $idPatient, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
+    {
+        $req = "
+         update patients
+         set photo = :photo, set idPatient= :idPatient, set irstName = :irstName, set lastName = :lastName, set birthDate = :birthDate, set sex = :sex, set tel = :tel, set email = :email, set address = :address, set dateInscriptionPatient = :dateInscriptionPatient, set idSoinsDentaires = :idSoinsDentaires, set idOrdonnance = :idOrdonnance
+         where idPatient = :idPatient";
+
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->binValue(":photo", $photo, PDO::PARAM_STR);
+        $stmt->binValue(":idPatient", $idPatient, PDO::PARAM_INT);
+        $stmt->binValue(":irstName", $irstName, PDO::PARAM_STR);
+        $stmt->binValue(":lastName", $lastName, PDO::PARAM_STR);
+        $stmt->binValue(":birthDate", $birthDate, PDO::PARAM_INT);
+        $stmt->binValue(":sex", $sex, PDO::PARAM_STR);
+        $stmt->binValue(":tel", $tel, PDO::PARAM_INT);
+        $stmt->binValue(":email", $email, PDO::PARAM_STR);
+        $stmt->binValue(":address", $address, PDO::PARAM_STR);
+        $stmt->binValue(":dateInscriptionPatient", $dateInscriptionPatient, PDO::PARAM_INT);
+        $stmt->binValue(":idSoinsDentaires", $idSoinsDentaires, PDO::PARAM_INT);
+        $stmt->binValue(":idOrdonnance", $idOrdonnance, PDO::PARAM_INT);
+
+        $resultat = $stmt->execute();
+        $stmt->closeCursor();
+
+        // si if est > 0 mise en jour des donnees ci-dessus 
+
+        if ($resultat > 0) {
+            $this->getPatientById($idPatient)->setPhoto($photo);
+            $this->getPatientById($idPatient)->setIrstName($irstName);
+            $this->getPatientById($idPatient)->setLastName($lastName);
+            $this->getPatientById($idPatient)->setBirthDate($birthDate);
+            $this->getPatientById($idPatient)->setSex($sex);
+            $this->getPatientById($idPatient)->setTel($tel);
+            $this->getPatientById($idPatient)->setEmail($email);
+            $this->getPatientById($idPatient)->setAddress($address);
+            $this->getPatientById($idPatient)->setDateInscriptionPatient($dateInscriptionPatient);
+            $this->getPatientById($idPatient)->setIdSoinsDentaires($idSoinsDentaires);
+            $this->getPatientById($idPatient)->setIdOrdonnance($idOrdonnance);
         }
     }
 }

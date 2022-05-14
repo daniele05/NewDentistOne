@@ -44,10 +44,16 @@ class PatientController
     public function ajoutPatientValidation()
     {
         $file = $_FILES['photo'];
-        // print_r($file);$_POST['idSoinsDentaires']
+
         $repertoire = "public/asset/img/";
-        $nomImageAjoute = $this->ajoutPhoto($file, $repertoire);
-        $this->connexionManager->ajouterConnexionBd($_POST['photo'], $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscription'], $_POST['idOrdonnance'], $nomImageAjoute);
+        $nomPhotoAjoute = $this->ajoutPhoto($file, $repertoire);
+        $this->connexionManager->ajouterConnexionBd($nomPhotoAjoute, $_POST['photo'], $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idOrdonnance']);
+
+        $_SESSION['alert'] = [
+            "type"  => "success",
+            "msg" => "Ajout réalisé"
+        ];
+
         header('Location:' . URL . "patient");
     }
 
@@ -57,6 +63,31 @@ class PatientController
         $patient = $this->patientManager->getPatientById($idPatient);
         require "views/modifierPatient.view.php";
     }
+
+    // validation de la modification
+
+    public function modificationPatientValidation()
+    {
+        $photoActuelle = $this->getPatientById($_POST['identifiantPatient'])->getPhoto();
+        $file = $_FILES['photo'];
+
+        if ($file['size'] > 0) {
+            unlink("public/asset/image/" . $photoActuelle);
+            $repertoire = "public/asset/img/";
+            $nomPhotoAjoute = $this->ajoutPhoto($file, $repertoire);
+        } else {
+            $nomPhotoAjoute =  $photoActuelle;
+        }
+        $this->connexionManager->modificationPatientBD($nomPhotoAjoute, $_POST['photo'], $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idOrdonnance']);
+
+        $_SESSION['alert'] = [
+            "type"  => "success",
+            "msg" => "Modification réalisée"
+        ];
+
+        header('Location:' . URL . "patient");
+    }
+
 
     // Supprimer un patient 
 
@@ -68,6 +99,12 @@ class PatientController
         // -> action de suppression dans la bdd 
 
         $this->patientManager->suppressionPatientBD($idPatient);
+
+
+        $_SESSION['alert'] = [
+            "type"  => "success",
+            "msg" => "Suppression réalisée"
+        ];
     }
 
 
@@ -84,7 +121,7 @@ class PatientController
         $random = rand(0, 99999);
         $target_file = $dir . $random . "_" . $file['name'];
 
-        if (!getPhoto($file["tmp_name"]))
+        if (!getPhotoSize($file["tmp_name"]))
             throw new Exception("le fichier n'est pas une image");
         if ($extension !== "jpg" && $extension !== "jpeg" && $extension !== "png" && $extension !== "gif");
         throw new Exception("l'extension du fichier n'est pas reconnue");

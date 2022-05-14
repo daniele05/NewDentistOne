@@ -4,10 +4,16 @@
 require_once "models/Patient.class.php";
 
 //  appel de la class Manager 
-
-
-
 ob_start();
+if (!empty($_SESSION['alert'])) :
+?>
+<div class="alert alert-<?= $_SESSION['alert']['type'] ?>" role="alert">
+    <?= $_SESSION['alert']['msg'] ?>
+</div>
+
+<?php
+    unset($_SESSION['alert']);
+endif;
 ?>
 
 <p class="  m-4 py-4">
@@ -16,8 +22,8 @@ ob_start();
 
 <!-- tableau en dure -->
 
-<div class="col-12 bg-light mt-4  p-4">
-    <table class="table table-hover mb-4 p-4">
+<div class="col-12 bg-light m-4">
+    <table class="table table-hover py-4 ">
 
         <thead>
             <tr class="color-dark border">
@@ -33,7 +39,8 @@ ob_start();
                 <th class="align-middle">Date Inscription Patient</th>
                 <th class="align-middle">Id Soins Dentaires</th>
                 <th class="align-middle">Id Ordonnance</th>
-                <th colspan=" 2">Actions</th>
+                <th colspan=" 2 border border- dark">Actions</th>
+
             </tr>
         </thead>
 
