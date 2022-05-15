@@ -1,5 +1,6 @@
-<?
+<?php
 ob_start();
+
 ?>
 <p class="Ici mon formulaire de modification"></p>
 
@@ -8,27 +9,29 @@ ob_start();
 <form method="POST" action="<?= URL ?> patient/mv" enctype="multipart/form-data">
 
     <h4>Photo: </h4>
+
     <img src="<?= URL ?>public/asset/img/<?= $patient->getPhoto() ?>">
 
-    <div class=" form-group">
+    <div class="form-group">
         <label for="image">Changer la photo:</label>
         <input type="file" class="form-control-file" id="image" name="image">
     </div>
     <input type="hidden" name="identifiant" value="<?= $patient->getIdPatient() ?>">
     <br>
-    <div class=" form-group">
+    <div class="form-group">
         <label for="idpatient">IdPatient:</label>
-        <input type="number" class="form-control" id="idPatient" name="idPatient" value="<?= $patient->getIdPatient() ?>>
+        <input type="number" class="form-control" id="idPatient" name="idPatient"
+            value="<?= $patient->getIdPatient() ?>">
 
     </div>
     <br>
-    <div class=" form-group">
+    <div class="form-group">
         <label for="irstname">IrstName:</label>
-        <input type="text" class="form-control" id="irstName" name="irstName" value="<?= $patient->getIrstName() ?>>
+        <input type="text" class="form-control" id="irstName" name="irstName" value="<?= $patient->getIrstName() ?>">
 
     </div>
     <br>
-    <div class=" form-group">
+    <div class="form-group">
         <label for="lastname">LastName:</label>
         <input type="text" class="form-control" id="lastName" name="lastName" value="<?= $patient->getLastName() ?>">
 
@@ -36,7 +39,7 @@ ob_start();
     <br>
     <div class="form-group">
         <label for="birthdate">Birthdate:</label>
-        <input type="date" class="form-control" id="birthDate" name="birthDate" value="<?= $aptient->getBirthDate() ?>">
+        <input type="date" class="form-control" id="birthDate" name="birthDate" value="<?= $patient->getBirthDate() ?>">
 
     </div>
     <br>

@@ -11,7 +11,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-12 open-hour-wrap">
                 <h3 class="text-primary justify">Notre savoir-faire</h3>
-                <img src="public/asset/img/Pédiatrie dentaire.png" alt="pédiatrie dentaire">
+                <img src="public/asset/img/Pédiatrie dentaire.png" alt="pédiatrie dentaire" class="m-4 p-4">
                 <p class="text-left text-justify">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type

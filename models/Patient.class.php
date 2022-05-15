@@ -71,7 +71,7 @@ class Patient
         $this->lastName = $lastName;
     }
 
-    public function getBirtDate()
+    public function getBirthDate()
     {
         return $this->birthDate;
     }

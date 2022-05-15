@@ -59,7 +59,7 @@ endif;
             </td>
             <td class="align-middle"><?= $patients[$i]->getIrstName(); ?></td>
             <td class="align-middle"><?= $patients[$i]->getLastName(); ?></td>
-            <td class="align-middle"><?= $patients[$i]->getBirtDate(); ?></td>
+            <td class="align-middle"><?= $patients[$i]->getBirthDate(); ?></td>
             <td class="align-middle"><?= $patients[$i]->getSex(); ?></td>
             <td class="align-middle"><?= $patients[$i]->getTel(); ?></td>
             <td class="align-middle"><?= $patients[$i]->getEmail(); ?></td>

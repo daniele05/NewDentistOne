@@ -10,8 +10,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12 open-hour-wrap">
-                <h3 class="text-primary">Notre savoir-faire</h3>
-                <img src="public/asset/imag/Consulation de routine" alt="Consultation de routine">
+                <h3 class="text-primary">Notre savoir faire</h3>
+                <img src="public/asset/img/Urgences dentaires.png" alt="Consultation de routine " class="m-4 p-4">
                 <p class="text-left">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type

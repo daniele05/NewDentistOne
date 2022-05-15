@@ -44,7 +44,7 @@
 <!--<!-- Start Galery Area -->
 <section class="galery-area section-gap">
     <div class="container pb-4 mb-3">
-        <div class="row d-flex space-between">
+        <div class="row d-flex space-evenly">
             <div class="card" style="width: 15rem;">
                 <img src="public/asset/img/Consultation routine.png" class="card-img-top" alt="Consultation de routine">
                 <div class="card-body">
@@ -53,8 +53,8 @@
                         industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                         printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <a href="#" class="btn btn-primary">En savoir <img src="public/asset/img/Vector (2).png" alt="arrow"
-                            class="m-2"></a>
+                    <a href="notre-savoir-faire-2" class="btn btn-primary">En savoir <img
+                            src="public/asset/img/Vector (2).png" alt="arrow" class="m-2"></a>
                 </div>
             </div>
 
@@ -67,7 +67,7 @@
                         industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                         printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <a href="<?= URL ?>/savoirFaire3/ " class="btn btn-primary">En savoir <img
+                    <a href="notre-savoir-faire-3 " class="btn btn-primary">En savoir <img
                             src="public/asset/img/Vector (2).png" alt="arrow" class="m-2"></a>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                         industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                         printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <a href="<?= URL ?>/savoirFaire4/ " class="btn btn-primary">En savoir <img
+                    <a href="notre-savoir-faire-4" class="btn btn-primary">En savoir <img
                             src="public/asset/img/Vector (2).png" alt="arrow" class="m-2"></a>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                         industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                         printer took a galley of type and.</p>
-                    <a href="<?= URL ?>/savoirFaire5/ " class="btn btn-primary">En savoir <img
+                    <a href="notre-savoir-faire-5" class="btn btn-primary">En savoir <img
                             src="public/asset/img/Vector (2).png" alt="arrow" class="m-2"></a>
                 </div>
             </div>

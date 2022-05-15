@@ -87,17 +87,19 @@
 
                             <ul>
 
-                                <li class="nav-items"><a class="nav-link" href="notre-savoir-faire-1">Implants
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-savoir-faire-1">Implants
                                         dentaires</a></li>
                                 <li class="nav-items"><a class="nav-link"
                                         href="<?= URL ?>notre-savoir-faire-2">Consultation de
                                         routine </a></li>
-                                <li class="nav-items"><a class="nav-link" href="notre-savoir-faire-3">Prothèses
+                                <li class="nav-items"><a class="nav-link"
+                                        href="<?= URL ?>notre-savoir-faire-3">Prothèses
                                         dentaires fixes ou amovibles
                                         dentaire</a></li>
-                                <li class="nav-items"><a class="nav-link" href="notre-savoir-faire-4">Pédiatrie
+                                <li class="nav-items"><a class="nav-link"
+                                        href="<?= URL ?>notre-savoir-faire-4">Pédiatrie
                                         dentaire</a></li>
-                                <li class="nav-items"><a class="nav-link" href="notre-savoir-faire-5">Urgences
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-savoir-faire-5">Urgences
                                         dentaires-Caries-Abcès dentaires </a></li>
 
 
@@ -108,7 +110,7 @@
                             <a class="nav-link" href="nous-contacter">Nous contacter </a>
                         </li>
                         <li class="nav-items">
-                            <a class="nav-link" href="<?= URL ?>connexion">Connexion</a>
+                            <a class="nav-link" href="<?= URL ?>patients">Patients</a>
                         </li>
 
 

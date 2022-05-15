@@ -58,7 +58,7 @@ class PatientController
     }
 
     // Modification patient 
-    public function modifierPatient()
+    public function modifierPatient($idPatient)
     {
         $patient = $this->patientManager->getPatientById($idPatient);
         require "views/modifierPatient.view.php";
@@ -68,7 +68,7 @@ class PatientController
 
     public function modificationPatientValidation()
     {
-        $photoActuelle = $this->getPatientById($_POST['identifiantPatient'])->getPhoto();
+        $photoActuelle = $this->patientManager->getPatientById($_POST['identifiantPatient'])->getPhoto();
         $file = $_FILES['photo'];
 
         if ($file['size'] > 0) {

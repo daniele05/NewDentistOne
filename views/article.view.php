@@ -17,41 +17,18 @@
                 <div class="banner-content m-5">
 
 
-                    <h3 class="text-primary mb-2">
-                        Les prothèses dentaires
-                    </h3>
+                    <h3 class=" page-title text-primary mb-2"><?= $value->getTitre() ?></h3>
 
 
 
-                    <img src="public/asset/img/prothèse dentaire.png" alt="les prothèses" class="">
-                    <p class="text-justify text-align-justify mt-5">Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-                        only five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged.Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-                        only five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-                        only five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-                        only five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-                        only five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged.
-                    </p>
+                    <img src="public/asset/img/<?= $value->getImage() ?>" alt="les prothèses" class="">
+                    <p class="text-justify text-align-justify mt-5"><?= $value->getContenu() ?></p>
                     <div class="font-weight-bold right-5">
 
-                        <span class="text-left m-5 font-weight-bold">Février 20, 2022 - blog</span>
-                        Auteur: Ben-Salah
+                        <span class="text-left m-5 font-weight-bold"><?= $value->getCreated() ?></span>
+
+                        <span class="text-left m-5 font-weight-bold"><?= $value->getIdDentiste() ?></span>
+
                     </div>
 
                     <div class="">

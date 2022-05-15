@@ -28,31 +28,31 @@ try {
                 $pagesStatiquesController->afficherNotreHistoire();
                 require "views/notre-histoire.view.php";
                 break;
-            case "notre-savoir-faire":
+            case "notre-savoir-faire-1":
                 $pagesStatiquesController->afficherNotreSavoirFaire_1();
                 require "views/notre-savoir-faire-1.view.php";
                 break;
-            case "notre-savoir-faire":
+            case "notre-savoir-faire-2":
                 $pagesStatiquesController->afficherNotreSavoirFaire_2();
-                require "views/notre-savoir-faire-2.view.php";
+                require "views/notre-savoir-faire-2.php";
                 break;
-            case "notre-savoir-faire":
+            case "notre-savoir-faire-3":
                 $pagesStatiquesController->afficherNotreSavoirFaire_3();
                 require "views/notre-savoir-faire-3.view.php";
                 break;
-            case "notre-savoir-faire":
+            case "notre-savoir-faire-4":
                 $pagesStatiquesController->afficherNotreSavoirFaire_4();
-                require "views/notre-savoir-faire.view-4.php";
+                require "views/notre-savoir-faire-4.php";
                 break;
-            case "notre-savoir-faire":
+            case "notre-savoir-faire-5":
                 $pagesStatiquesController->afficherNotreSavoirFaire_5();
-                require "views/notre-savoir-faire.view-5.php";
+                require "views/notre-savoir-faire-5.view.php";
                 break;
             case "nous-contacter":
                 $pagesStatiquesController->afficherContact();
                 require "views/nous-contacter.view.php";
                 break;
-            case "connexion":
+            case "patients":
 
                 if (empty($url[1])) {
                     $patientController->afficherPatients();
@@ -72,8 +72,7 @@ try {
                     throw new Exception("La page n'existe pas");
                 }
                 break;
-            default:
-                throw new Exception("la page n'existe pas");
+
             case "blog":
                 require "views/article.view.php";
                 break;
@@ -82,8 +81,10 @@ try {
                 break;
             case "mentions":
                 $pagesStatiquesController->afficherMentions();
-                require "views/mentions.view.php";
+
                 break;
+            default:
+                throw new Exception("la page n'existe pas");
         }
     }
 } catch (Exception $e) {

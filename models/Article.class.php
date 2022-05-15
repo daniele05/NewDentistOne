@@ -2,17 +2,19 @@
 class Article
 {
     private $idArticle;
+    private $titre;
+    private $image;
     private $contenu;
     private $created;
-    private $titre;
     private $idDentiste;
 
-    public function __construct($idArticle, $contenu, $created, $titre, $idDentiste)
+    public function __construct($idArticle, $titre, $image, $contenu, $created, $idDentiste)
     {
         $this->idArticle = $idArticle;
+        $this->titre = $titre;
+        $this->image = $image;
         $this->contenu = $contenu;
         $this->created = $created;
-        $this->titre = $titre;
         $this->idDentiste = $idDentiste;
     }
 
@@ -32,6 +34,35 @@ class Article
             echo "Problème avec l'Id <br>";
         }
     }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+
+    public function setImage($image)
+    {
+        if (isset($image) && !empty($image)) {
+            $this->image = $image;
+        } else {
+            echo "Problème avec l'image <br>";
+        }
+    }
+
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+    public function setTitre($titre)
+    {
+        if (isset($titre) && !empty($titre)) {
+            $this->titre = $titre;
+        } else {
+            echo "Problème avec le titre";
+        }
+    }
+
 
     public function getContenu()
     {
@@ -56,19 +87,6 @@ class Article
             $this->created = $created;
         } else {
             echo "problème avec la date de creation";
-        }
-    }
-
-    public function getTitre()
-    {
-        return $this->titre;
-    }
-    public function setTitre($titre)
-    {
-        if (isset($titre) && !empty($titre)) {
-            $this->titre = $titre;
-        } else {
-            echo "Problème avec le titre";
         }
     }
 
