@@ -8,12 +8,12 @@ ob_start();
 
 <form method="POST" action="<?= URL ?> patient/mv" enctype="multipart/form-data">
 
-    <h4>Photo: </h4>
+    <h4 class="">Photo: </h4>
 
-    <img src="<?= URL ?>public/asset/img/<?= $patient->getPhoto() ?>">
+    <img src="<?= URL ?>public/asset/img/<?= $patient->getImage() ?>">
 
     <div class="form-group">
-        <label for="image">Changer la photo:</label>
+        <label for="image">Changer l'image:</label>
         <input type="file" class="form-control-file" id="image" name="image">
     </div>
     <input type="hidden" name="identifiant" value="<?= $patient->getIdPatient() ?>">

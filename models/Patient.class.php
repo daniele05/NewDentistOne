@@ -2,7 +2,7 @@
 
 class Patient
 {
-    private $photo;
+    private $image;
     private $idPatient;
     private $irstName;
     private $lastName;
@@ -16,10 +16,10 @@ class Patient
     private $idOrdonnance;
 
 
-    public function __construct($photo, $idPatient, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
+    public function __construct($image, $idPatient, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
     {
 
-        $this->photo = $photo;
+        $this->image = $image;
         $this->idPatient = $idPatient;
         $this->irstName = $irstName;
         $this->lastName = $lastName;
@@ -35,13 +35,13 @@ class Patient
 
     // construction des getter and setter
 
-    public function getPhoto()
+    public function getImage()
     {
-        return $this->photo;
+        return $this->image;
     }
-    public function setPhoto($photo)
+    public function setImage($image)
     {
-        $this->photo = $photo;
+        $this->image = $image;
     }
 
     public function getIdPatient()

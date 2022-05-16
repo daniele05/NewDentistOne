@@ -18,7 +18,7 @@
 
                 <img src="public/asset/img/accueil-dentiste.png" alt="accueil-dentiste" class=" bg-image mt-3">
 
-                <h5 class=" text-primary  mt-1">Votre dentiste, à votre écoute</h5>
+                <h5 class=" text-primary">Votre dentiste, à votre écoute</h5>
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
                     with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
                     publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
-                <button class="shadow-sl open-btn text-primary border border none" href="#">En savoir <img
+                <button class="shadow-sl open-btn text-primary border border none" href="notre-histoire">En savoir <img
                         src="public/asset/img/Vector (2).png" alt="arrow"></button>
             </div>
         </div>
@@ -92,8 +92,8 @@
                 <img src="public/asset/img/Implants dentaires.png" class="rounded mx-auto d-block"
                     alt="Implants dentaires">
                 <h5 class="mt-2">Implants dentaires</h5>
-                <button class="shadow-sl open-btn text-primary border border none" href="#">En savoir <img
-                        src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button class="shadow-sl open-btn text-primary border border none" href="#">En savoir
+                    <img src="public/asset/img/Vector (2).png" alt="arrow"></button>
             </div>
         </div>
 
@@ -102,8 +102,8 @@
                 <img src="public/asset/img/Consultation routine.png" class="rounded mx-auto d-block"
                     alt="Consultation de routine">
                 <h5 class="mt-2">Consultation de routine</h5>
-                <button class="shadow-sl open-btn text-primary border border none" href="#">En savoir <img
-                        src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button class="shadow-sl open-btn text-primary border border none" href="notre-savoir-faire-2">En savoir
+                    <img src="public/asset/img/Vector (2).png" alt="arrow"></button>
             </div>
         </div>
 
@@ -113,8 +113,8 @@
                 <img src="public/asset/img/Prothèses dentaires.png" class="rounded mx-auto d-block"
                     alt="prothèses dentaires fixes ou amovibles">
                 <h5 class="mt-2">prothèses dentaires fixes ou amovibles</h5>
-                <button class="shadow-sl open-btn text-primary border border none" href="#">En savoir <img
-                        src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button class="shadow-sl open-btn text-primary border border none" href="notre-savoir-faire-3">En savoir
+                    <img src="public/asset/img/Vector (2).png" alt="arrow"></button>
 
             </div>
         </div>
@@ -125,8 +125,8 @@
                 <img src="public/asset/img/Pédiatrie dentaire.png" class="rounded mx-auto d-block"
                     alt="pédiatrie dentaire">
                 <h5 class="mt-2">Pédiatrie dentaire</h5>
-                <button class="shadow-sl open-btn text-primary border border none" href="#">En savoir <img
-                        src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button class="shadow-sl open-btn text-primary border border none" href="notre-savoir-faire-4">En savoir
+                    <img src="public/asset/img/Vector (2).png" alt="arrow"></button>
 
             </div>
         </div>
@@ -137,8 +137,8 @@
                 <img src="public/asset/img/Urgences dentaires.png" class="rounded mx-auto d-block"
                     alt="Urgences dentaires - Caries - Abcès dentaire">
                 <h5 class="mt-2">Urgences dentaires - Caries - Abcès dentaires</h5>
-                <button class="shadow-sl open-btn text-primary border border none" href="#">En savoir <img
-                        src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button class="shadow-sl open-btn text-primary border border none" href="notre-savoir-faire-5">En savoir
+                    <img src="public/asset/img/Vector (2).png" alt="arrow"></button>
 
             </div>
         </div>
@@ -241,7 +241,8 @@
         </div>
     </div>
     <div class="text-center p-2">
-        <button class="shadow-sl open-btn text-primary border border none m-4" href="#">En savoir <img
+
+        <button class="shadow-sl open-btn text-primary border border none m-4" href="galerie">En savoir <img
                 src="public/asset/img/Vector (2).png" alt="arrow"></button>
     </div>
 </section>
@@ -254,45 +255,55 @@
         <div class="row justify-content-center">
             <div class="col-lg-12 open-mention-wrap m-2">
                 <h3 class="text-primary text-center m-3">Mentions légales</h3>
-                <p class="dark text-justify bg-dark">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
-                    not only five centuries, but also the leap into electronic typesetting, remaining essentially
-                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                    Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum, <br>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum<br>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum<br>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                <p class="dark text-justify">
+
+                    Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie
+                    numérique, il est précisé aux utilisateurs du site Cabinet dentaire Antony l'identité des différents
+                    intervenants dans le cadre de sa réalisation et de son suivi.
+
+                    Edition du site
+
+                    Le présent site, accessible à l’URL https://cabinetdentaireantony.fr (le « Site »), est édité par :
+
+                    christine daniele, résidant 56 rte d antony 91320 wissous, de nationalité Française (France), né(e)
+                    le 05/12/1977,
+
+
+                    Hébergement
+
+                    Le Site est hébergé par la société obh, situé 56 rte d antony 92360, (contact téléphonique ou email
+                    : +33695172435).
+
+                    Directeur de publication
+
+                    Le Directeur de la publication du Site est christine daniele.
+
+                    Nous contacter
+
+                    Par téléphone : +33695172435
+                    Par email : konda300@yahoo.fr
+                    Par courrier : 56 rte d antony 91320 wissous
+
+                    Données personnelles
+
+                    Le traitement de vos données à caractère personnel est régi par notre Charte du respect de la vie
+                    privée, disponible depuis la section "Charte de Protection des Données Personnelles", conformément
+                    au Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016 («RGPD»).
+
+                    a désigné un Délégué à la Protection des Données (DPO) auprès de la CNIL (Désignation N° ). Les
+                    coordonnées de notre Délégué à la Protection des Données sont les suivantes :
+
+                    Nom : Arthur Rimbal
+                    Adresse : 10 route de l ecole 91320 wissous
+                    Téléphone : +33695172430
+                    Email : konda300@yahoo.fr
+
+                    Génération des mentions légales par Legalstart...
                 </p>
+            </div>
+            <div class="text-center p-2">
+                <button class="shadow-sl open-btn text-primary border border none m-4" href="mentions">En savoir <img
+                        src="public/asset/img/Vector (2).png" alt="arrow"></button>
             </div>
         </div>
     </div>

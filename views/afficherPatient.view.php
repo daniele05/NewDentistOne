@@ -5,7 +5,7 @@ ob_start();
 
 <div class="row">
     <div class="col-6">
-        <img src="<?= URL ?>public/asset/img/<?= $patient->getPhoto(); ?>">
+        <img src="<?= URL ?>public/asset/img/<?= $patient->getImage(); ?>">
     </div>
     <div class="col-6">
         <p>Prénom: </p><?= $patient->getIrstName(); ?>">

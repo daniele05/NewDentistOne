@@ -44,8 +44,8 @@
 <!--<!-- Start Galery Area -->
 <section class="galery-area section-gap">
     <div class="container pb-4 mb-3">
-        <div class="row d-flex space-evenly">
-            <div class="card" style="width: 15rem;">
+        <div class="row d-flex space-between">
+            <div class="card" style="width: 12rem;">
                 <img src="public/asset/img/Consultation routine.png" class="card-img-top" alt="Consultation de routine">
                 <div class="card-body">
                     <h5 class="card-title text-primary">Consultation de routine</h5>
@@ -58,8 +58,8 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 15rem;">
-                <img src="public/asset/img/Prothèses dentaires.png" class="card-img-top"
+            <div class="card" style="width: 12rem;">
+                <img src="public/asset/img/Prothèses dentaires.png" class="card-img-top mb-5"
                     alt="prothèses dentaires fixes ou amovibles">
                 <div class="card-body">
                     <h5 class="card-title text-primary">prothèses dentaires fixes ou amovibles</h5>
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 15rem;">
+            <div class="card" style="width: 12rem;">
                 <img src="public/asset/img/Pédiatrie dentaire.png" class="card-img-top" alt="pédiatrie dentaire">
                 <div class="card-body">
                     <h5 class="card-title text-primary">Pédiatrie dentaire</h5>
@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 15rem;">
+            <div class="card" style="width: 12rem;">
                 <img src="public/asset/img/Urgences dentaires.png" class="card-img-top"
                     alt="Urgences dentaires - Caries - Abcès dentaire">
                 <div class="card-body">
@@ -93,6 +93,8 @@
                     <p class="card-text text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry.
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and.Lorem Ipsum has been the industry's standard dummy text ever
+                        since the 1500s, when an unknown
                         printer took a galley of type and.</p>
                     <a href="notre-savoir-faire-5" class="btn btn-primary">En savoir <img
                             src="public/asset/img/Vector (2).png" alt="arrow" class="m-2"></a>

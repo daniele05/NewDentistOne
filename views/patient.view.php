@@ -27,7 +27,7 @@ endif;
 
         <thead>
             <tr class="color-dark border">
-                <th class="align-middle">Photo</th>
+                <th class="align-middle">Image</th>
                 <th class="align-middle">Idpatient</th>
                 <th class="align-middle">Irstname</th>
                 <th class="align-middle">lastname</th>
@@ -52,7 +52,7 @@ endif;
         ?>
         <tr class="#">
 
-            <td class="align-middle"><img src="public/asset/img/<?= $patients[$i]->getPhoto(); ?>" alt="photo"
+            <td class="align-middle"><img src="public/asset/img/<?= $patients[$i]->getImage(); ?>" alt="image_photo"
                     width="50"></td>
             <td class="align-middle"><a
                     href="<?= URL ?>patients/p/<?= $patients[$i]->getIdPatient(); ?>"><?= $patients[$i]->getIdPatient(); ?>

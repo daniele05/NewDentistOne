@@ -7,9 +7,6 @@ require "Model.class.php";
 require_once "Patient.class.php";
 
 
-
-
-
 class PatientManager extends Model
 {
     // tableau de patients que je parcours dans ma function getPatientById
@@ -39,7 +36,7 @@ class PatientManager extends Model
         $req->closeCursor();
 
         foreach ($patients as $patient) {
-            $p = new Patient($patient["photo"], $patient["idPatient"], $patient["istName"], $patient["lastName"], $patient["birthDate"], $patient["sex"], $patient["tel"], $patient["email"], $patient["address"], $patient["dateInscriptionPatient"], $patient["idSoinsDentaires"], $patient["idordonnance"]);
+            $p = new Patient($patient["image"], $patient["idPatient"], $patient["istName"], $patient["lastName"], $patient["birthDate"], $patient["sex"], $patient["tel"], $patient["email"], $patient["address"], $patient["dateInscriptionPatient"], $patient["idSoinsDentaires"], $patient["idordonnance"]);
             $this->ajouterPatient($p);
         }
     }
@@ -58,13 +55,13 @@ class PatientManager extends Model
     }
 
 
-    public function ajouterPatientBd($photo, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
+    public function ajouterPatientBd($image, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
     {
         $req = "
-        INSERT INTO connexions (photo,irstName,lastName,birthDate, sex, tel,email, address, dateInscriptionPatient,:idSoinsDentaires,  idOrdonnance)
-        values(:photo, :irstName, :lastName, :birthDate, :sex, :tel, :email, :address, :dateInscriptionPatient,:idSoinsDentaires, :idOrdonnance)";
+        INSERT INTO connexions (image,irstName,lastName,birthDate, sex, tel,email, address, dateInscriptionPatient,:idSoinsDentaires,  idOrdonnance)
+        values(:image, :irstName, :lastName, :birthDate, :sex, :tel, :email, :address, :dateInscriptionPatient,:idSoinsDentaires, :idOrdonnance)";
         $stmt = $this->getBdd()->prepare($req);
-        $stmt->binValue(":photo", $photo, PDO::PARAM_STR);
+        $stmt->binValue(":image", $image, PDO::PARAM_STR);
         $stmt->binValue(":irstName", $irstName, PDO::PARAM_STR);
         $stmt->binValue(":lastName", $lastName, PDO::PARAM_STR);
         $stmt->binValue(":birthDate", $birthDate, PDO::PARAM_INT);
@@ -84,7 +81,7 @@ class PatientManager extends Model
 
         if ($resultat > 0) {
             // instancier une nouvelle insertion connexion patient si > 0
-            $patient = new Patient($photo, $this->getBdd()->secondInsertId(), $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance);
+            $patient = new Patient($image, $this->getBdd()->secondInsertId(), $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance);
             $this->ajouterPatient($patient);
         }
     }
@@ -107,15 +104,15 @@ class PatientManager extends Model
         }
     }
 
-    public function modificationPatientBD($photo, $idPatient, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
+    public function modificationPatientBD($image, $idPatient, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
     {
         $req = "
          update patients
-         set photo = :photo, set idPatient= :idPatient, set irstName = :irstName, set lastName = :lastName, set birthDate = :birthDate, set sex = :sex, set tel = :tel, set email = :email, set address = :address, set dateInscriptionPatient = :dateInscriptionPatient, set idSoinsDentaires = :idSoinsDentaires, set idOrdonnance = :idOrdonnance
+         set image = :image, set idPatient= :idPatient, set irstName = :irstName, set lastName = :lastName, set birthDate = :birthDate, set sex = :sex, set tel = :tel, set email = :email, set address = :address, set dateInscriptionPatient = :dateInscriptionPatient, set idSoinsDentaires = :idSoinsDentaires, set idOrdonnance = :idOrdonnance
          where idPatient = :idPatient";
 
         $stmt = $this->getBdd()->prepare($req);
-        $stmt->binValue(":photo", $photo, PDO::PARAM_STR);
+        $stmt->binValue(":image", $image, PDO::PARAM_STR);
         $stmt->binValue(":idPatient", $idPatient, PDO::PARAM_INT);
         $stmt->binValue(":irstName", $irstName, PDO::PARAM_STR);
         $stmt->binValue(":lastName", $lastName, PDO::PARAM_STR);
@@ -134,7 +131,7 @@ class PatientManager extends Model
         // si if est > 0 mise en jour des donnees ci-dessus 
 
         if ($resultat > 0) {
-            $this->getPatientById($idPatient)->setPhoto($photo);
+            $this->getPatientById($idPatient)->setImage($image);
             $this->getPatientById($idPatient)->setIrstName($irstName);
             $this->getPatientById($idPatient)->setLastName($lastName);
             $this->getPatientById($idPatient)->setBirthDate($birthDate);

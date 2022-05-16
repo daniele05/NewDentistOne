@@ -8,6 +8,9 @@ $pagesStatiquesController = new PagesStatiquesController;
 require_once("controllers/PatientController.php");
 $patientController = new PatientController;
 
+require_once("controllers/ArticleController.controller.php");
+$articleController = new ArticleController;
+
 
 
 
@@ -74,13 +77,18 @@ try {
                 break;
 
             case "blog":
-                require "views/article.view.php";
+                if (empty($url[1])) {
+                    $articleController->afficherArticle();
+                }
+
+
                 break;
             case "galerie":
                 require "views/galerie.view.php";
                 break;
             case "mentions":
                 $pagesStatiquesController->afficherMentions();
+                require "views/mentions.view.php";
 
                 break;
             default:
