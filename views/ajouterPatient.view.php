@@ -12,7 +12,7 @@ ob_start();
 <form method="POST" action="<?= URL ?> patient/av" enctype="multipart/form-data">
 
     <div class=" form-group">
-        <label for="image">Photo:</label>
+        <label for="image">Image:</label>
         <input type="file" class="form-control-file" id="image" name="image">
     </div>
     <br>
@@ -94,7 +94,7 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-$titre = "Ajout d'un patient";
+$titre = "Ajouter un patient";
 require "template.php";
 
 ?>

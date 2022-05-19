@@ -10,8 +10,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12 open-hour-wrap">
-                <h3 class="text-primary">Notre Histoire</h3>
-                <img src="public/asset/img/notre_histoire.png" alt="notre_histoire">
+                <h3 class="text-primary mb-3">Notre Histoire</h3>
+                <img src="public/asset/img/notre_histoire.png" alt="notre_histoire" class="mb-4">
                 <p class="text-left">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
@@ -34,10 +34,10 @@
         <div class="row justify-content-center">
             <div class="col-lg-12 open-hour-wrap">
                 <div class="position-absolute">
-                    <img src="public/asset/img/localisation.png" alt="localisation">
-                    <img src="public/asset/img/Frame 10.png" alt="vecteur">
+                    <img src="public/asset/img/localisation.png" alt="localisation " class="m-2">
+                    <img src="public/asset/img/Frame 10.png" alt="vecteur" class="m-2">
                 </div>
-                <h4 class="text-primary"> 2 Av. jean Monnet, 92160 Antony
+                <h4 class="text-primary mb-3"> 2 Av. jean Monnet, 92160 Antony
                 </h4>
                 <p class="text-center text-primary">
                     Horaires
@@ -78,7 +78,7 @@
                                 <p class="m-3 font-weight-bold">.RER Antony (ligne B)</p>
                             </div>
 
-                            <div class="col-lg-12 open-hour-wrap">
+                            <div class="col-lg-12 open-hour-wrap m-2">
                                 <h4 class="text-primary">Parking public</h4>
 
                                 <p class="m-3 font-weight-bold">Place des Anciens combattants - disque requis (gratuit -

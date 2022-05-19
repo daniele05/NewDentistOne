@@ -17,6 +17,10 @@ class PatientManager extends Model
 
     public function ajouterPatient($patient)
     {
+        // var_dump($patient);
+        // die();
+
+
         $this->patients[] = $patient;
     }
 
@@ -58,7 +62,7 @@ class PatientManager extends Model
     public function ajouterPatientBd($image, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
     {
         $req = "
-        INSERT INTO connexions (image,irstName,lastName,birthDate, sex, tel,email, address, dateInscriptionPatient,:idSoinsDentaires,  idOrdonnance)
+        INSERT INTO patients (image,irstName,lastName,birthDate, sex, tel,email, address, dateInscriptionPatient,:idSoinsDentaires,  idOrdonnance)
         values(:image, :irstName, :lastName, :birthDate, :sex, :tel, :email, :address, :dateInscriptionPatient,:idSoinsDentaires, :idOrdonnance)";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->binValue(":image", $image, PDO::PARAM_STR);
@@ -81,7 +85,9 @@ class PatientManager extends Model
 
         if ($resultat > 0) {
             // instancier une nouvelle insertion connexion patient si > 0
+            // getBdd()->secondInsertId a a voir avec mon Idpatient non declaré jusque la car en auto increment
             $patient = new Patient($image, $this->getBdd()->secondInsertId(), $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance);
+            // generer la liste de patient
             $this->ajouterPatient($patient);
         }
     }
@@ -89,7 +95,7 @@ class PatientManager extends Model
     public function suppressionPatientBD($idPatient)
     {
         $req = "
-        Delete from connexions where id = : idPatient
+        Delete from patient where id = : idPatient
         ";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(":idPatient", $idPatient, PDO::PARAM_INT);

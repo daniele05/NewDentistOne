@@ -1,6 +1,10 @@
 <?php
+// Def const URL 
+// Const defint lien absolu depuis https ou http
 session_start();
 define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[PHP_SELF]"));
+
+// role de routeur de index.php
 
 require_once("controllers/PagesStatiquesController.php");
 $pagesStatiquesController = new PagesStatiquesController;
@@ -8,8 +12,11 @@ $pagesStatiquesController = new PagesStatiquesController;
 require_once("controllers/PatientController.php");
 $patientController = new PatientController;
 
-require_once("controllers/ArticleController.controller.php");
+require_once("controllers/ArticleController.php");
 $articleController = new ArticleController;
+
+require_once("controllers/UserController.php");
+$userController = new UserController;
 
 
 
@@ -55,12 +62,16 @@ try {
                 $pagesStatiquesController->afficherContact();
                 require "views/nous-contacter.view.php";
                 break;
-            case "patients":
 
+            case "login":
+                $userController->login();
+                break;
+
+            case "patients":
                 if (empty($url[1])) {
                     $patientController->afficherPatients();
                 } elseif ($url[1] === "p") {
-                    $patientController->afficherPatients($url[2]);
+                    $patientController->afficherPatient($url[2]);
                 } elseif ($url[1] === "a") {
                     $patientController->ajouterPatient();
                 } elseif ($url[1] === "m") {
@@ -79,17 +90,27 @@ try {
             case "blog":
                 if (empty($url[1])) {
                     $articleController->afficherArticle();
+                } elseif ($url[1] === "a") {
+                    $articleController->ajouterArticle();
+                } elseif ($url[1] === "m") {
+                    $articleController->modifierArticle($url[2]);
+                } elseif ($url[1] === "d") {
+                    $articleController->suppressionArticle($url[2]);
+                } elseif ($url[1] === "av") {
+                    $articleController->ajoutArticleValidation();
+                } elseif ($url[1] === "mv") {
+                    $articleController->modificationArticleValidation();
+                } else {
+                    throw new Exception("La page n'existe pas");
                 }
-
-
                 break;
+
             case "galerie":
                 require "views/galerie.view.php";
                 break;
             case "mentions":
                 $pagesStatiquesController->afficherMentions();
                 require "views/mentions.view.php";
-
                 break;
             default:
                 throw new Exception("la page n'existe pas");

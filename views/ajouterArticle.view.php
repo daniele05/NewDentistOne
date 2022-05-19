@@ -9,7 +9,7 @@ ob_start();
 
 <!-- start form -->
 
-<form method="POST" action="" enctype="multipart/form-data">
+<form method="POST" action="<?= URL ?> article/av" enctype="multipart/form-data">
 
     <div class=" form-group">
         <label for="idArticle">idArticle:</label>
@@ -48,7 +48,7 @@ ob_start();
     <br>
     <br>
 
-    <button type="submit" class="btn btn-primary">Valider</button>
+    <button type="submit" class="btn btn-primary">Publier</button>
 </form>
 <br>
 <!-- End form -->

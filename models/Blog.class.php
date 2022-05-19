@@ -6,7 +6,6 @@ class Blog
     private $titre;
     private $image;
     private $contenu;
-
     private $idDentiste;
 
     public function __construct($idArticle, $created, $titre, $image, $contenu,  $idDentiste)
@@ -26,54 +25,54 @@ class Blog
 
     public function getIdArticle()
     {
-        return $this->idArticle; //retourne l'identifiant
+        return $this->idArticle;
     }
     public function setIdArticle($idArticle)
     {
-        $this->id = $idArticle; //écrit dans l'attribut id
+        $this->id = $idArticle;
     }
 
     public function getCreated()
     {
-        return $this->created; //retourne le nom de la photo
+        return $this->created;
     }
     public function setCreated($created)
     {
-        $this->photo = $created; //écrit dans l'attribut photo
+        $this->photo = $created;
     }
     public function getTitre()
     {
-        return $this->titre; //retourne le titre
+        return $this->titre;
     }
     public function setTitre($titre)
     {
-        $this->titre = $titre; //écrit dans l'attribut titre
+        $this->titre = $titre;
     }
 
     public function getImage()
     {
-        return $this->image; //retourne la date
+        return $this->image;
     }
     public function setImage($image)
     {
-        $this->date = $image; //écrit dans l'attribut date
+        $this->date = $image;
     }
 
     public function getContenu()
     {
-        return $this->contenu; //retourne le commentaire
+        return $this->contenu;
     }
     public function setContenu($contenu)
     {
-        $this->commentaire = $contenu; //écrit dans l'attribut commentaire
+        $this->commentaire = $contenu;
     }
 
     public function getIdDentiste()
     {
-        return $this->idDentiste; //retourne le nom de la photo
+        return $this->idDentiste;
     }
     public function setIdDentiste($idDentiste)
     {
-        $this->idDentiste = $idDentiste; //écrit dans l'attribut photo
+        $this->idDentiste = $idDentiste;
     }
 }

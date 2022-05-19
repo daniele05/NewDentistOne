@@ -29,9 +29,7 @@
     <link rel="manifest" href="/site.webmanifest">
 
 
-    <!--
-			CSS
-			============================================= -->
+    <!-- css boostrap -->
     <link rel="stylesheet" href="public/asset/css/linearicons.css">
     <link rel="stylesheet" href="public/asset/css/font-awesome.min.css">
     <link rel="stylesheet" href="public/asset/css/bootstrap.css">
@@ -43,13 +41,13 @@
     <link rel="stylesheet" href="public/asset/css/main.css">
 
 
-    <!-- css autre -->
+    <!-- css personnalisé -->
     <link rel="stylesheet" href="public/asset/css/style.css">
 
 </head>
 
 <body>
-    <header id="header" id="home">
+    <header id="header" id="home" class="mx-5 px-5 mb-5">
         <div class="header-top">
             <div class="container">
                 <div class="row align-items-center">
@@ -107,17 +105,36 @@
                         </li>
 
                         <li class="nav-items">
-                            <a class="nav-link" href="nous-contacter">Nous contacter </a>
+                            <a class="nav-link" href="nous-contacter">Nous contacter</a>
                         </li>
-                        <li class="nav-items">
-                            <a class="nav-link" href="<?= URL ?>patients">Patients</a>
+
+                        <li class="menu-has-children"><a href="#">Patients</a>
+                            <ul>
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>login">Sign in / Sign up</a>
+                                </li>
+
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>patients">Espace Connexion
+                                        Patients</a></li>
+
+                            </ul>
                         </li>
 
 
                         <li class="menu-has-children"><a href="blog">Blog</a></li>
 
 
-                        <li class="menu-has-children"><a href="galerie">Galérie</a></li>
+                        <li class="menu-has-children"><a href="#">Galérie</a>
+
+                            <ul>
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>galerie">Galérie</a>
+                                </li>
+
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>videos">Vidéos
+                                    </a></li>
+
+                            </ul>
+
+                        </li>
 
                         <li class="nav-items"><a class="nav-link" href="mentions">Mentions légales</a></li>
 

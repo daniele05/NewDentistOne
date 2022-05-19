@@ -19,7 +19,7 @@ class PatientController
     {
         $patientManager = $this->patientManager;
         $patients = $patientManager->getPatients();
-        require "views/patient.view.php";
+        require "views/patients.view.php";
     }
 
     // Afficher un patient 
@@ -27,7 +27,7 @@ class PatientController
     public function afficherPatient($idPatient)
     {
         $patient = $this->patientManager->getPatientById($idPatient);
-        // echo $patient->getIdPatient();
+        // echo $patient->getIrstName();
 
         require "views/afficherPatient.view.php";
     }
@@ -40,22 +40,7 @@ class PatientController
     }
 
 
-    // Valiadtaion ajout patient avec tous les champs 
-    public function ajoutPatientValidation()
-    {
-        $file = $_FILES['photo'];
 
-        $repertoire = "public/asset/img/";
-        $nomPhotoAjoute = $this->ajoutPhoto($file, $repertoire);
-        $this->connexionManager->ajouterConnexionBd($nomPhotoAjoute, $_POST['photo'], $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idOrdonnance']);
-
-        $_SESSION['alert'] = [
-            "type"  => "success",
-            "msg" => "Ajout réalisé"
-        ];
-
-        header('Location:' . URL . "patient");
-    }
 
     // Modification patient 
     public function modifierPatient($idPatient)
@@ -68,17 +53,17 @@ class PatientController
 
     public function modificationPatientValidation()
     {
-        $photoActuelle = $this->patientManager->getPatientById($_POST['identifiantPatient'])->getPhoto();
+        $imageActuelle = $this->patientManager->getPatientById($_POST['identifiantPatient'])->getImage();
         $file = $_FILES['photo'];
 
         if ($file['size'] > 0) {
-            unlink("public/asset/image/" . $photoActuelle);
+            unlink("public/asset/image/" . $imageActuelle);
             $repertoire = "public/asset/img/";
-            $nomPhotoAjoute = $this->ajoutPhoto($file, $repertoire);
+            $nomImageAjoute = $this->ajoutImage($file, $repertoire);
         } else {
-            $nomPhotoAjoute =  $photoActuelle;
+            $nomImageAjoute =  $imageActuelle;
         }
-        $this->connexionManager->modificationPatientBD($nomPhotoAjoute, $_POST['photo'], $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idOrdonnance']);
+        $this->patientManager->modificationPatientBD($nomImageAjoute, $_POST['photo'], $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idOrdonnance']);
 
         $_SESSION['alert'] = [
             "type"  => "success",
@@ -91,9 +76,10 @@ class PatientController
 
     // Supprimer un patient 
 
+
     public function suppressionPatient($idPatient)
     {
-        $nomPhoto = $this->patientManager->getPatientById($idPatient)->getPhoto();
+        $nomPhoto = $this->patientManager->getPatientById($idPatient)->getImage();
         unlink("public/asset/image/" . $nomPhoto);
 
         // -> action de suppression dans la bdd 
@@ -107,11 +93,28 @@ class PatientController
         ];
     }
 
+    // Validation ajout patient avec tous les champs 
+    public function ajoutPatientValidation()
+    {
+        $file = $_FILES['image'];
+
+        $repertoire = "public/asset/img/";
+        $nomImageAjoute = $this->ajoutImage($file, $repertoire);
+        $this->patientManager->ajouterPatientBd($nomImageAjoute, $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idOrdonnance']);
+
+        $_SESSION['alert'] = [
+            "type"  => "success",
+            "msg" => "Ajout réalisé"
+        ];
+
+        header('Location:' . URL . "patient");
+    }
+
 
 
     // Critères d ajout de photo 
 
-    private function ajoutPhoto($file, $dir)
+    private function ajoutImage($file, $dir)
     {
         if (isset($file['name']) || empty($file['name']))
             throw new Exception("Vous devez indiquer une photo");
@@ -121,7 +124,7 @@ class PatientController
         $random = rand(0, 99999);
         $target_file = $dir . $random . "_" . $file['name'];
 
-        if (!getPhotoSize($file["tmp_name"]))
+        if (!getimagesize($file["tmp_name"]))
             throw new Exception("le fichier n'est pas une image");
         if ($extension !== "jpg" && $extension !== "jpeg" && $extension !== "png" && $extension !== "gif");
         throw new Exception("l'extension du fichier n'est pas reconnue");

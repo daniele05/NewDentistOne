@@ -40,8 +40,13 @@
                     with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
                     publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
-                <button class="shadow-sl open-btn text-primary border border none" href="notre-histoire">En savoir <img
-                        src="public/asset/img/Vector (2).png" alt="arrow"></button>
+
+                <button type="button" class="shadow-sl open-btn btn-primary border border none"
+                    href="views\home.view.php">En savoir
+                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
+                </button>
+
+
             </div>
         </div>
     </div>
@@ -92,8 +97,10 @@
                 <img src="public/asset/img/Implants dentaires.png" class="rounded mx-auto d-block"
                     alt="Implants dentaires">
                 <h5 class="mt-2">Implants dentaires</h5>
-                <button class="shadow-sl open-btn text-primary border border none" href="#">En savoir
-                    <img src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button type="button" class="shadow-sl open-btn btn-primary border border none"
+                    href="views\notre-savoir-faire-1.view.php">En savoir
+                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
+                </button>
             </div>
         </div>
 
@@ -102,8 +109,10 @@
                 <img src="public/asset/img/Consultation routine.png" class="rounded mx-auto d-block"
                     alt="Consultation de routine">
                 <h5 class="mt-2">Consultation de routine</h5>
-                <button class="shadow-sl open-btn text-primary border border none" href="notre-savoir-faire-2">En savoir
-                    <img src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button type="button" class="shadow-sl open-btn btn-primary border border none"
+                    href="views\notre-savoir-faire-5.view.php">En savoir
+                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
+                </button>
             </div>
         </div>
 
@@ -113,8 +122,10 @@
                 <img src="public/asset/img/Prothèses dentaires.png" class="rounded mx-auto d-block"
                     alt="prothèses dentaires fixes ou amovibles">
                 <h5 class="mt-2">prothèses dentaires fixes ou amovibles</h5>
-                <button class="shadow-sl open-btn text-primary border border none" href="notre-savoir-faire-3">En savoir
-                    <img src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button type="button" class="shadow-sl open-btn btn-primary border border none"
+                    href="views\notre-savoir-faire-3.view.php">En savoir
+                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
+                </button>
 
             </div>
         </div>
@@ -125,8 +136,10 @@
                 <img src="public/asset/img/Pédiatrie dentaire.png" class="rounded mx-auto d-block"
                     alt="pédiatrie dentaire">
                 <h5 class="mt-2">Pédiatrie dentaire</h5>
-                <button class="shadow-sl open-btn text-primary border border none" href="notre-savoir-faire-4">En savoir
-                    <img src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button type="button" class="shadow-sl open-btn btn-primary border border none"
+                    href="views\notre-savoir-faire-4.view.php">En savoir
+                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
+                </button>
 
             </div>
         </div>
@@ -137,8 +150,10 @@
                 <img src="public/asset/img/Urgences dentaires.png" class="rounded mx-auto d-block"
                     alt="Urgences dentaires - Caries - Abcès dentaire">
                 <h5 class="mt-2">Urgences dentaires - Caries - Abcès dentaires</h5>
-                <button class="shadow-sl open-btn text-primary border border none" href="notre-savoir-faire-5">En savoir
-                    <img src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button type="button" class="shadow-sl open-btn btn-primary border border none"
+                    href="views\notre-savoir-faire-2.view.php">En savoir
+                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
+                </button>
 
             </div>
         </div>
@@ -155,8 +170,9 @@
                 <h3 class="text-primary mt-4">Nous contacter</h3>
                 <img src="public/asset/img/nous-contacter.png" class="rounded mx-auto d-block position-relative mt-2"
                     alt="Nous contacter">
-                <button class="shadow-sl open-btn text-primary border border none" href="#">En savoir <img
-                        src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button type="button" class="shadow-sl open-btn btn-primary border border none" href="#">En savoir
+                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
+                </button>
 
             </div>
         </div>
@@ -177,8 +193,9 @@
                     risus mi
                     egestas enim quis faucibus....</p>
 
-                <button class="shadow-sl open-btn text-primary border border none" href="#">En savoir <img
-                        src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button type="button" class="shadow-sl open-btn btn-primary border border none" href="#">En savoir
+                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
+                </button>
             </div>
         </div>
     </div>
@@ -241,9 +258,9 @@
         </div>
     </div>
     <div class="text-center p-2">
-
-        <button class="shadow-sl open-btn text-primary border border none m-4" href="galerie">En savoir <img
-                src="public/asset/img/Vector (2).png" alt="arrow"></button>
+        <button type="button" class="shadow-sl open-btn text-primary border border none" href="galerie">En savoir plus
+            <img src="public/asset/img/Vector (2).png" alt="arrow">
+        </button>
     </div>
 </section>
 <!-- End testomial Area -->
@@ -302,8 +319,9 @@
                 </p>
             </div>
             <div class="text-center p-2">
-                <button class="shadow-sl open-btn text-primary border border none m-4" href="mentions">En savoir <img
-                        src="public/asset/img/Vector (2).png" alt="arrow"></button>
+                <button type="button" class="shadow-sl open-btn text-primary border border none m-4" href="mentions">En
+                    savoir <img src="public/asset/img/Vector (2).png" alt="arrow">
+                </button>
             </div>
         </div>
     </div>

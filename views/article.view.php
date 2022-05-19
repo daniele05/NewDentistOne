@@ -6,6 +6,7 @@ ob_start();
 
 ?>
 
+
 <p class="text-monospace m-3 font-weight-bold">ici ma page de blog</p>
 
 
@@ -34,7 +35,7 @@ ob_start();
         <div class="mb-2 text-center">
 
             <p><?= $article['idDentiste'] ?></p>
-            <button type="submit" class="btn btn-primary">Valider</button>
+            <button type="submit" class="btn btn-primary">Publier</button>
             <a href="<?= URL ?>article/update/<?= $article['idArticle'] ?>" class="btn btn-warning">Modifier</a>
             <a href="<?= URL ?>article/delete/<?= $article['idArticle'] ?>" class="btn btn-danger">Supprimer</a>
         </div>
@@ -50,6 +51,7 @@ ob_start();
 
 
 <!-- Section video  -->
+
 <section class="banner-area relative" id="home">
     <div class="bg-light"></div>
     <div class="container">
