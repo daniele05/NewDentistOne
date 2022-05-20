@@ -20,6 +20,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 
 
     <!-- img favicon -->
@@ -75,7 +76,17 @@
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class="menu-active"><a href="<?= URL ?>Home">Home</a></li>
-                        <li class="nav-items"><a href="<?= URL ?>notre-histoire">Notre Histoire</a></li>
+                        <li class="menu-has-children"><a href="<?= URL ?>notre-histoire">Notre Histoire</a>
+
+                            <ul>
+
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-equipe">Notre équipe</a>
+                                </li>
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>leCabinetEnPhotos">Le
+                                        cabinet en photos </a></li>
+                            </ul>
+
+                        </li>
                         <?php
 
                         ?>
@@ -206,6 +217,10 @@
     <script src="public/asset/js/jquery.nice-select.min.js"></script>
     <script src="public/asset/js/mail-script.js"></script>
     <script src="public/asset/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
+        integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="public/asset/js/scripts.js"></script>
 </body>
 
 </html>

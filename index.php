@@ -38,6 +38,15 @@ try {
                 $pagesStatiquesController->afficherNotreHistoire();
                 require "views/notre-histoire.view.php";
                 break;
+            case "notre-equipe":
+                $pagesStatiquesController->afficherNotreEquipe();
+                require "views/notre-equipe.view.php";
+                break;
+            case "leCabinetEnPhotos":
+                $pagesStatiquesController->afficherleCabinetEnPhotos();
+                require "views/leCabinetEnPhotos.view.php";
+                break;
+
             case "notre-savoir-faire-1":
                 $pagesStatiquesController->afficherNotreSavoirFaire_1();
                 require "views/notre-savoir-faire-1.view.php";

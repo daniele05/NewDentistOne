@@ -15,22 +15,28 @@
                 <div class="d-flex">
 
                     <img src="public/asset/img/doctolib_logo.png" alt="doctolib_logo" class="m-3">
+                    <a href="https://www.doctolib.fr" class="mt-4 pt-4">Doctolib</a>
 
-                    <p class="mr-2 font-weight-bold">Redirection Doctolib</p>
+
                 </div>
 
-                <div class="d-flex">
+                <div class=" d-flex">
 
-                    <img src="public/asset/img/telephone_mini.png" alt="telephone_mini" class="m-3">
+                    <img src="public/asset/img/telephone_mini.png" alt="telephone_mini" class="m-3 ">
 
-                    <p class="mt-2 font-weight-bold p-2">01 84 19 72 43</p>
+                    <p class="mt-4 pt-4 text-primary">01 84 19 72 43</p>
                 </div>
 
                 <div class="d-flex">
 
                     <img src="public/asset/img/aerobas.png" alt="e-mail" class="m-3">
 
-                    <p class="mr-4 font-weight-bold">Contactez-nous par e-mail</p>
+
+                    <a href="mailto:cabinet-antony@hotmail.com? subject=subject text" class=" mt-4 pt-4">Cliquez ici
+                        pour
+                        nous
+                        envoyer un
+                        e-mail !</a>
                 </div>
             </div>
 

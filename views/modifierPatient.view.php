@@ -98,7 +98,7 @@ ob_start();
 
 
 <?
-$content = ob_clean();
+$content = ob_get_clean();
 $titre = "Modification fiche patient : " . $patient->getIdPatient();
 require "template.php";
 

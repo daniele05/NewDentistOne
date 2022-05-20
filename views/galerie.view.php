@@ -33,8 +33,10 @@
                                             alt="photo">
 
                                         <h4>Photo_Galérie</h4>
-                                        <p class="m-1">
-                                            Photo0
+                                        <p class="desc text-justify ">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore et dolore magna aliqua.
                                         </p>
                                     </div>
 
@@ -42,8 +44,10 @@
                                         <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                                         <h4>photo1_Galérie</h4>
-                                        <p class="m-1">
-                                            photo
+                                        <p class="desc text-justify ">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore et dolore magna aliqua.
                                         </p>
                                     </div>
 
@@ -51,8 +55,10 @@
                                         <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                                         <h4>photo2_Galérie</h4>
-                                        <p class="m-1">
-                                            photo2
+                                        <p class="desc text-justify ">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore et dolore magna aliqua.
                                         </p>
                                     </div>
 
@@ -60,8 +66,10 @@
                                         <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                                         <h4>photo3_Galérie</h4>
-                                        <p class="m-1">
-                                            photo3
+                                        <p class="desc text-justify ">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore et dolore magna aliqua.
                                         </p>
                                     </div>
 
@@ -69,8 +77,10 @@
                                         <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                                         <h4>photo4_Galérie</h4>
-                                        <p class="m-1">
-                                            photo4
+                                        <p class="desc text-justify ">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore et dolore magna aliqua.
                                         </p>
                                     </div>
 
@@ -78,8 +88,10 @@
                                         <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                                         <h4>photo5_Galérie</h4>
-                                        <p class="m-1">
-                                            photo5
+                                        <p class="desc text-justify ">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore et dolore magna aliqua.
                                         </p>
                                     </div>
 
@@ -87,16 +99,20 @@
                                         <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                                         <h4>photo6_Galérie</h4>
-                                        <p class="m-1">
-                                            photo6
+                                        <p class="desc text-justify ">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore et dolore magna aliqua.
                                         </p>
                                     </div>
                                     <div class="single-testimonial item">
                                         <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                                         <h4>photo5_Galérie</h4>
-                                        <p class="m-1">
-                                            photo5
+                                        <p class="desc text-justify ">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore et dolore magna aliqua.
                                         </p>
                                     </div>
 

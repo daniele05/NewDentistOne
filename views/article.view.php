@@ -19,8 +19,8 @@ ob_start();
 
     ?>
     <article class="col-sm-10 maincontent">
-        <header class="page-header">
-            <h4 class="page-title text-primary mb-4"><?= $article['titre'] ?></h4>
+        <header class="page-header m-4 pt-4 py-4">
+            <h4 class="page-title text-primary m-4 p-4"><?= $article['titre'] ?></h4>
         </header>
 
         <?php
@@ -52,7 +52,7 @@ ob_start();
 
 <!-- Section video  -->
 
-<section class="banner-area relative" id="home">
+<!-- <section class="banner-area relative" id="home">
     <div class="bg-light"></div>
     <div class="container">
         <div class="row fullscreen d-flex justify-content-center align-items-center">
@@ -72,7 +72,7 @@ ob_start();
                 </div>
             </div>
         </div>
-</section>
+</section> -->
 
 
 

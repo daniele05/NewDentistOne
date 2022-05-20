@@ -178,12 +178,7 @@ endif;
     </div>
     <br>
 
-    <div class="form-row d-flex justify-content-center">
-        <a href="<?= URL ?>patients/m/<?= $patients[$i]->getIdPatient(); ?>" class="btn btn-warning  mr-3 ">Modifier</a>
 
-        <a href="<?= URL ?>patients/s/<?= $patients[$i]->getIdPatient(); ?>" class="btn btn-danger ml-3"
-            type="submit">Supprimer</a>
-    </div>
 
     <br>
     <div class="text-center w-100  ">

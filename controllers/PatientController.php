@@ -80,7 +80,7 @@ class PatientController
     public function suppressionPatient($idPatient)
     {
         $nomPhoto = $this->patientManager->getPatientById($idPatient)->getImage();
-        unlink("public/asset/image/" . $nomPhoto);
+        unlink("public/asset/img/" . $nomPhoto);
 
         // -> action de suppression dans la bdd 
 

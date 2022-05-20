@@ -20,11 +20,11 @@ position: relative;
 }
 
 .main-menu{
-    background-color: #19334a;
+    background-color: #1e5897 ;
 }
 
 .button{
-    color: #19334a;
+    color: #1e5897;
   
 }
 
@@ -32,6 +32,12 @@ position: relative;
    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-image: none;
 }
 
+.img-thumbnail{
+    padding: .5rem;
+    border: 2px solid;
+    border-radius: 0;
+}
 

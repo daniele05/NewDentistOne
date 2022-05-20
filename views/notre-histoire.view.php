@@ -103,32 +103,6 @@
 </section>
 <!-- End notre_histoire Area -->
 
-<!-- Start open-hour Area -->
-<section class="equipe-admin-area">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 open-hour-wrap">
-                <h3 class="text-primary">Equipe médicale</h3>
-                <img src="public/asset/img/Frame 27.png" alt="equipe_medicale">
-                <p class="text-left">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. At tempus, vestibulum at augue. Integer et
-                    ultricies egestas viverra vestibulum. Adipiscing accumsan, mattis hac sagittis. Nunc orci leo sem
-                    fermentum. Gravida ultrices praesent turpis ornare eget. Ut et massa adipiscing habitasse commodo
-                    elementum urna vitae. Bibendum elit suspendisse magna aliquet hac enim augue a sit. Felis in
-                    molestie at amet vulputate sem egestas et, quam. Odio neque elementum facilisis lacinia nascetur
-                    enim.
-                </p>
-
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End notre_histoire Area -->
-
-
-</body>
-
-</html>
 <?php
 
 $content = ob_get_clean();

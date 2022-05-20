@@ -11,6 +11,13 @@ class PagesStatiquesController
     {
     }
 
+    public function afficherNotreEquipe()
+    {
+    }
+    public function afficherleCabinetEnPhotos()
+    {
+    }
+
     public function afficherNotreSavoirFaire_1()
     {
     }

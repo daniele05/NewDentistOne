@@ -95,7 +95,7 @@ class PatientManager extends Model
     public function suppressionPatientBD($idPatient)
     {
         $req = "
-        Delete from patient where id = : idPatient
+        Delete from patient where idPatient = :idPatient
         ";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(":idPatient", $idPatient, PDO::PARAM_INT);
@@ -113,7 +113,7 @@ class PatientManager extends Model
     public function modificationPatientBD($image, $idPatient, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
     {
         $req = "
-         update patients
+         update patient
          set image = :image, set idPatient= :idPatient, set irstName = :irstName, set lastName = :lastName, set birthDate = :birthDate, set sex = :sex, set tel = :tel, set email = :email, set address = :address, set dateInscriptionPatient = :dateInscriptionPatient, set idSoinsDentaires = :idSoinsDentaires, set idOrdonnance = :idOrdonnance
          where idPatient = :idPatient";
 

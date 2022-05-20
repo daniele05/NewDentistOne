@@ -41,10 +41,11 @@
                     publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
 
-                <button type="button" class="shadow-sl open-btn btn-primary border border none"
-                    href="views\home.view.php">En savoir
+
+                <a href="notre-histoire">En savoir
                     plus <img src="public/asset/img/Vector (2).png" alt="arrow">
-                </button>
+                </a>
+
 
 
             </div>
@@ -93,14 +94,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12 open-hour-wrap mt-5 pt-2">
-                <h3 class="text-primary mb-4">Notre savoir-faire</h3>
+                <h3 class="text-primary m-3">Notre savoir-faire</h3>
                 <img src="public/asset/img/Implants dentaires.png" class="rounded mx-auto d-block"
                     alt="Implants dentaires">
-                <h5 class="mt-2">Implants dentaires</h5>
-                <button type="button" class="shadow-sl open-btn btn-primary border border none"
-                    href="views\notre-savoir-faire-1.view.php">En savoir
-                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
-                </button>
+                <h5 class="mt-2 text-primary">Implants dentaires</h5>
+                <a href="notre-savoir-faire-1" class="btn btn-light mt-2">En savoir <img
+                        src="public/asset/img/Vector (2).png" alt="arrow" class="m-2"></a>
             </div>
         </div>
 
@@ -108,11 +107,10 @@
             <div class="col-lg-12 open-hour-wrap mb-2 p-4">
                 <img src="public/asset/img/Consultation routine.png" class="rounded mx-auto d-block"
                     alt="Consultation de routine">
-                <h5 class="mt-2">Consultation de routine</h5>
-                <button type="button" class="shadow-sl open-btn btn-primary border border none"
-                    href="views\notre-savoir-faire-5.view.php">En savoir
-                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
-                </button>
+                <h5 class="mt-2 text-primary">Consultation de routine</h5>
+                <a href="notre-savoir-faire-5" class="btn btn-light mt-2">En savoir <img
+                        src="public/asset/img/Vector (2).png" alt="arrow" class="m-2"></a>
+
             </div>
         </div>
 
@@ -121,11 +119,11 @@
 
                 <img src="public/asset/img/Prothèses dentaires.png" class="rounded mx-auto d-block"
                     alt="prothèses dentaires fixes ou amovibles">
-                <h5 class="mt-2">prothèses dentaires fixes ou amovibles</h5>
-                <button type="button" class="shadow-sl open-btn btn-primary border border none"
-                    href="views\notre-savoir-faire-3.view.php">En savoir
-                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
-                </button>
+                <h5 class="mt-2 text-primary">prothèses dentaires fixes ou amovibles</h5>
+                <a href="notre-savoir-faire-3" class="btn btn-light mt-2">En savoir <img
+                        src="public/asset/img/Vector (2).png" alt="arrow" class="m-2"></a>
+
+
 
             </div>
         </div>
@@ -135,11 +133,9 @@
 
                 <img src="public/asset/img/Pédiatrie dentaire.png" class="rounded mx-auto d-block"
                     alt="pédiatrie dentaire">
-                <h5 class="mt-2">Pédiatrie dentaire</h5>
-                <button type="button" class="shadow-sl open-btn btn-primary border border none"
-                    href="views\notre-savoir-faire-4.view.php">En savoir
-                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
-                </button>
+                <h5 class="mt-2 text-primary">Pédiatrie dentaire</h5>
+                <a href="notre-savoir-faire-4" class="btn btn-light mt-2">En savoir <img
+                        src="public/asset/img/Vector (2).png" alt="arrow" class="m-2"></a>
 
             </div>
         </div>
@@ -149,11 +145,9 @@
 
                 <img src="public/asset/img/Urgences dentaires.png" class="rounded mx-auto d-block"
                     alt="Urgences dentaires - Caries - Abcès dentaire">
-                <h5 class="mt-2">Urgences dentaires - Caries - Abcès dentaires</h5>
-                <button type="button" class="shadow-sl open-btn btn-primary border border none"
-                    href="views\notre-savoir-faire-2.view.php">En savoir
-                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
-                </button>
+                <h5 class="mt-2 text-primary">Urgences dentaires - Caries - Abcès dentaires</h5>
+                <a href="notre-savoir-faire-2" class="btn btn-light mt-2">En savoir <img
+                        src="public/asset/img/Vector (2).png" alt="arrow" class="m-2"></a>
 
             </div>
         </div>
@@ -170,9 +164,8 @@
                 <h3 class="text-primary mt-4">Nous contacter</h3>
                 <img src="public/asset/img/nous-contacter.png" class="rounded mx-auto d-block position-relative mt-2"
                     alt="Nous contacter">
-                <button type="button" class="shadow-sl open-btn btn-primary border border none" href="#">En savoir
-                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
-                </button>
+                <a href="nous-contacter" class="btn btn-light mt-2">En savoir <img src="public/asset/img/Vector (2).png"
+                        alt="arrow" class="m-2"></a>
 
             </div>
         </div>
@@ -193,9 +186,8 @@
                     risus mi
                     egestas enim quis faucibus....</p>
 
-                <button type="button" class="shadow-sl open-btn btn-primary border border none" href="#">En savoir
-                    plus <img src="public/asset/img/Vector (2).png" alt="arrow">
-                </button>
+                <a href="article" class="btn btn-light mt-2">En savoir <img src="public/asset/img/Vector (2).png"
+                        alt="arrow" class="m-2"></a>
             </div>
         </div>
     </div>
@@ -211,10 +203,10 @@
             <div class="menu-content pb-60 col-lg-12">
                 <div class="title text-center">
                     <h3 class="m-5 text-primary pb-3">Galérie</h3>
-                    <p class="text-justify dark mb-2">Lorem ipsum simply dummy text of the printing and typesetting
-                        industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p class="desc text-justify text-dark ">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
                 </div>
             </div>
         </div>
@@ -224,8 +216,9 @@
                     <img class="mx-auto  text-h-70" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                     <h4 class="mt-2">Photo_Galérie</h4>
-                    <p class="desc">
-                        Photo0
+                    <p class="desc text-justify text-dark ">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
                     </p>
                 </div>
 
@@ -233,16 +226,18 @@
                     <img class="mx-auto  text-h-70" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                     <h4 class="mt-2">Photo_Galérie</h4>
-                    <p class="desc">
-                        Photo0
+                    <p class="desc text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
                     </p>
                 </div>
                 <div class="single-testimonial item">
                     <img class="mx-auto  text-h-70" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                     <h4 class="mt-2">Photo_Galérie</h4>
-                    <p class="desc">
-                        photo
+                    <p class="desc text-justify text-dark">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
                     </p>
                 </div>
 
@@ -250,16 +245,17 @@
                     <img class="mx-auto  text-h-70" src="public/asset/img/photo_galerie2.png" alt="photo">
 
                     <h4 class="mt-2">Photo_Galérie</h4>
-                    <p class="desc">
-                        Photo0
+                    <p class="desc text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
                     </p>
                 </div>
             </div>
         </div>
     </div>
     <div class="text-center p-2">
-        <button type="button" class="shadow-sl open-btn text-primary border border none" href="galerie">En savoir plus
-            <img src="public/asset/img/Vector (2).png" alt="arrow">
+        <a href="galerie" class="btn btn-light mt-2">En savoir <img src="public/asset/img/Vector (2).png" alt="arrow"
+                class="m-2"></a>
         </button>
     </div>
 </section>
@@ -319,8 +315,8 @@
                 </p>
             </div>
             <div class="text-center p-2">
-                <button type="button" class="shadow-sl open-btn text-primary border border none m-4" href="mentions">En
-                    savoir <img src="public/asset/img/Vector (2).png" alt="arrow">
+                <a href="mentions" class="btn btn-light mt-2">En savoir <img src="public/asset/img/Vector (2).png"
+                        alt="arrow" class="m-2"></a>
                 </button>
             </div>
         </div>
