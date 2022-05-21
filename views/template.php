@@ -153,8 +153,9 @@
                 </nav><!-- #nav-menu-container -->
 
                 <div class="menu-social-icons">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-facebook m-2"></i></a>
+
+                    <a href="#"><i class="fa fa-twitter m-2"></i></a>
 
                 </div>
             </div>

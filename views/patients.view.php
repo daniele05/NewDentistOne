@@ -28,6 +28,8 @@ endif;
         <label for="exampleFormControlFile1">Image</label>
         <input type="file" class="form-control-file" id="exampleFormControlFile1">
     </div>
+    <br>
+
 
     <div class="form-row">
         <div class="col">
@@ -89,19 +91,11 @@ endif;
     </div>
     <br>
 
-
-
-    <div class="form-row d-flex justify-content-center">
-        <a href="#" class="btn btn-warning  mr-3 m-1">Modifier</a>
-
-        <a href="#" class="btn btn-danger ml-3 m-1" type="submit">Supprimer</a>
+    <div class="text-center w-100  ">
+        <a href="<?= URL ?>patients/a" class="btn btn-success d-block">Ajouter</a>
     </div>
 
     <br>
-    <div class="text-center w-100  ">
-        <a href="#" class="btn btn-success ">Ajouter</a>
-    </div>
-
 
     <?php
 
@@ -113,6 +107,8 @@ endif;
                 alt="image_photo" width=30></label>
         <input type="file" class="form-control-file" id="exampleFormControlFile1">
     </div>
+    <br>
+
     <div class="form-row">
         <div class="col">
 
@@ -178,16 +174,21 @@ endif;
     </div>
     <br>
 
-
-
     <br>
-    <div class="text-center w-100  ">
-        <a href="<?= URL ?>patients/a" class="btn btn-success ">Ajouter</a>
+    <div class="container">
+        <div class="row align-items-center justify-content-center"><a
+                href="<?= URL ?>patients/m/<?= $patients[$i]->getIdPatient(); ?>"
+                class="btn btn-warning  mr-3 text-center ">Modifier</a>
+
+            <a href="<?= URL ?>patients/m/<?= $patients[$i]->getIdPatient(); ?>"
+                class="btn btn-danger  mr-3 text-center ">Supprimer</a>
+        </div>
+        <br>
     </div>
-
-
     <?php endfor; ?>
 </form>
+
+
 
 
 

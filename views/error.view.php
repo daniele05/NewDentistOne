@@ -2,7 +2,6 @@
 ob_start();
 ?>
 
-
 <?= $msg; ?>
 
 <?php

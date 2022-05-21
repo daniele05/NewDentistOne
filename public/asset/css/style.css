@@ -41,3 +41,13 @@ position: relative;
     border-radius: 0;
 }
 
+ .main-menu a{
+  color: #fff;
+}
+
+ .main-menu a:hover{
+    color: #17338f;
+}
+
+
+ 

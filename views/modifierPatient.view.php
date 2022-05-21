@@ -1,6 +1,7 @@
+<!-- temporisation par le biais du buffer -->
 <?php
-ob_start();
 
+ob_start();
 ?>
 <p class="Ici mon formulaire de modification"></p>
 
@@ -8,10 +9,11 @@ ob_start();
 
 <form method="POST" action="<?= URL ?> patient/mv" enctype="multipart/form-data">
 
-    <h4 class="">Photo: </h4>
+    <h4 class="">Image: </h4>
 
-    <img src="<?= URL ?>public/asset/img/<?= $patient->getImage() ?>">
-
+    <img src=" <?= URL ?>public/asset/img/<?= $patient->getImage() ?>" class="w-40">
+    <br>
+    <br>
     <div class="form-group">
         <label for="image">Changer l'image:</label>
         <input type="file" class="form-control-file" id="image" name="image">
@@ -68,9 +70,9 @@ ob_start();
     </div>
     <br>
     <div class="form-group">
-        <label for="dateInscription">Date Inscription Patient:</label>
-        <input type="date" class="form-control" id="dateInscription" name="dateInscription"
-            value="<?= $patient->getDateInscriptionPatient() ?>">
+        <label for="dateInscriptionPatient">Date Inscription Patient:</label>
+        <input type="date" class="form-control" id="dateInscriptionPatient" name="dateInscriptionPatient"
+            value="<?= $patient->getDateIncriptionPatient() ?>">
 
     </div>
     <br>
@@ -89,18 +91,14 @@ ob_start();
     </div>
     <br>
 
-    <button type="submit" class="btn btn-primary">Modifier</button>
+    <button type="submit" class="btn btn-primary">Valider</button>
 </form>
 
 <br>
 <!-- End form -->
 
-
-
-<?
+<?php
 $content = ob_get_clean();
-$titre = "Modification fiche patient : " . $patient->getIdPatient();
+$titre = "Modification fiche patient:" . $patient->getIdPatient();
 require "template.php";
-
-
 ?>

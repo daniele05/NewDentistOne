@@ -54,7 +54,7 @@ class PatientController
     public function modificationPatientValidation()
     {
         $imageActuelle = $this->patientManager->getPatientById($_POST['identifiantPatient'])->getImage();
-        $file = $_FILES['photo'];
+        $file = $_FILES['img'];
 
         if ($file['size'] > 0) {
             unlink("public/asset/image/" . $imageActuelle);
@@ -79,8 +79,8 @@ class PatientController
 
     public function suppressionPatient($idPatient)
     {
-        $nomPhoto = $this->patientManager->getPatientById($idPatient)->getImage();
-        unlink("public/asset/img/" . $nomPhoto);
+        $nomImage = $this->patientManager->getPatientById($idPatient)->getImage();
+        unlink("public/asset/img/" . $nomImage);
 
         // -> action de suppression dans la bdd 
 
@@ -96,7 +96,7 @@ class PatientController
     // Validation ajout patient avec tous les champs 
     public function ajoutPatientValidation()
     {
-        $file = $_FILES['image'];
+        $file = $_FILES['img'];
 
         $repertoire = "public/asset/img/";
         $nomImageAjoute = $this->ajoutImage($file, $repertoire);
