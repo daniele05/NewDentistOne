@@ -7,7 +7,7 @@ ob_start();
 ?>
 
 
-<p class="text-monospace m-3 font-weight-bold">ici ma page de blog</p>
+<p class="text-monospace m-3 p-4 font-weight-bold">ici ma page de blog</p>
 
 
 <!-- start banner Area -->
@@ -18,35 +18,63 @@ ob_start();
     foreach ($articles as $article) :
 
     ?>
+
     <article class="col-sm-10 maincontent">
-        <header class="page-header m-4 pt-4 py-4">
-            <h4 class="page-title text-primary m-4 p-4"><?= $article['titre'] ?></h4>
+
+        <header class="page-header mt-3 pt-3 p-3">
+            <h4 class="page-title text-primary m-4 p-4">Titre:</h4>
         </header>
+
+        <p class="img-rounded pull right mb-2" width="100" height="100"">Image:</p> <img src="" alt="">
+            <p class=" text-justify mb-2">Contenu:</p>
+        <p class="text-justify">Created:</p>
+        <p class="text-justify">Identité Dentiste:</p>
+
+        <div class="text-center w-100">
+
+            <a href="<?= URL ?>article/a" class="btn btn-success d-block">Publier</a>
+        </div>
+
+
+
+
+
+
+        <h4 class="page-title text-primary m-4 p-4">Titre:<?= $article['titre'] ?></h4>
+
 
         <?php
             // var_dump($article['photo']);
             if ($article['image'] != "" && isset($article["image"])) {
 
                 $lien = URL . "public/asset/img/" . $article['image'];
-                echo '<p><img src=' . $lien . ' class="img-rounded pull right" width="500"></p>';
+                echo '<p><img src=' . $lien . ' class="img-rounded pull right" width="100" height="100"></p>';
             }
             ?>
         <p class="text-justify"><?= $article['contenu'] ?></p>
-        <div class="mb-2 text-center">
+        <p><?= $article['created'] ?></p>
+        <p><?= $article['idDentiste'] ?></p>
 
-            <p><?= $article['idDentiste'] ?></p>
-            <button type="submit" class="btn btn-primary">Publier</button>
-            <a href="<?= URL ?>article/update/<?= $article['idArticle'] ?>" class="btn btn-warning">Modifier</a>
-            <a href="<?= URL ?>article/delete/<?= $article['idArticle'] ?>" class="btn btn-danger">Supprimer</a>
+
+        <div class="container">
+            <div class="row align-items-center justify-content-center"><a
+                    href="<?= URL ?>article/update/<?= $article['idArticle'] ?>"
+                    class="btn btn-warning  mr-3 text-center ">Modifier</a>
+
+                <a href="<?= URL ?>article/delete/<?= $article['idArticle'] ?>>"
+                    class="btn btn-danger  mr-3 text-center ">Supprimer</a>
+
+
+            </div>
         </div>
-
 
     </article>
     <?php
+
     endforeach; ?>
 </div>
 </div>
-<!-- End banner Area -->
+
 
 
 

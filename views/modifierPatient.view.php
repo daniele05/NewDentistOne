@@ -11,12 +11,12 @@ ob_start();
 
     <h4 class="">Image: </h4>
 
-    <img src=" <?= URL ?>public/asset/img/<?= $patient->getImage() ?>" class="w-40">
+    <img src=" <?= URL ?>public/asset/img/<?= $patient->getImage() ?>" width="100" height="100">
     <br>
     <br>
     <div class="form-group">
         <label for="image">Changer l'image:</label>
-        <input type="file" class="form-control-file" id="image" name="image">
+        <input type="file" class="form-control-file w-25" id="image" name="image">
     </div>
     <input type="hidden" name="identifiant" value="<?= $patient->getIdPatient() ?>">
     <br>

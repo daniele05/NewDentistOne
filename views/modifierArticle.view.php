@@ -18,15 +18,15 @@ ob_start();
     </div>
     <br>
     <div class="form-group">
-        <label for="created">Created:</label>
-        <input type="date" class="form-control" id="created" name="created" value="<?= $article->getCreated() ?>">
+        <label for="titre">Titre:</label>
+        <input type="text" class="form-control" id="titre" name="titre" value="<?= $article->getTitre() ?>">
 
     </div>
     <br>
     <div class="form-group">
-        <label for="titre">Titre:</label>
-        <input type="text" class="form-control" id="titre" name="titre" value="<?= $article->getTitre() ?>">
-
+        <label for="image">Image:</label>
+        <img src="<?= URL ?>public/asset/img/<?= $article->getImage() ?>">
+        <input type="file" class="form-control-file" id="image" name="image">
     </div>
     <br>
     <div class="form-group">
@@ -36,14 +36,23 @@ ob_start();
     </div>
     <br>
     <div class="form-group">
-        <label for="contenu"> Changer le contenu:</label>
-        <input type="text" class="form-control" id="contenu" name="contenu" value="<?= $article->getContenu() ?>>
+        <label for="image">Changer le contenu:</label>
+        <input type="text" class="form-control" id="contenu" name="contenu" value="" <?= $article->getContenu() ?>">
+
+    </div>
+
+    <div class=" form-group">
+        <label for="created">Created:</label>
+        <input type="date" class="form-control" id="created" name="created" value="<?= $article->getCreated() ?>">
 
     </div>
     <br>
+
+    <br>
     <div class=" form-group">
-        <label for="number">idDentiste:</label>
-        <input type="number" class="form-control" id="idDentiste" name="idDentiste" value="<?= $article->getIdDentiste() ?>>
+        <label for="created">IdDentiste:</label>
+        <input type="number" class="form-control" id="idDentiste" name="idDentiste"
+            value="<?= $article->getIdDentiste() ?>">
 
     </div>
     <br>
