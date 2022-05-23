@@ -5,6 +5,7 @@ class PagesStatiquesController
 
     public function afficherHome()
     {
+        require "views/home.view.php";
     }
 
     public function afficherNotreHistoire()

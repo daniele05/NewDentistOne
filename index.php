@@ -32,10 +32,9 @@ try {
         switch ($url['0']) {
             case "Home":
                 $pagesStatiquesController->afficherHome();
-                require "views/home.view.php";
                 break;
             case "notre-histoire":
-                $pagesStatiquesController->afficherNotreHistoire();
+                // $pagesStatiquesController->afficherNotreHistoire();
                 require "views/notre-histoire.view.php";
                 break;
             case "notre-equipe":

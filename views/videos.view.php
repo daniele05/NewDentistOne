@@ -16,6 +16,21 @@
                     <div class="container">
 
                         <h4 class="text-primary mb-5 p-5">Vidéo</h4>
+                        <p class="brosser text-center"> </p>
+                        <div class="container_video mt-3">
+
+                            <video controls="controls" poster="">
+                                <source src="" type="">
+
+                            </video>
+
+                        </div>
+                    </div>
+                    <a href="" class="btn btn-success d-block">Play</a>
+
+                    <div class="container">
+
+                        <h4 class="text-primary mb-5 p-5">Vidéo</h4>
                         <p class="brosser text-center">Implants dentaires </p>
                         <div class="container_video mt-3">
 
@@ -25,8 +40,16 @@
                             </video>
 
                         </div>
+                        <a href="" class="btn btn-warning">Modifier</a>
+                        <a href="" class="btn btn-danger">Supprimer</a>
+
                     </div>
                 </div>
+
+
+
+
+
 
 
             </div>

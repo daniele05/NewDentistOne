@@ -26,7 +26,9 @@ class PatientController
 
     public function afficherPatient($idPatient)
     {
-        $patient = $this->patientManager->getPatientById($idPatient);
+        $patientManager = $this->patientManager;
+        $patient = $patientManager->getPatientById($idPatient);
+
         // echo $patient->getIrstName();
 
         require "views/afficherPatient.view.php";

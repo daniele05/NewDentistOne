@@ -1,23 +1,20 @@
-<?php
-
-ob_start();
-?>
+<?php ob_start(); ?>
 
 <div class="row">
     <div class="col-6">
-        <img src="<?= URL ?>public/asset/img/<?= $patient->getImage(); ?>">
+        <img src="<?= URL ?>public/asset/img/<?= $patient->getImage(); ?>" width="100" height="100">
     </div>
     <div class="col-6">
-        <p>Prénom: </p><?= $patient->getIrstName(); ?>">
-        <p>Nom: </p><?= $patient->getLastName(); ?>">
-        <p>Date de naissance: </p><?= $patient->getBirtDate(); ?>">
-        <p>Sexe: </p><?= $patient->getSex(); ?>">
-        <p>Téléphone: </p><?= $patient->getTel(); ?>">
-        <p>Email: </p><?= $patient->getEmail(); ?>">
-        <p>Adresse: </p><?= $patient->getAddress(); ?>">
-        <p>Date d'Inscription Patient: </p><?= $patient->getDateIncriptionPatient(); ?>">
-        <p>Id Soins Dentaires: </p><?= $patient->getIdSoinsDentaire(); ?>">
-        <p>Id Ordonnance: </p><?= $patient->getIdOrdonnance(); ?>">
+        <p>Prénom: <?= $patient->getIrstName(); ?></p>
+        <p>Nom: <?= $patient->getLastName(); ?></p>
+        <p>Date de naissance: <?= $patient->getBirthDate(); ?></p>
+        <p>Sexe: <?= $patient->getSex(); ?></p>
+        <p>Téléphone: <?= $patient->getTel(); ?></p>
+        <p>Email: <?= $patient->getEmail(); ?></p>
+        <p>Adresse: <?= $patient->getAddress(); ?></p>
+        <p>Date d'Inscription Patient: <?= $patient->getDateIncriptionPatient(); ?></p>
+        <p>Id Soins Dentaires: <?= $patient->getIdSoinsDentaires(); ?></p>
+        <p>Id Ordonnance: <?= $patient->getIdOrdonnance(); ?></p>
 
     </div>
 
@@ -28,7 +25,7 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-$titre = $patient->getIdPatient();
+$titre = "Afficher patient";
 require "template.php";
 
 ?>
