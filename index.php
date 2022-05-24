@@ -18,6 +18,10 @@ $articleController = new ArticleController;
 require_once("controllers/UserController.php");
 $userController = new UserController;
 
+require_once("controllers/VideoController.php");
+$videoController = new VideoController;
+
+
 
 
 
@@ -34,41 +38,32 @@ try {
                 $pagesStatiquesController->afficherHome();
                 break;
             case "notre-histoire":
-                // $pagesStatiquesController->afficherNotreHistoire();
-                require "views/notre-histoire.view.php";
+                $pagesStatiquesController->afficherNotreHistoire();
                 break;
             case "notre-equipe":
                 $pagesStatiquesController->afficherNotreEquipe();
-                require "views/notre-equipe.view.php";
                 break;
             case "leCabinetEnPhotos":
                 $pagesStatiquesController->afficherleCabinetEnPhotos();
-                require "views/leCabinetEnPhotos.view.php";
                 break;
 
             case "notre-savoir-faire-1":
                 $pagesStatiquesController->afficherNotreSavoirFaire_1();
-                require "views/notre-savoir-faire-1.view.php";
                 break;
             case "notre-savoir-faire-2":
                 $pagesStatiquesController->afficherNotreSavoirFaire_2();
-                require "views/notre-savoir-faire-2.php";
                 break;
             case "notre-savoir-faire-3":
                 $pagesStatiquesController->afficherNotreSavoirFaire_3();
-                require "views/notre-savoir-faire-3.view.php";
                 break;
             case "notre-savoir-faire-4":
                 $pagesStatiquesController->afficherNotreSavoirFaire_4();
-                require "views/notre-savoir-faire-4.php";
                 break;
             case "notre-savoir-faire-5":
                 $pagesStatiquesController->afficherNotreSavoirFaire_5();
-                require "views/notre-savoir-faire-5.view.php";
                 break;
             case "nous-contacter":
                 $pagesStatiquesController->afficherContact();
-                require "views/nous-contacter.view.php";
                 break;
 
             case "login":
@@ -115,10 +110,29 @@ try {
 
             case "galerie":
                 require "views/galerie.view.php";
+
                 break;
+            case "videos":
+                if (empty($url[1])) {
+                    $videoController->afficherVideos();
+                } elseif ($url[1] === "a") {
+                    $videoController->ajouterVideo();
+                } elseif ($url[1] === "m") {
+                    $articleController->modifierArticle($url[2]);
+                } elseif ($url[1] === "d") {
+                    $articleController->suppressionArticle($url[2]);
+                } elseif ($url[1] === "av") {
+                    $articleController->ajoutArticleValidation();
+                } elseif ($url[1] === "mv") {
+                    $articleController->modificationArticleValidation();
+                } else {
+                    throw new Exception("La page n'existe pas");
+                }
+
+                break;
+
             case "mentions":
                 $pagesStatiquesController->afficherMentions();
-                require "views/mentions.view.php";
                 break;
             default:
                 throw new Exception("la page n'existe pas");

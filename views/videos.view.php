@@ -1,71 +1,71 @@
-<!-- Temporisation par le bais du buffer -->
+<?php
+require_once "models/Video.class.php";
+ob_start();
+?>
 
-<?php ob_start(); ?>
-
-
-<p class="text-monospace m-3">ici ma page galérie</p>
-
-
-<!-- Start open-hour Area -->
-<section class="galery-area">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 open-hour-wrap">
-
-                <div class="galery-area section-gap">
-                    <div class="container">
-
-                        <h4 class="text-primary mb-5 p-5">Vidéo</h4>
-                        <p class="brosser text-center"> </p>
-                        <div class="container_video mt-3">
-
-                            <video controls="controls" poster="">
-                                <source src="" type="">
-
-                            </video>
-
-                        </div>
-                    </div>
-                    <a href="" class="btn btn-success d-block">Play</a>
-
-                    <div class="container">
-
-                        <h4 class="text-primary mb-5 p-5">Vidéo</h4>
-                        <p class="brosser text-center">Implants dentaires </p>
-                        <div class="container_video mt-3">
-
-                            <video controls="controls" poster="public/asset/img/Rectangle 70.png">
-                                <source src="public/asset/video/Implants Dentaires.mp4" type="video/mp4">
-                                Mettez votre navigateur à jour!!!
-                            </video>
-
-                        </div>
-                        <a href="" class="btn btn-warning">Modifier</a>
-                        <a href="" class="btn btn-danger">Supprimer</a>
-
-                    </div>
-                </div>
+<p class="mb-5 pb-5 ">
+    Ici le contenu de mes vidéos
+</p>
+<div class="container">
 
 
 
+    <h4 class="text-center text-primary mb-4 pb-4">Titre Vidéo:</h4>
 
+    <video controls width="250">
 
+        <img src="" alt="" width="250" height="250">
 
+        <source src="" type="">
 
-            </div>
-        </div>
+        Sorry, your browser doesn't support embedded videos.
+    </video>
+    <h6 class="text-center mb-4 pb-4">Id Vidéo: </h6>
+    <h6 class="text-center">Id Article: </h6>
+
+    <div class="text-center w-100  ">
+        <a href="" class="btn btn-success d-block">Ajouter</a>
     </div>
+    <br>
+    <br>
+
+    <?php
+    for ($i = 0; $i < count($videos); $i++) {
+    ?>
+
+
+
+
+    <h4 class="text-center text-primary">Titre Vidéo: <?= $videos[$i]->getTitle(); ?></h4>
+
+
+
+
+    <video controls width="250">
+
+        <img src="public/asset/img/<?= $videos[$i]->getImageName(); ?>" alt="bien se brosser les dents" width="250"
+            height="250">
+
+        <source src="public/asset/video/<?= $videos[$i]->getLienVideo(); ?>" type="video/mp4">
+
+        Sorry, your browser doesn't support embedded videos.
+    </video>
+    <h6 class="text-center">Id Vidéo: </h6>
+    <h6 class=" text-center">Id Article:<?= $videos[$i]->getIdArticle(); ?> </h6>
+
+    <div class="container mb-3">
+        <a href="" class="btn btn-warning ml-3 mb-3 px-2">Modifier</a>
+        <a href="" class="btn btn-danger ml-3 mb-3 px-2">Supprimer</a>
     </div>
 
 
-</section>
-<!-- End notre_histoire Area -->
+    <?php
+    } ?>
 
-
+</div>
 
 <?php
-
 $content = ob_get_clean();
-$titre = "Vidéo";
+$titre = "Mes Vidéos";
 require "template.php";
 ?>
