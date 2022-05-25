@@ -6,15 +6,17 @@ class Video
     private $title;
     private $imageName;
     private $lienVideo;
+    private $idVideo;
     private $idArticle;
 
 
-    public function __construct($title, $imageName, $lienVideo, $idArticle)
+    public function __construct($title, $imageName, $lienVideo, $idVideo, $idArticle)
     {
 
         $this->title = $title;
         $this->imageName = $imageName;
         $this->lienVideo = $lienVideo;
+        $this->idVideo = $idVideo;
         $this->idArticle = $idArticle;
     }
 
@@ -44,6 +46,15 @@ class Video
     public function setLienVideo($lienVideo)
     {
         $this->lienVideo = $lienVideo;
+    }
+
+    public function getIdVideo()
+    {
+        return $this->idVideo;
+    }
+    public function setIdVideo($idVideo)
+    {
+        $this->idVideo = $idVideo;
     }
     public function getIdArticle()
     {

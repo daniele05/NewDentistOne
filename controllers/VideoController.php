@@ -42,4 +42,13 @@ class VideoController
     {
         require "views/ajouterVideo.view.php";
     }
+
+    //Modifier Vidéo
+    public function modifierVideo($idVideo)
+    {
+        $video = $this->videoManager->getVideoById($idVideo);
+        require "views/modifierVideo.view.php";
+    }
+
+    // Validation de la modification vidéos
 }

@@ -180,7 +180,7 @@ endif;
                 href="<?= URL ?>patients/m/<?= $patients[$i]->getIdPatient(); ?>"
                 class="btn btn-warning  mr-3 text-center ">Modifier</a>
 
-            <a href="<?= URL ?>patients/m/<?= $patients[$i]->getIdPatient(); ?>"
+            <a href="<?= URL ?>patients/d/<?= $patients[$i]->getIdPatient(); ?>"
                 class="btn btn-danger  mr-3 text-center ">Supprimer</a>
         </div>
         <br>

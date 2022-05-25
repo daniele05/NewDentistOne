@@ -39,7 +39,7 @@ class VideoManager extends Model
 
         foreach ($videos as $video) {
 
-            $v = new Video($video["title"], $video["imageName"], $video["lienVideo"], $video["idArticle"]);
+            $v = new Video($video["title"], $video["imageName"], $video["lienVideo"], $video["idVideo"], $video["idArticle"]);
             $this->ajouterVideo($v);
         }
     }

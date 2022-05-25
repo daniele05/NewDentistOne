@@ -24,7 +24,7 @@ ob_start();
     <h6 class="text-center">Id Article: </h6>
 
     <div class="text-center w-100  ">
-        <a href="" class="btn btn-success d-block">Ajouter</a>
+        <a href="<?= URL ?>videos/a" class="btn btn-success d-block">Ajouter</a>
     </div>
     <br>
     <br>
@@ -50,12 +50,14 @@ ob_start();
 
         Sorry, your browser doesn't support embedded videos.
     </video>
-    <h6 class="text-center">Id Vidéo: </h6>
-    <h6 class=" text-center">Id Article:<?= $videos[$i]->getIdArticle(); ?> </h6>
+    <h6 class="text-center">Id Vidéo:<?= $videos[$i]->getIdVideo(); ?></h6>
+    <h6 class=" text-center">Id Article:<?= $videos[$i]->getIdVideo(); ?> </h6>
 
     <div class="container mb-3">
-        <a href="" class="btn btn-warning ml-3 mb-3 px-2">Modifier</a>
-        <a href="" class="btn btn-danger ml-3 mb-3 px-2">Supprimer</a>
+        <a href="<?= URL ?>videos/m/<?= $videos[$i]->getIdVideo(); ?>"
+            class="btn btn-warning ml-3 mb-3 px-2">Modifier</a>
+        <a href="<?= URL ?>videos/d/<?= $videos[$i]->getIdVideo(); ?>"
+            class="btn btn-danger ml-3 mb-3 px-2">Supprimer</a>
     </div>
 
 
