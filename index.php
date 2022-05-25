@@ -118,13 +118,13 @@ try {
                 } elseif ($url[1] === "a") {
                     $videoController->ajouterVideo();
                 } elseif ($url[1] === "m") {
-                    $articleController->modifierArticle($url[2]);
+                    $videoController->modifierVideo($url[2]);
                 } elseif ($url[1] === "d") {
-                    $articleController->suppressionArticle($url[2]);
+                    $videoController->suppressionVideo($url[2]);
                 } elseif ($url[1] === "av") {
-                    $articleController->ajoutArticleValidation();
+                    $videoController->ajoutVideoValidation();
                 } elseif ($url[1] === "mv") {
-                    $articleController->modificationArticleValidation();
+                    $videoController->modificationVideoValidation();
                 } else {
                     throw new Exception("La page n'existe pas");
                 }
