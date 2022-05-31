@@ -23,13 +23,18 @@
                 <h5 class="text-left text-primary">Suivi adapté aux enfants</h5>
                 <p class="text-justify mt-4">
                 <ul class="text-justify mb-3 pb-3">
-                    <li class="font-weight-bold mb-1 pb-1">Dépistage des caries</li>
-                    <li class="font-weight-bold mb-1 pb-1">Enseignement personnalisé à bien se brosser les dents adapté
-                        à
-                        chaque enfant </li>
-                    <li class="font-weight-bold mb-1 pb-1">Encourager à developper de bonnes habitudes pour prévenir les
-                        caries</li>
-                    <li class="font-weight-bold mb-1 pb-1">Conseils de prévention de carie</li>
+                    <li class="font-weight-bold mb-1 pb-1"><img src="public/asset/img/Vector (2).png" alt="vector">
+                        Dépistage des caries
+                    </li>
+                    <li class="font-weight-bold mb-1 pb-1"><img src="public/asset/img/Vector (2).png" alt="vector">
+                        Enseignement personnalisé à bien se brosser les dents adapté à chaque enfant
+                    </li>
+                    <li class="font-weight-bold mb-1 pb-1"><img src="public/asset/img/Vector (2).png" alt="vector">
+                        Encourager à developper de bonnes habitudes pour prévenir les caries
+                    </li>
+                    <li class="font-weight-bold mb-1 pb-1"><img src="public/asset/img/Vector (2).png" alt="vector">
+                        Conseils de prévention de carie
+                    </li>
                 </ul>
                 </p>
             </div>

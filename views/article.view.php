@@ -14,41 +14,35 @@ ob_start();
 
 
 <div class="row">
-    <?php
-    foreach ($articles as $article) :
-
-    ?>
 
     <article class="col-sm-10 maincontent">
 
         <header class="page-header mt-3 pt-3 p-3">
-            <h4 class="page-title text-primary m-4 p-4">Titre:</h4>
+            <h4 class="page-title text-primary m-4 p-4">Titre: </h4>
         </header>
 
-        <p class="img-rounded pull right mb-2" width="100" height="100"">Image:</p> <img src="" alt="">
-            <p class=" text-justify mb-2">Contenu:</p>
-        <p class="text-justify">Created:</p>
-        <p class="text-justify">Identité Dentiste:</p>
+
+        <p class="img-rounded pull right mb-2" width="100" height="100">Image: </p><img src="" alt="">
+
+        <p class=" text-justify mb-2">Contenu: </p>
+        <p class="text-justify">Created: </p>
+        <p class="text-justify">Identité Dentiste:
+            <input type="hidden" name="MAX_FILE_SIZE">
+        </p>
 
         <div class="text-center w-100">
-
-            <a href="<?= URL ?>article/a" class="btn btn-success d-block">Publier</a>
+            <a href="<?= URL ?>article/a" class="btn btn-success d-block">Ajouter</a>
         </div>
 
-
-
-
-
-
-        <h4 class="page-title text-primary m-4 p-4">Titre:<?= $article['titre'] ?></h4>
-
-
         <?php
-            // var_dump($article['photo']);
-            if ($article['image'] != "" && isset($article["image"])) {
+        foreach ($articles as $article) :
+        ?>
 
+        <h4 class="page-title text-primary m-4 p-4">Titre: <?= $article['titre'] ?></h4>
+        <?php
+            if ($article['image'] != "" && isset($article["image"])) {
                 $lien = URL . "public/asset/img/" . $article['image'];
-                echo '<p><img src=' . $lien . ' class="img-rounded pull right" width="100" height="100"></p>';
+                echo '<p><img src=' . $lien . ' class="rounded float-left" width="100" height="100"></p>';
             }
             ?>
         <p class="text-justify"><?= $article['contenu'] ?></p>
@@ -67,11 +61,12 @@ ob_start();
 
             </div>
         </div>
+        <br>
 
     </article>
     <?php
 
-    endforeach; ?>
+        endforeach; ?>
 </div>
 </div>
 

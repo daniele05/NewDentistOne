@@ -37,7 +37,8 @@
                 </p>
                 <h5 class="text-left text-primary">Les différentes types de prothèses dentaires</h5>
                 <br>
-                <h6 class="text-left text-white-50">Les prothèses dentaires partielles amovibles</h6>
+                <h6 class="text-left text-white-50"><img src="public/asset/img/Vector (2).png" alt="vector"> Les
+                    prothèses dentaires partielles amovibles</h6>
                 <p class="text-justify pb-3">Parmi les prothèses amovibles, les prothèses partielles s’ancrent sur les
                     dents restantes d’un patient. Il faut s’adresser à des laboratoires de prothèses dentaires, ces
                     derniers peuvent concevoir une prothèse grâce aux informations pourvues par un dentiste ou un
@@ -51,7 +52,8 @@
                     stabilité au quotidien et un rendu esthétique formidable. Ce type de prothèse évite en plus le
                     déplacement des dents restantes.
                 </p>
-                <h6 class="text-left text-white-50">Les prothèses complètes amovibles</h6>
+                <h6 class="text-left text-white-50"><img src="public/asset/img/Vector (2).png" alt="vector"> Les
+                    prothèses complètes amovibles</h6>
                 <p class="text-justify pb-3">Les prothèses dentaires complètes remplacent toutes les dents du patient,
                     que ce soit au niveau du maxillaire supérieur ou inférieur. D’habitude, elles sont fabriquées en
                     résine et sont conçues par les laboratoires dentaires selon le visage du patient.

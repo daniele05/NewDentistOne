@@ -111,7 +111,7 @@
                 <img src="public/asset/img/Consultation routine.png" class="card-img-top" alt="Consultation de routine">
                 <div class="card-body">
                     <h5 class="card-title text-primary">Consultation de routine</h5>
-                    <p class="card-text text-justify pb-4 mb-4">Quand consulter le dentiste? </p>
+                    <h6 class="card-text text-justify pb-4 mb-4 text-dark">Quand consulter le dentiste? </h6>
                     <p class="text-justify pb-3">La visite de contrôle chez le dentiste est essentielle pour préserver
                         sa santé bucco-dentaire. Cet examen de routine doit être effectué régulièrement pour prévenir
                         les pathologies des dents...</p>
@@ -125,8 +125,9 @@
                     alt="prothèses dentaires fixes ou amovibles">
                 <div class="card-body">
                     <h5 class="card-title text-primary ">prothèses dentaires fixes ou amovibles</h5>
-                    <h5 class="text-left text-justify text-primary font-weight-bold">
-                        Qu'est-ce qu'une prothèse dentaire?</h5>
+                    <h6 class="text-left text-justify text-dark font-weight-bold">
+                        Qu'est-ce qu'une prothèse dentaire?</h6>
+                    <br>
                     <p class="text-justify pb-3">
                         Les prothèses amovibles sont un type de restauration dentaire. Comme son nom l’indique, on peut
                         les retirer facilement, ce qui est utile pour certains patients. Communément appelées dentiers,
@@ -141,13 +142,15 @@
                 <img src="public/asset/img/Pédiatrie dentaire.png" class="card-img-top" alt="pédiatrie dentaire">
                 <div class="card-body">
                     <h5 class="card-title text-primary">Pédiatrie dentaire</h5>
-                    <h5 class="text-left text-primary">Prévention dentaire pédiatrique</h5>
+                    <h6 class="text-left text-dark">Prévention dentaire pédiatrique</h6>
                     <p class="text-justify pb-3">La période de carie est très active chez l’enfant et l’adolescent.</p>
-                    <h5 class="text-left text-primary">Suivi adapté aux enfants</h5>
+                    <h6 class="text-left text-dark">Suivi adapté aux enfants</h6>
                     <p class="text-justify mt-4">
                     <ul class="text-justify mb-3 pb-3">
-                        <li class="mb-1 pb-1">Dépistage des caries</li>
-                        <li class="mb-1 pb-1">Enseignement personnalisé à bien se brosser les dents
+                        <li class="mb-1 pb-1"><img src="public/asset/img/Vector (2).png" alt="vector"> Dépistage des
+                            caries</li>
+                        <li class="mb-1 pb-1"><img src="public/asset/img/Vector (2).png" alt="vector"> Enseignement
+                            personnalisé à bien se brosser les dents
                             adapté à chaque enfant...
                         </li>
                         <a href="notre-savoir-faire-4" class="btn btn-primary">En savoir <img
