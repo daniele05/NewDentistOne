@@ -55,4 +55,78 @@ class VideoManager extends Model
 
         throw new Exception("cette vidéo n'existe pas dans notre base de données");
     }
+
+    public function ajouterVideoBd($title, $imageName, $lienVideo, $idVideo, $idArticle)
+    {
+        $req = "
+        INSERT INTO videos (title,imageName,lienVideo,idVideo, idArticle)
+        values(:title, :imageName, :lienVideo, :idVideo, :idArticle)";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->binValue(":title", $title, PDO::PARAM_STR);
+        $stmt->binValue(":imageName", $imageName, PDO::PARAM_STR);
+        $stmt->binValue(":lienVideo", $lienVideo, PDO::PARAM_STR);
+        $stmt->binValue(":idVideo", $idVideo, PDO::PARAM_INT);
+        $stmt->binValue(":idArticle", $idArticle, PDO::PARAM_INT);
+
+        $resultat = $stmt->execute();
+        $stmt->closeCursor();
+
+
+        // voir si $resultat a retourné qlq chose
+
+        if ($resultat > 0) {
+            // instancier une nouvelle insertion connexion patient si > 0
+            // getBdd()->secondInsertId a a voir avec mon Idpatient non declaré jusque la car en auto increment
+            $video = new Video($title, $imageName, $lienVideo, $this->getBdd()->fourthInsertId(), $idArticle);
+            // generer la liste de patient
+            $this->ajouterVideo($video);
+        }
+    }
+
+    public function suppressionVideoBD($idVideo)
+    {
+        // var_dump($idVideo);
+        // die();
+        $req = "
+        Delete from video where idVideo = :idVideo
+        ";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->bindValue(":idVideo", $idVideo, PDO::PARAM_INT);
+        $resultat = $stmt->execute();
+        $stmt->closeCursor();
+
+        // verif de ma requete
+
+        if ($resultat > 0) {
+            $video = $this->getVideoById($idVideo);
+            unset($video);
+        }
+    }
+
+    public function modificationVideoBD($title, $imageName, $lienVideo, $idVideo, $idArticle)
+    {
+        $req = "
+         update video
+         set title = :title, set imageName= :imageName, set lienVideo = :lienVideo, set idVideo = :idVideo, set idArticle = :idArticle
+         where idVideo = :idVideo";
+
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->binValue(":title", $title, PDO::PARAM_STR);
+        $stmt->binValue(":imageName", $imageName, PDO::PARAM_STR);
+        $stmt->binValue(":lienVideo", $lienVideo, PDO::PARAM_STR);
+        $stmt->binValue(":idVideo", $idVideo, PDO::PARAM_INT);
+        $stmt->binValue(":idArticle", $idArticle, PDO::PARAM_INT);
+        $resultat = $stmt->execute();
+        $stmt->closeCursor();
+
+        // si if est > 0 mise en jour des donnees ci-dessus 
+
+        if ($resultat > 0) {
+            $this->getVideoById($idVideo)->setTitle($title);
+            $this->getVideoById($idVideo)->setImageName($imageName);
+            $this->getVideoById($idVideo)->setLienVideo($lienVideo);
+            $this->getVideoById($idVideo)->setIdVideo($idVideo);
+            $this->getVideoById($idVideo)->setIdArticle($idArticle);
+        }
+    }
 }

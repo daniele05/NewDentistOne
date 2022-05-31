@@ -84,6 +84,7 @@ ob_start();
     <br>
 
     <button type="submit" class="btn btn-primary">Valider</button>
+    <a href="index">page d'affichage Patient.</a>
 </form>
 
 <br>

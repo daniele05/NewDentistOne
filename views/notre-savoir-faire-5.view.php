@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 
-<p class="text-monospace m-3">ici ma page urgences</p>
+<p class="text-monospace m-3">ici ma page de consulation de routine</p>
 
 <!-- Start open-hour Area -->
 <section class="notre_savoir_faire_2_area">
@@ -12,31 +12,35 @@
             <div class="col-lg-12 open-hour-wrap">
                 <h3 class="text-primary justify">Notre savoir-faire</h3>
                 <img src="public/asset/img/Consultation routine.png" alt="consultation de routine" class="m-4 p-4">
-                <p class="text-left text-justify">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+                <p class="text-left text-primary font-weight-bold">Quand consulter le dentiste? </p>
+                <p class="text-justify pb-3">La visite de contrôle chez le dentiste est essentielle pour préserver sa
+                    santé bucco-dentaire. Cet examen de routine doit être effectué régulièrement pour prévenir les
+                    pathologies des dents et des gencives. L'intervalle entre deux visites chez le dentiste généralement
+                    admise est de 12 mois.Dans tous les cas, le dentiste indique un calendrier de suivi adapté à la
+                    situation de chacun. La fréquence du détartrage dépend de chaque patient : il peut être réalisé tous
+                    les 4, 6 ou 12 mois.</p>
+            </div>
 
+            <div>
+                <h5 class="text-left font-weight-bold">Les principales étapes courantes d'une consulationde routine</h5>
+                <p class="text-justify pb-3">
+                    Nettoyage et détartrage : les consultations chez le dentiste pour un contrôle annuel commencent
+                    souvent par un nettoyage en profondeur de vos dents. En effet, une fois que la plaque dentaire s’est
+                    minéralisée et qu’elle s’est transformée en tartre, seul un dentiste peut l’éliminer en réalisant un
+                    détartrage, étape souvent non-douloureuse. Ce détartrage est essentiel pour éviter la prolifération
+                    de caries et le déclenchement d’une gingivite et peut vous aider à retrouver des dents plus
+                    blanches.
+                </p>
+                <p class="text-justify pb-3">
+                    Examen complet : aller chez le dentiste est également l’occasion de dépister des caries ou des
+                    problèmes de gencives, pour les soigner le plus tôt possible et éviter des problèmes plus sérieux.
+                    Plus le diagnostic est posé tôt, plus le soin sera facile.
+                </p>
+                <p class="text-justify pb-3">
+                    Radiographie : réaliser une radiographie permet de diagnostiquer des problèmes qui ne sont pas
+                    visibles à l’œil nu. Une dent de sagesse qui pousse de travers, une lésion osseuse ou une carie
+                    interdentaire pourront être détectées grâce à une radio lors d’une simple visite chez le dentiste.
+                </p>
             </div>
         </div>
     </div>

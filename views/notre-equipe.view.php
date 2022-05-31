@@ -3,45 +3,58 @@
 <?php ob_start(); ?>
 
 
-<p class="text-monospace m-4 py-4">ici mon équipe médicale</p>
+<p class="text-monospace m-4 p-4">ici mon équipe médicale</p>
 
 
 
 
 <!-- Start area equipe  -->
 
-<h3 class="text-primary mb-4 pb-4">Equipe médicale</h3>
+<h3 class="text-primary mb-4 pt-4">Equipe médicale</h3>
 
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="public/asset/img/medesma.jpg" class="d-block w-50" alt="bensalah">
-            <h4 class="text-primary">Dr ben Salah</h4>
+        <div class="carousel-item active mb-3">
+            <img src="public/asset/img/medesma.jpg" class="d-block w-50 mb-3" alt="bensalah">
+            <h4 class="text-primary mb-2">Dr ben Salah</h4>
             <p>Chrirurgien dentiste</p>
-            <h3>Diplomes</h3>
-            <p>Lorem ipsum </p>
-            <h3>Diplomes</h3>
-            <p>Lorem ipsum </p>
+            <h5 class="text-primary">Diplômes</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
 
         </div>
         <div class=" carousel-item">
-            <img src="public/asset/img/ben-salah.jpg" class="d-block w-50" alt="ben-salah">
-            <h4 class="text-primary">Dr ben Salah</h4>
+            <img src="public/asset/img/ben-salah.jpg" class="d-block w-50 mb-3" alt="ben-salah">
+            <h4 class="text-primary mb-2">Dr Amar</h4>
             <p>Chrirurgien dentiste</p>
-            <h3>Diplomes</h3>
-            <p>Lorem ipsum </p>
-            <h3>Diplomes</h3>
-            <p>Lorem ipsum </p>
+            <h5 class="text-primary">Diplômes</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </p>
 
         </div>
         <div class="carousel-item">
-            <img src="public/asset/img/bensalah.png" class="d-block w-50" alt="bensalah">
-            <h4 class="text-primary">Dr ben Salah</h4>
-            <p>Chrirurgien dentiste</p>
-            <h3>Diplomes</h3>
-            <p>Lorem ipsum </p>
-            <h3>Diplomes</h3>
-            <p>Lorem ipsum </p>
+            <img src="public/asset/img/téléchargement.jpg" class="d-block w-50 mb-3 pb-4" alt="téléchargement">
+            <h4 class="text-primary mb-4">Equipe d'Assistants dentaires</h4>
+            <h5 class="text-primary">Diplômes</h5>
+            <p class=" text-primary">Titre d'Assistant dentaire</h5>
+            <p>En charge de la stérilisation et de l'asepsie au cabinet</p>
+            <p>Accueil des patients du cabinet</p>
+            <p> Gestion du Planning</p>
+
 
         </div>
     </div>

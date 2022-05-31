@@ -17,105 +17,108 @@
                         <div class="row d-flex justify-content-center">
                             <div class="menu-content pb-60 col-lg-8">
                                 <div class="title text-center mb-1">
-                                    <h3 class="mb-10 text-primary">Galérie</h3>
+                                    <h3 class="mt-10 text-primary">Galérie</h3>
                                 </div>
                             </div>
                         </div>
 
                         <section class="text-center">
-                            <h4 class="text-primary mb-4">Photos</h4>
+                            <h4 class="text-primary mb-4 pb-4 text-dark">Photos</h4>
 
 
                             <div class="row">
                                 <div class="active-testimonial-carusel">
-                                    <div class="single-testimonial item">
-                                        <img class="mx-auto  text-h-70" src="public/asset/img/photo_galerie2.png"
-                                            alt="photo">
-
-                                        <h4>Photo_Galérie</h4>
-                                        <p class="desc text-justify ">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
+                                    <div class="single-testimonial item"><a href="public/asset/img/radio_dentaire.jpg"
+                                            data-toggle="lightbox" data-gallery="img-gallery"><img class="mx-auto"
+                                                src="public/asset/img/radio_dentaire.jpg"
+                                                class="img-fluid img-thumbnail" alt="radio_dentaire"></a><br>
+                                        <h4 class="text-primary">photo_radio</h4>
                                     </div>
 
-                                    <div class="single-testimonial item">
-                                        <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                                        <h4>photo1_Galérie</h4>
-                                        <p class="desc text-justify ">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
+                                    <div class="single-testimonial item"><a
+                                            href="public/asset/img/consultation dentaire enfant.jpg"
+                                            data-toggle="lightbox" data-gallery="img-gallery">
+                                            <img class="mx-auto" src="public/asset/img/consultation dentaire enfant.jpg"
+                                                class="img-fluid img-thumbnail"
+                                                alt="consultation dentaire enfant"></a><br>
+                                        <h4 class="text-primary">photo_Consultation</h4>
                                     </div>
 
-                                    <div class="single-testimonial item">
-                                        <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                                        <h4>photo2_Galérie</h4>
-                                        <p class="desc text-justify ">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
+                                    <div class="single-testimonial item"><a
+                                            href="public/asset/img/conseil_bien_se_brosser.jpg" data-toggle="lightbox"
+                                            data-gallery="img-gallery">
+                                            <img class="mx-auto" src="public/asset/img/conseil_bien_se_brosser.jpg"
+                                                class="img-fluid img-thumbnail" alt="conseils"></a><br>
+                                        <h4 class="text-primary">photo_Conseils</h4>
+                                    </div>
+                                    <div class="single-testimonial item"><a
+                                            href="public/asset/img/intervention_dentaire1.jpg" data-toggle="lightbox"
+                                            data-gallery="img-gallery">
+                                            <img class="mx-auto" src="public/asset/img/intervention_dentaire1.jpg"
+                                                class="img-fluid img-thumbnail" alt="intervention_denatire"></a><br>
+                                        <h4 class="text-primary">photo_intervention_dentaire1</h4>
                                     </div>
 
-                                    <div class="single-testimonial item">
-                                        <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                                        <h4>photo3_Galérie</h4>
-                                        <p class="desc text-justify ">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
+                                    <div class="single-testimonial item"><a
+                                            href="public/asset/img/conseil_bien_se_brosser.jpg" data-toggle="lightbox"
+                                            data-gallery="img-gallery">
+                                            <img class="mx-auto" src="public/asset/img/conseil_bien_se_brosser.jpg"
+                                                class="img-fluid img-thumbnail" alt="conseils"></a><br>
+                                        <h4 class="text-primary">photo_Conseils</h4>
+                                    </div>
+                                    <div class="single-testimonial item"><a
+                                            href="public/asset/img/consultation dentaire enfant.jpg"
+                                            data-toggle="lightbox" data-gallery="img-gallery">
+                                            <img class="mx-auto" src="public/asset/img/consultation dentaire enfant.jpg"
+                                                class="img-fluid img-thumbnail"
+                                                alt="consultation dentaire enfant"></a><br>
+                                        <h4 class="text-primary">Consultation dentaire enfant</h4>
                                     </div>
 
-                                    <div class="single-testimonial item">
-                                        <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                                        <h4>photo4_Galérie</h4>
-                                        <p class="desc text-justify ">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
+                                    <div class="single-testimonial item"><a
+                                            href="public/asset/img/photo_dentiste_en_exercice.jpg"
+                                            data-toggle="lightbox" data-gallery="img-gallery">
+                                            <img class="mx-auto" src="public/asset/img/photo_dentiste_en_exercice.jpg"
+                                                class="img-fluid img-thumbnail" alt="dentiste en exercice"></a><br>
+                                        <h4 class="text-primary">photo_Intervention</h4>
+                                    </div>
+                                    <div class="single-testimonial item"><a href="public/asset/img/detartrage.jpg"
+                                            data-toggle="lightbox" data-gallery="img-gallery">
+                                            <img class="mx-auto" src="public/asset/img/detartrage.jpg"
+                                                class="img-fluid img-thumbnail" alt="dentiste en exercice"></a><br>
+                                        <h4 class="text-primary">photo_Détartrage</h4>
                                     </div>
 
-                                    <div class="single-testimonial item">
-                                        <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                                        <h4>photo5_Galérie</h4>
-                                        <p class="desc text-justify ">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
+                                </div>
+                            </div>
+                            <div class="row mb-4 pb-4">
+                                <div class="active-testimonial-carusel">
+                                    <div class="single-testimonial item"><a href="public/asset/img/outilsDentaires.jpg"
+                                            data-toggle="lightbox" data-gallery="img-gallery">
+                                            <img class="mx-auto  text-h-70" src="public/asset/img/outilsDentaires.jpg"
+                                                class="img-fluid img-thumbnail" alt="outils dentaires"></a><br>
+                                        <h4 class="text-primary">Outils dentaires</h4>
                                     </div>
-
-                                    <div class="single-testimonial item">
-                                        <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                                        <h4>photo6_Galérie</h4>
-                                        <p class="desc text-justify ">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
+                                    <div class="single-testimonial item"><a
+                                            href="public/asset/img/interventionDentaire.jpg" data-toggle="lightbox"
+                                            data-gallery="img-gallery">
+                                            <img class="mx-auto" src="public/asset/img/interventionDentaire.jpg"
+                                                class="img-fluid img-thumbnail" alt="interventionDentaire"></a><br>
+                                        <h4 class="text-primary">Intervention Dentaire</h4>
                                     </div>
-                                    <div class="single-testimonial item">
-                                        <img class="mx-auto" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                                        <h4>photo5_Galérie</h4>
-                                        <p class="desc text-justify ">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore et dolore magna aliqua.
-                                        </p>
+                                    <div class="single-testimonial item"><a
+                                            href="public/asset/img/interventionPediatrique1.jpg" data-toggle="lightbox"
+                                            data-gallery="img-gallery">
+                                            <img class="mx-auto" src="public/asset/img/interventionPediatrique1.jpg"
+                                                class="img-fluid img-thumbnail" alt="Intervention Pédiatrique"></a><br>
+                                        <h4 class="text-primary">Intervention Pédiatrique</h4>
                                     </div>
-
+                                    <div class="single-testimonial item"><a href="public/asset/img/enfant.jpg"
+                                            data-toggle="lightbox" data-gallery="img-gallery">
+                                            <img class="mx-auto" src="public/asset/img/enfant.jpg"
+                                                class="img-fluid img-thumbnail" alt="enfant"></a><br>
+                                        <h4 class="text-primary">photo_Enfant</h4>
+                                    </div>
 
                                 </div>
                             </div>

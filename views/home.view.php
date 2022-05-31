@@ -203,9 +203,8 @@
             <div class="menu-content pb-60 col-lg-12">
                 <div class="title text-center">
                     <h3 class="m-5 text-primary pb-3">Galérie</h3>
-                    <p class="desc text-justify text-dark ">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                    <p class=" text-dark desc text-justify text-center">
+                        Votre bien-être est notre préoccupation.
                     </p>
                 </div>
             </div>
@@ -213,42 +212,23 @@
         <div class="row">
             <div class="active-testimonial-carusel">
                 <div class="single-testimonial item">
-                    <img class="mx-auto  text-h-70" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                    <h4 class="mt-2">Photo_Galérie</h4>
-                    <p class="desc text-justify text-dark ">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                    </p>
+                    <img class="mx-auto  text-h-70" src="public/asset/img/smile.jpg" alt="smile">
+                    <h5 class="mt-2 text-primary">Photo_Galérie_Smile</h5>
                 </div>
 
                 <div class="single-testimonial item">
-                    <img class="mx-auto  text-h-70" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                    <h4 class="mt-2">Photo_Galérie</h4>
-                    <p class="desc text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                    </p>
+                    <img class="mx-auto  text-h-70" src="public/asset/img/detartrage.jpg" alt="détartrage">
+                    <h5 class="mt-2 text-primary">Photo_Galérie_Détartrage</h5>
                 </div>
                 <div class="single-testimonial item">
-                    <img class="mx-auto  text-h-70" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                    <h4 class="mt-2">Photo_Galérie</h4>
-                    <p class="desc text-justify text-dark">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                    </p>
+                    <img class="mx-auto  text-h-70" src="public/asset/img/intervention_pediatrique.jpg"
+                        alt="intervention pédiatrique">
+                    <h5 class="mt-2 text-primary">Photo_Galérie_Intervention_Péd.</h5>
                 </div>
 
                 <div class="single-testimonial item">
-                    <img class="mx-auto  text-h-70" src="public/asset/img/photo_galerie2.png" alt="photo">
-
-                    <h4 class="mt-2">Photo_Galérie</h4>
-                    <p class="desc text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                    </p>
+                    <img class="mx-auto  text-h-70" src="public/asset/img/conseil_bien_se_brosser.jpg" alt="conseils">
+                    <h5 class="mt-2 text-primary">Photo_Galérie_Conseils</h5>
                 </div>
             </div>
         </div>

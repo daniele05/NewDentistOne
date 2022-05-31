@@ -131,6 +131,10 @@ try {
 
                 break;
 
+            case "ordonnance":
+                echo "views/ordonnance.view.php";
+                break;
+
             case "mentions":
                 $pagesStatiquesController->afficherMentions();
                 break;

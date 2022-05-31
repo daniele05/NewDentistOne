@@ -59,7 +59,7 @@ class PatientController
         $file = $_FILES['img'];
 
         if ($file['size'] > 0) {
-            unlink("public/asset/image/" . $imageActuelle);
+            unlink("public/asset/img/" . $imageActuelle);
             $repertoire = "public/asset/img/";
             $nomImageAjoute = $this->ajoutImage($file, $repertoire);
         } else {
