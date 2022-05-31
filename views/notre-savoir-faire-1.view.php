@@ -2,7 +2,6 @@
 
 <?php ob_start(); ?>
 
-
 <p class=" text-monospace m-3 p-3">ici ma page notre savoir-faire</p>
 
 <!-- Start open-hour Area -->

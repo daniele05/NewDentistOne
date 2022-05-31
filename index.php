@@ -21,6 +21,9 @@ $userController = new UserController;
 require_once("controllers/VideoController.php");
 $videoController = new VideoController;
 
+require_once("controllers/Visitor/OrdonnanceController.php");
+$ordonnanceController = new OrdonnanceController;
+
 
 
 
@@ -107,10 +110,26 @@ try {
                     throw new Exception("La page n'existe pas");
                 }
                 break;
+            case "ordonnances":
+                if (empty($url[1])) {
+                    $ordonnanceController->afficherOrdonnances();
+                } elseif ($url[1] === "a") {
+                    $ordonnanceController->ajouterOrdonnance();
+                } elseif ($url[1] === "m") {
+                    $ordonnanceController->modifierOrdonnance($url[2]);
+                } elseif ($url[1] === "d") {
+                    $ordonnanceController->suppressionOrdonnance($url[2]);
+                } elseif ($url[1] === "av") {
+                    $ordonnanceController->ajoutOrdonnanceValidation();
+                } elseif ($url[1] === "mv") {
+                    $ordonnanceController->modificationOrdonnanceValidation();
+                } else {
+                    throw new Exception("La page n'existe pas");
+                }
+                break;
 
             case "galerie":
                 require "views/galerie.view.php";
-
                 break;
             case "videos":
                 if (empty($url[1])) {
@@ -128,11 +147,6 @@ try {
                 } else {
                     throw new Exception("La page n'existe pas");
                 }
-
-                break;
-
-            case "ordonnance":
-                echo "views/ordonnance.view.php";
                 break;
 
             case "mentions":

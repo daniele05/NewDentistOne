@@ -16,7 +16,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Cabinet dentaire d'Antony</title>
+    <title><?= $titre ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
@@ -147,6 +147,13 @@
 
                         </li>
 
+                        <li class="nav-items"><a class="nav-link" href="<? URL ?>ordonnances">Ordonnances</a>
+                            <ul>
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>login">Sign in / Sign up</a>
+                                </li>
+                            </ul>
+                        </li>
+
                         <li class="nav-items"><a class="nav-link" href="mentions">Mentions légales</a></li>
 
                     </ul>
@@ -167,7 +174,7 @@
 
     <!-- mettre dans uen div juste pour les marges -->
     <div class="container">
-        <h3><?= $titre ?></h3>
+        <!-- <h3><= $titre ></h3> -->
         <?= $content ?>
     </div>
 

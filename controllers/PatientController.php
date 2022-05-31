@@ -9,7 +9,6 @@ class PatientController
 
     public function __construct()
     {
-
         $this->patientManager = new PatientManager;
         $this->patientManager->chargementPatients();
     }
@@ -24,10 +23,11 @@ class PatientController
 
     // Afficher un patient 
 
-    public function afficherPatient($idPatient)
+    // public function afficherPatient($idPatient)
+    public function afficherPatient()
     {
-        $patientManager = $this->patientManager;
-        $patient = $patientManager->getPatientById($idPatient);
+        // $patientManager = $this->patientManager;
+        // $patient = $patientManager->getPatientById($idPatient);
 
         // echo $patient->getIrstName();
 
@@ -45,6 +45,7 @@ class PatientController
 
 
     // Modification patient 
+
     public function modifierPatient($idPatient)
     {
         $patient = $this->patientManager->getPatientById($idPatient);

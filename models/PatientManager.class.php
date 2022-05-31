@@ -13,8 +13,6 @@ class PatientManager extends Model
 
     private $patients; // tableau patients
 
-
-
     public function ajouterPatient($patient)
     {
         // var_dump($patient);

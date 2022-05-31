@@ -11,7 +11,7 @@ ob_start();
 
     <h4 class="">Image: </h4>
 
-    <img src=" <?= URL ?>public/asset/img/<?= $patient->getImage() ?>" width="100" height="100">
+    <img src="<?= URL ?>public/asset/img/<?= $patient->getImage() ?>" width="100" height="100">
     <br>
     <br>
     <div class="form-group">
@@ -84,7 +84,7 @@ ob_start();
     </div>
     <br>
     <div class="form-group">
-        <label for="idordonnace">Id Ordonnance:</label>
+        <label for="idordonnance">Id Ordonnance:</label>
         <input type="number" class="form-control" id="idOrdonnance" name="idOrdonnance"
             value="<?= $patient->getIdOrdonnance() ?>">
 
