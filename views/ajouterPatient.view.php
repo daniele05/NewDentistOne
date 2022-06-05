@@ -1,9 +1,6 @@
 <!-- temporisation du code par e biais du buffer -->
 
-<?php
-
-ob_start();
-?>
+<?php ob_start(); ?>
 
 <p class="text-monospace m-4">ici mon formulaire de contact</p>
 
@@ -83,8 +80,9 @@ ob_start();
     </div>
     <br>
 
-    <button type="submit" class="btn btn-primary">Valider</button>
-    <a href="index">page d'affichage Patient.</a>
+    <div class="text-center w-100  ">
+        <a href="" class="btn btn-success d-block">Valider</a>
+    </div>
 </form>
 
 <br>
@@ -96,6 +94,4 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $titre = "Ajouter un patient";
-require "template.php";
-
-?>
+require "template.php"; ?>

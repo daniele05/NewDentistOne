@@ -90,10 +90,10 @@ class PatientController
         $this->patientManager->suppressionPatientBD($idPatient);
 
 
-        $_SESSION['alert'] = [
-            "type"  => "success",
-            "msg" => "Suppression réalisée"
-        ];
+        // $_SESSION['alert'] = [
+        //     "type"  => "success",
+        //     "msg" => "Suppression réalisée"
+        // ];
     }
 
     // Validation ajout patient avec tous les champs 

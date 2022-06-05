@@ -1,9 +1,17 @@
 <?php
-require_once "models/UserManager.class.php";
+require "models/UserManager.php";
 
-class UserController extends Model
+class UserController extends UserManager
 {
-    public function login()
+    public function loginView()
     {
+        require "views/User/login.view.php";
     }
+   
+}
+
+
+if(isset($_GET['action']) && $_GET['action'] =='login'){
+    $userController = new UserController;
+    $userController->loginView();
 }

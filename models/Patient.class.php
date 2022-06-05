@@ -1,5 +1,4 @@
 <?php
-
 class Patient
 {
     private $image;
@@ -18,7 +17,6 @@ class Patient
 
     public function __construct($image, $idPatient, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
     {
-
         $this->image = $image;
         $this->idPatient = $idPatient;
         $this->irstName = $irstName;

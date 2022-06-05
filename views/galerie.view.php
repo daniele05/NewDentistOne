@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 
-<p class="text-monospace m-3">ici ma page galérie</p>
+<p class="text-monospace m-3">ici ma page Galerie</p>
 
 
 <!-- Start open-hour Area -->
@@ -17,7 +17,7 @@
                         <div class="row d-flex justify-content-center">
                             <div class="menu-content pb-60 col-lg-8">
                                 <div class="title text-center mb-1">
-                                    <h3 class="mt-10 text-primary">Galérie</h3>
+                                    <h3 class="mt-10 text-primary">Galerie</h3>
                                 </div>
                             </div>
                         </div>
@@ -91,14 +91,15 @@
 
                                 </div>
                             </div>
+                            <br />
                             <div class="row mb-4 pb-4">
                                 <div class="active-testimonial-carusel">
-                                    <div class="single-testimonial item"><a href="public/asset/img/outilsDentaires.jpg"
+                                    <!-- <div class="single-testimonial item"><a href="public/asset/img/outilsDentaires.jpg"
                                             data-toggle="lightbox" data-gallery="img-gallery">
                                             <img class="mx-auto  text-h-70" src="public/asset/img/outilsDentaires.jpg"
                                                 class="img-fluid img-thumbnail" alt="outils dentaires"></a><br>
                                         <h4 class="text-primary">Outils dentaires</h4>
-                                    </div>
+                                    </div> -->
                                     <div class="single-testimonial item"><a
                                             href="public/asset/img/interventionDentaire.jpg" data-toggle="lightbox"
                                             data-gallery="img-gallery">
@@ -142,6 +143,6 @@
 <?php
 
 $content = ob_get_clean();
-$titre = "Galérie";
+$titre = "Galerie";
 require "template.php";
 ?>

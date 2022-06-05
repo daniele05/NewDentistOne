@@ -68,6 +68,5 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-$titre = "Mes Vidéos";
 require "template.php";
 ?>

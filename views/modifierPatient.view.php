@@ -1,8 +1,5 @@
 <!-- temporisation par le biais du buffer -->
-<?php
-
-ob_start();
-?>
+<?php ob_start(); ?>
 <p class="Ici mon formulaire de modification"></p>
 
 <!-- start form -->
@@ -89,9 +86,9 @@ ob_start();
             value="<?= $patient->getIdOrdonnance() ?>">
 
     </div>
-    <br>
-
-    <button type="submit" class="btn btn-primary">Valider</button>
+    <div class="text-center w-100  ">
+        <a href="" class="btn btn-success d-block">Valider</a>
+    </div>
 </form>
 
 <br>

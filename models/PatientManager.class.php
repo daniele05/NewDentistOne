@@ -34,11 +34,10 @@ class PatientManager extends Model
         $req->execute();
         $patients = $req->fetchAll(PDO::FETCH_ASSOC);
 
-
         $req->closeCursor();
 
         foreach ($patients as $patient) {
-            $p = new Patient($patient["image"], $patient["idPatient"], $patient["istName"], $patient["lastName"], $patient["birthDate"], $patient["sex"], $patient["tel"], $patient["email"], $patient["address"], $patient["dateInscriptionPatient"], $patient["idSoinsDentaires"], $patient["idordonnance"]);
+            $p = new Patient($patient["image"], $patient["idPatient"], $patient["istName"], $patient["lastName"], $patient["birthDate"], $patient["sex"], $patient["tel"], $patient["email"], $patient["address"], $patient["dateInscriptionPatient"], $patient["idSoinsDentaires"], $patient["idOrdonnance"]);
             $this->ajouterPatient($p);
         }
     }
@@ -101,7 +100,6 @@ class PatientManager extends Model
         $stmt->closeCursor();
 
         // verif de ma requete
-
         if ($resultat > 0) {
             $patient = $this->getPatientById($idPatient);
             unset($patient);

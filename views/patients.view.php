@@ -201,7 +201,7 @@ endif;
 <?php
 
 $content = ob_get_clean();
-$titre = "Espace Patient";
+$title = "Espace Patient";
 require "template.php"
 
 ?>

@@ -33,7 +33,7 @@ class ArticleController
 
         $repertoire = "public/asset/img/";
         $nomPhotoAjoute = $this->ajoutPhoto($file, $repertoire);
-        $this->articleManager->ajouterArticleBd($nomPhotoAjoute, $_POST['idArticle'], $_POST['created'], $_POST['titre'], $_POST['image'], $_POST['contenu'], $_POST['idDentiste']);
+        $this->articleManager->ajouterArticle($nomPhotoAjoute, $_POST['idArticle'], $_POST['created'], $_POST['titre'], $_POST['image'], $_POST['contenu'], $_POST['idDentiste']);
 
         $_SESSION['alert'] = [
             "type"  => "success",
@@ -106,7 +106,7 @@ class ArticleController
         $random = rand(0, 99999);
         $target_file = $dir . $random . "_" . $file['name'];
 
-        if (!getPhotoSize($file["tmp_name"]))
+        if (!getImageSize($file["tmp_name"]))
             throw new Exception("le fichier n'est pas une image");
         if ($extension !== "jpg" && $extension !== "jpeg" && $extension !== "png" && $extension !== "gif");
         throw new Exception("l'extension du fichier n'est pas reconnue");

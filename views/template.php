@@ -16,7 +16,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title><?= $titre ?></title>
+    <title><?= $title; ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
@@ -24,26 +24,27 @@
 
 
     <!-- img favicon -->
-    <link rel=" apple-touch-icon" sizes="180x180" href="public/asset/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/asset/img/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/asset/img/favicon-16x16.png">
+    <link rel=" apple-touch-icon" sizes="180x180" href="<?= URL ?>public/asset/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= URL ?>public/asset/img/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= URL ?>public/asset/img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
 
     <!-- css boostrap -->
-    <link rel="stylesheet" href="public/asset/css/linearicons.css">
-    <link rel="stylesheet" href="public/asset/css/font-awesome.min.css">
-    <link rel="stylesheet" href="public/asset/css/bootstrap.css">
-    <link rel="stylesheet" href="public/asset/css/magnific-popup.css">
-    <link rel="stylesheet" href="public/asset/css/nice-select.css">
-    <link rel="stylesheet" href="public/asset/css/animate.min.css">
-    <link rel="stylesheet" href="public/asset/css/jquery-ui.css">
-    <link rel="stylesheet" href="public/asset/css/owl.carousel.css">
-    <link rel="stylesheet" href="public/asset/css/main.css">
+    <link rel="stylesheet" href="<?= URL ?>public/asset/css/linearicons.css">
+    <link rel="stylesheet" href="<?= URL ?>public/asset/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= URL ?>public/asset/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= URL ?>public/asset/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?= URL ?>public/asset/css/nice-select.css">
+    <link rel="stylesheet" href="<?= URL ?>public/asset/css/animate.min.css">
+    <link rel="stylesheet" href="<?= URL ?>public/asset/css/jquery-ui.css">
+    <link rel="stylesheet" href="<?= URL ?>public/asset/css/owl.carousel.css">
+    <link rel="stylesheet" href="<?= URL ?>public/asset/css/main.css">
 
 
     <!-- css personnalisé -->
-    <link rel="stylesheet" href="public/asset/css/style.css">
+    <link rel="stylesheet" href="<?= URL ?>public/asset/css/style.css">
+
 
 </head>
 
@@ -54,7 +55,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
                         <h3 class="text-primary">Cabinet dentaire d'Antony</h3>
-                        <a href="index.php"><img src="public/asset/img/logo_ajust.png" alt="logo_site"
+                        <a href="index.php"><img src="<?= URL ?>public/asset/img/logo_ajust.png" alt="logo_site"
                                 class="float-left" /></a>
                     </div>
                     <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
@@ -63,9 +64,9 @@
                         <a class="icons" href="tel:+331 84 19 72 43">
                             <span class="lnr lnr-phone-handset text-primary"></span>
                         </a>
-                        <a class="icons text-primary" href="mailto:cabinet-antony@hotmail.com">
+                        <!-- <a class="icons text-primary" href="mailto:cabinet-antony@hotmail.com">
                             <span class="lnr lnr-envelope text-primary"></span>
-                        </a>
+                        </a> -->
 
                     </div>
                 </div>
@@ -82,18 +83,12 @@
 
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-equipe">Notre équipe</a>
                                 </li>
-                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>leCabinetEnPhotos">Le
-                                        cabinet en photos </a></li>
+
                             </ul>
 
                         </li>
-                        <?php
-
-                        ?>
 
                         <li class="menu-has-children"><a href="#">Notre Savoir-faire</a>
-
-
                             <ul>
 
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-savoir-faire-1">Implants
@@ -110,8 +105,6 @@
                                         dentaire</a></li>
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-savoir-faire-5">Urgences
                                         dentaires-Caries-Abcès dentaires </a></li>
-
-
                             </ul>
                         </li>
 
@@ -121,23 +114,28 @@
 
                         <li class="menu-has-children"><a href="#">Patients</a>
                             <ul>
-                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>login">Sign in / Sign up</a>
-                                </li>
-
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>patients">Espace Connexion
                                         Patients</a></li>
-
                             </ul>
                         </li>
+                        <li class="menu-has-children"><a href="#">Rendez-vous</a>
+                            <ul>
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>rdvs"> Mes rendez-vous
+                                    </a></li>
+                            </ul>
+                        </li>
+
 
 
                         <li class="menu-has-children"><a href="blog">Blog</a></li>
 
 
-                        <li class="menu-has-children"><a href="#">Galérie</a>
+                        <li class="menu-has-children"><a href="#">Galerie</a>
 
                             <ul>
-                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>galerie">Galérie</a>
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>leCabinetEnPhotos">Le
+                                        cabinet en photos </a></li>
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>galerie">Interventions</a>
                                 </li>
 
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>videos">Vidéos
@@ -147,10 +145,10 @@
 
                         </li>
 
-                        <li class="nav-items"><a class="nav-link" href="<? URL ?>ordonnances">Ordonnances</a>
+                        <li class="nav-items"><a class="nav-items" href="<? URL ?>">Ordonnances</a>
                             <ul>
-                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>login">Sign in / Sign up</a>
-                                </li>
+                                <li><a class="btn" href="<?= URL ?>">Vous Connecter</a></li>
+                                <li><a class="btn" href="<?= URL ?>login">Login</a></li>
                             </ul>
                         </li>
 
