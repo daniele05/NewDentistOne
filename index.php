@@ -21,13 +21,8 @@ $userController = new UserController;
 require_once("controllers/VideoController.php");
 $videoController = new VideoController;
 
-require_once("controllers/Visitor/OrdonnanceController.php");
+require_once("controllers/OrdonnanceController.php");
 $ordonnanceController = new OrdonnanceController;
-
-
-
-
-
 
 
 try {
@@ -70,7 +65,7 @@ try {
                 break;
 
             case "login":
-                $userController->login();
+                // $userController->login();
                 break;
 
             case "patients":
