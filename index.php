@@ -1,10 +1,22 @@
 <?php
+$password = "kiki";
+$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+// var_dump($password);
+// var_dump($passwordHash);
+// die();
+
+?>
+
+<?php
 // Def const URL 
 // Const defint lien absolu depuis https ou http
 session_start();
 define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[PHP_SELF]"));
 
 // role de routeur de index.php
+
+require_once("controllers/Visitor.controller.php");
+$visitorController = new VisitorController;
 
 require_once("controllers/PagesStatiquesController.php");
 $pagesStatiquesController = new PagesStatiquesController;
@@ -15,8 +27,8 @@ $patientController = new PatientController;
 require_once("controllers/ArticleController.php");
 $articleController = new ArticleController;
 
-require_once("controllers/UserController.php");
-$userController = new UserController;
+// require_once("controllers/UserController.php");
+// $userController = new UserController;
 
 require_once("controllers/VideoController.php");
 $videoController = new VideoController;
@@ -30,8 +42,9 @@ try {
         require "views/home.view.php";
     } else {
         $url = explode("/", filter_var($_GET['page']), FILTER_SANITIZE_URL);
+        $page = $url[0];
 
-        switch ($url['0']) {
+        switch ($page) {
             case "Home":
                 $pagesStatiquesController->afficherHome();
                 break;
@@ -64,9 +77,12 @@ try {
                 $pagesStatiquesController->afficherContact();
                 break;
 
-            case "login":
-                // $userController->login();
-                break;
+            case "compte":
+                switch ($url[1]) {
+                    case "profil":
+                        // $visitorController->afficherHome();
+                        break;
+                }
 
             case "patients":
                 if (empty($url[1])) {

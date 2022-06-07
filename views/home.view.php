@@ -179,6 +179,7 @@
         <div class="row justify-content-center mb-4 pb-4">
             <div class="col-lg-12 open-hour-wrap">
                 <h3 class="text-primary mb-4">Blog</h3>
+                <h4 class="text-primary"> L'importance de bien se brosser les dents.</h4>
                 <img src="public/asset/img/photo_blog.png" class="rounded mx-auto d-block position-relative"
                     alt="Notre Blog">
                 <p class="text-justify dark mb-2 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor
@@ -306,8 +307,7 @@
 <!-- End mention Area -->
 
 <?php
-
 $content = ob_get_clean();
-$titre = "Accueil";
+$title = "Accueil";
 require "template.php";
 ?>

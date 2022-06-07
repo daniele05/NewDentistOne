@@ -6,17 +6,17 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="public/asset/img/logo_ajust.png>
-    <!-- Author Meta -->
+    <link rel="shortcut icon" href="<?= URL ?>public/asset/img/logo_ajust.png>
+    <!-- Author Meta  -->
     <meta name=" author" content="colorlib">
     <!-- Meta Description -->
-    <meta name="description" content="">
+    <meta name="description" content="<= $page_description; ?>">
     <!-- Meta Keyword -->
     <meta name="keywords" content="">
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title><?= $title; ?></title>
+    <title><?= $page_title; ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
@@ -40,6 +40,12 @@
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/jquery-ui.css">
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/owl.carousel.css">
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/main.css">
+    <?php
+    if (!empty($page_css)) : ?>
+    <?php foreach ($page_css as $fichier_css) : ?>
+    <link href="<?= URL ?>public/asset/css/<? $fichier_css ?>" rel="stylesheet">
+    <?php endforeach; ?>
+    <?php endif; ?>
 
 
     <!-- css personnalisé -->
@@ -60,7 +66,8 @@
                     </div>
                     <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
                         <a class="btns text-primary" href="tel:+331 84 19 72 43">+331 84 19 72 43</a>
-                        <a class="btns text-primary" href="web:www.doctolib.fr">www.doctolib.fr</a>
+                        <a class="btns text-primary" href="<?= URL ?>web:https://www.doctolib.fr"
+                            target="_blank">www.doctolib.fr</a>
                         <a class="icons" href="tel:+331 84 19 72 43">
                             <span class="lnr lnr-phone-handset text-primary"></span>
                         </a>
@@ -72,7 +79,7 @@
                 </div>
             </div>
         </div>
-        <div class="container main-menu">
+        <div class="container main-menu w-100">
             <div class="row align-items-center justify-content-between d-flex">
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
@@ -88,7 +95,7 @@
 
                         </li>
 
-                        <li class="menu-has-children"><a href="#">Notre Savoir-faire</a>
+                        <li class="menu-has-children"><a href="#">Savoir-faire</a>
                             <ul>
 
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-savoir-faire-1">Implants
@@ -109,7 +116,7 @@
                         </li>
 
                         <li class="nav-items">
-                            <a class="nav-link" href="nous-contacter">Nous contacter</a>
+                            <a class="nav-link" href="nous-contacter">Contact</a>
                         </li>
 
                         <li class="menu-has-children"><a href="#">Patients</a>
@@ -152,7 +159,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-items"><a class="nav-link" href="mentions">Mentions légales</a></li>
+                        <li class="nav-items"><a class="nav-link" href="mentions">Mentions</a></li>
 
                     </ul>
                 </nav><!-- #nav-menu-container -->
@@ -172,7 +179,6 @@
 
     <!-- mettre dans uen div juste pour les marges -->
     <div class="container">
-        <!-- <h3><= $titre ></h3> -->
         <?= $content ?>
     </div>
 
@@ -206,27 +212,27 @@
     </footer>
     <!-- End footer Area -->
 
-    <script src="public/asset/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="<?= URL ?>public/asset/js/vendor/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
-    <script src="public/asset/js/vendor/bootstrap.min.js"></script>
-    <script type="public/asset/text/javascript"
+    <script src="<?= URL ?>public/asset/js/vendor/bootstrap.min.js"></script>
+    <script type="<?= URL ?>public/asset/text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-    <script src="public/asset/js/easing.min.js"></script>
-    <script src="public/asset/js/hoverIntent.js"></script>
-    <script src="public/asset/js/superfish.min.js"></script>
-    <script src="public/asset/js/jquery.ajaxchimp.min.js"></script>
-    <script src="public/asset/js/jquery.magnific-popup.min.js"></script>
-    <script src="public/asset/js/jquery-ui.js"></script>
-    <script src="public/asset/js/owl.carousel.min.js"></script>
-    <script src="public/asset/js/jquery.nice-select.min.js"></script>
-    <script src="public/asset/js/mail-script.js"></script>
-    <script src="public/asset/js/main.js"></script>
+    <script src="<?= URL ?>public/asset/js/easing.min.js"></script>
+    <script src="<?= URL ?>public/asset/js/hoverIntent.js"></script>
+    <script src="<?= URL ?>public/asset/js/superfish.min.js"></script>
+    <script src="<?= URL ?>public/asset/js/jquery.ajaxchimp.min.js"></script>
+    <script src="<?= URL ?>public/asset/js/jquery.magnific-popup.min.js"></script>
+    <script src="<?= URL ?>public/asset/js/jquery-ui.js"></script>
+    <script src="<?= URL ?>public/asset/js/owl.carousel.min.js"></script>
+    <script src="<?= URL ?>public/asset/js/jquery.nice-select.min.js"></script>
+    <script src="<?= URL ?>public/asset/js/mail-script.js"></script>
+    <script src="<?= URL ?>public/asset/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
         integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="public/asset/js/scripts.js"></script>
+    <script src="<?= URL ?>public/asset/js/scripts.js"></script>
 </body>
 
 </html>
