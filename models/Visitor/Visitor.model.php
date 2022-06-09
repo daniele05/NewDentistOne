@@ -1,7 +1,7 @@
 <?php
-require_once("models/MainManger.php");
+require_once("models/Model.php");
 
-class VisitorManager extends MainManager
+class VisitorManager extends Model
 {
     public function getUsers()
     {

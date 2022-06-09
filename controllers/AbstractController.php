@@ -1,5 +1,5 @@
 <?php
-abstract class MainController
+abstract class AbstractController
 {
     const ROUGE = 'danger';
     const ORANGE = 'warning';
@@ -15,11 +15,21 @@ abstract class MainController
         require_once($template);
     }
 
-    protected function pageErreur($msg)
+    public function home()
     {
         $data_page = [
-            "page_description" => "page permettant de gérér les erreurs",
-            "page_title" => "Page d'erreur",
+            "description" => "description page accueil",
+            "title" => "Titre page",
+            "view" => "views/home.view.php",
+            "template" => "views/template.php"
+        ];
+        $this->genererPage($data_page);
+    }
+    public function pageErreur($msg)
+    {
+        $data_page = [
+            "description" => "page permettant de gérér les erreurs",
+            "title" => "Page d'erreur",
             "msg" => $msg,
             "view" => "views/error.view.php",
             "template" => "views/template.php"

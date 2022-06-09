@@ -18,7 +18,7 @@
 
                 <img src="public/asset/img/accueil-dentiste.png" alt="accueil-dentiste" class=" bg-image mt-3">
 
-                <h5 class=" text-primary">Votre dentiste, à votre écoute</h5>
+                <h5 class=" text-dark mt-2">Votre dentiste, à votre écoute</h5>
             </div>
         </div>
     </div>
@@ -179,7 +179,7 @@
         <div class="row justify-content-center mb-4 pb-4">
             <div class="col-lg-12 open-hour-wrap">
                 <h3 class="text-primary mb-4">Blog</h3>
-                <h4 class="text-primary"> L'importance de bien se brosser les dents.</h4>
+                <h4 class="text-dark"> L'importance de bien se brosser les dents.</h4>
                 <img src="public/asset/img/photo_blog.png" class="rounded mx-auto d-block position-relative"
                     alt="Notre Blog">
                 <p class="text-justify dark mb-2 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor
@@ -204,9 +204,9 @@
             <div class="menu-content pb-60 col-lg-12">
                 <div class="title text-center">
                     <h3 class="m-5 text-primary pb-3">Galérie</h3>
-                    <p class=" text-dark desc text-justify text-center">
+                    <h4 class=" text-dark desc text-justify text-center">
                         Votre bien-être est notre préoccupation.
-                    </p>
+                    </h4>
                 </div>
             </div>
         </div>
@@ -214,22 +214,22 @@
             <div class="active-testimonial-carusel">
                 <div class="single-testimonial item">
                     <img class="mx-auto  text-h-70" src="public/asset/img/smile.jpg" alt="smile">
-                    <h5 class="mt-2 text-primary">Photo_Galérie_Smile</h5>
+                    <h6 class="mt-2 text-primary">Photo_Galérie_Smile</h6>
                 </div>
 
                 <div class="single-testimonial item">
                     <img class="mx-auto  text-h-70" src="public/asset/img/detartrage.jpg" alt="détartrage">
-                    <h5 class="mt-2 text-primary">Photo_Galérie_Détartrage</h5>
+                    <h6 class="mt-2 text-primary">Photo_Galérie_Détartrage</h6>
                 </div>
                 <div class="single-testimonial item">
                     <img class="mx-auto  text-h-70" src="public/asset/img/intervention_pediatrique.jpg"
                         alt="intervention pédiatrique">
-                    <h5 class="mt-2 text-primary">Photo_Galérie_Intervention_Péd.</h5>
+                    <h6 class="mt-2 text-primary">Photo_Galérie_Intervention_Péd.</h6>
                 </div>
 
                 <div class="single-testimonial item">
                     <img class="mx-auto  text-h-70" src="public/asset/img/conseil_bien_se_brosser.jpg" alt="conseils">
-                    <h5 class="mt-2 text-primary">Photo_Galérie_Conseils</h5>
+                    <h6 class="mt-2 text-primary">Photo_Galérie_Conseils</h6>
                 </div>
             </div>
         </div>

@@ -4,7 +4,6 @@ $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 // var_dump($password);
 // var_dump($passwordHash);
 // die();
-
 ?>
 
 <?php
@@ -15,6 +14,7 @@ define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" :
 
 // role de routeur de index.php
 
+require_once("controllers/AbstractController.php");
 require_once("controllers/Visitor.controller.php");
 $visitorController = new VisitorController;
 
@@ -23,12 +23,6 @@ $pagesStatiquesController = new PagesStatiquesController;
 
 require_once("controllers/PatientController.php");
 $patientController = new PatientController;
-
-require_once("controllers/ArticleController.php");
-$articleController = new ArticleController;
-
-// require_once("controllers/UserController.php");
-// $userController = new UserController;
 
 require_once("controllers/VideoController.php");
 $videoController = new VideoController;
@@ -104,23 +98,6 @@ try {
                 }
                 break;
 
-            case "blog":
-                if (empty($url[1])) {
-                    $articleController->afficherArticle();
-                } elseif ($url[1] === "a") {
-                    $articleController->ajouterArticle();
-                } elseif ($url[1] === "m") {
-                    $articleController->modifierArticle($url[2]);
-                } elseif ($url[1] === "d") {
-                    $articleController->suppressionArticle($url[2]);
-                } elseif ($url[1] === "av") {
-                    $articleController->ajoutArticleValidation();
-                } elseif ($url[1] === "mv") {
-                    $articleController->modificationArticleValidation();
-                } else {
-                    throw new Exception("La page n'existe pas");
-                }
-                break;
             case "ordonnances":
                 if (empty($url[1])) {
                     $ordonnanceController->afficherOrdonnances();

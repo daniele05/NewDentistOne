@@ -91,39 +91,6 @@
 
                                 </div>
                             </div>
-                            <br />
-                            <div class="row mb-4 pb-4">
-                                <div class="active-testimonial-carusel">
-                                    <!-- <div class="single-testimonial item"><a href="public/asset/img/outilsDentaires.jpg"
-                                            data-toggle="lightbox" data-gallery="img-gallery">
-                                            <img class="mx-auto  text-h-70" src="public/asset/img/outilsDentaires.jpg"
-                                                class="img-fluid img-thumbnail" alt="outils dentaires"></a><br>
-                                        <h4 class="text-primary">Outils dentaires</h4>
-                                    </div> -->
-                                    <div class="single-testimonial item"><a
-                                            href="public/asset/img/interventionDentaire.jpg" data-toggle="lightbox"
-                                            data-gallery="img-gallery">
-                                            <img class="mx-auto" src="public/asset/img/interventionDentaire.jpg"
-                                                class="img-fluid img-thumbnail" alt="interventionDentaire"></a><br>
-                                        <h4 class="text-primary">Intervention Dentaire</h4>
-                                    </div>
-                                    <div class="single-testimonial item"><a
-                                            href="public/asset/img/interventionPediatrique1.jpg" data-toggle="lightbox"
-                                            data-gallery="img-gallery">
-                                            <img class="mx-auto" src="public/asset/img/interventionPediatrique1.jpg"
-                                                class="img-fluid img-thumbnail" alt="Intervention Pédiatrique"></a><br>
-                                        <h4 class="text-primary">Intervention Pédiatrique</h4>
-                                    </div>
-                                    <div class="single-testimonial item"><a href="public/asset/img/enfant.jpg"
-                                            data-toggle="lightbox" data-gallery="img-gallery">
-                                            <img class="mx-auto" src="public/asset/img/enfant.jpg"
-                                                class="img-fluid img-thumbnail" alt="enfant"></a><br>
-                                        <h4 class="text-primary">photo_Enfant</h4>
-                                    </div>
-
-                                </div>
-                            </div>
-
                         </section>
                     </div>
                 </div>

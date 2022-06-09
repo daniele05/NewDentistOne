@@ -4,7 +4,6 @@
 // Mise en lien avec nos differents fichiers Model et connexion.class
 
 require "Model.class.php";
-require "controllers/MainController.php";
 require_once "Patient.class.php";
 
 

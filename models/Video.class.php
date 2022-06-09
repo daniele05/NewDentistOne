@@ -7,17 +7,16 @@ class Video
     private $imageName;
     private $lienVideo;
     private $idVideo;
-    private $idArticle;
 
 
-    public function __construct($title, $imageName, $lienVideo, $idVideo, $idArticle)
+
+    public function __construct($title, $imageName, $lienVideo, $idVideo)
     {
 
         $this->title = $title;
         $this->imageName = $imageName;
         $this->lienVideo = $lienVideo;
         $this->idVideo = $idVideo;
-        $this->idArticle = $idArticle;
     }
 
     // construction des getter and setter
@@ -55,13 +54,5 @@ class Video
     public function setIdVideo($idVideo)
     {
         $this->idVideo = $idVideo;
-    }
-    public function getIdArticle()
-    {
-        return $this->idArticle;
-    }
-    public function setIdArticle($idArticle)
-    {
-        $this->idArticle = $idArticle;
     }
 }

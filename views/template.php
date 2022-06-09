@@ -10,13 +10,13 @@
     <!-- Author Meta  -->
     <meta name=" author" content="colorlib">
     <!-- Meta Description -->
-    <meta name="description" content="<= $page_description; ?>">
+    <meta name="description" content="">
     <!-- Meta Keyword -->
     <meta name="keywords" content="">
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title><?= $page_title; ?></title>
+    <title><?= $title; ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
@@ -66,15 +66,11 @@
                     </div>
                     <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
                         <a class="btns text-primary" href="tel:+331 84 19 72 43">+331 84 19 72 43</a>
-                        <a class="btns text-primary" href="<?= URL ?>web:https://www.doctolib.fr"
+                        <a class="btns text-primary" href="https://www.doctolib.fr/dentiste/antony/mohamed-ben-salah"
                             target="_blank">www.doctolib.fr</a>
                         <a class="icons" href="tel:+331 84 19 72 43">
-                            <span class="lnr lnr-phone-handset text-primary"></span>
+                            <!-- <span class="lnr lnr-phone-handset text-primary"></span> -->
                         </a>
-                        <!-- <a class="icons text-primary" href="mailto:cabinet-antony@hotmail.com">
-                            <span class="lnr lnr-envelope text-primary"></span>
-                        </a> -->
-
                     </div>
                 </div>
             </div>
@@ -94,8 +90,7 @@
                             </ul>
 
                         </li>
-
-                        <li class="menu-has-children"><a href="#">Savoir-faire</a>
+                        <li class="menu-has-children m-0"><a href="#">Notre Savoir-faire</a>
                             <ul>
 
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-savoir-faire-1">Implants
@@ -114,9 +109,8 @@
                                         dentaires-Caries-Abcès dentaires </a></li>
                             </ul>
                         </li>
-
                         <li class="nav-items">
-                            <a class="nav-link" href="nous-contacter">Contact</a>
+                            <a class="nav-link" href="nous-contacter">Nous contacter</a>
                         </li>
 
                         <li class="menu-has-children"><a href="#">Patients</a>
@@ -125,20 +119,14 @@
                                         Patients</a></li>
                             </ul>
                         </li>
-                        <li class="menu-has-children"><a href="#">Rendez-vous</a>
+                        <!-- <li class="menu-has-children"><a href="#">Rendez-vous</a>
                             <ul>
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>rdvs"> Mes rendez-vous
                                     </a></li>
                             </ul>
-                        </li>
-
-
-
-                        <li class="menu-has-children"><a href="blog">Blog</a></li>
-
-
+                        </li> -->
+                        <!-- <li class="menu-has-children"><a href="blog">Blog</a></li> -->
                         <li class="menu-has-children"><a href="#">Galerie</a>
-
                             <ul>
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>leCabinetEnPhotos">Le
                                         cabinet en photos </a></li>
@@ -149,36 +137,31 @@
                                     </a></li>
 
                             </ul>
-
                         </li>
-
-                        <li class="nav-items"><a class="nav-items" href="<? URL ?>">Ordonnances</a>
+                        <!-- <li class="nav-items"><a class="nav-items" href="<? URL ?>">Ordonnances</a>
                             <ul>
                                 <li><a class="btn" href="<?= URL ?>">Vous Connecter</a></li>
                                 <li><a class="btn" href="<?= URL ?>login">Login</a></li>
                             </ul>
+                        </li> -->
+                        <li class="nav-items"><a class="nav-link" href="">
+
+                                <img src="public/asset/img/ps_padlock.png" alt="espace connexion"
+                                    class="text-white mb-2">
+                                <span class="-link hide-in-responsive text-white"><a class=" text-link text-white">
+                                        Mon <b class="text-link text-primary"> espace</a></span></a>
+
                         </li>
-
-                        <li class="nav-items"><a class="nav-link" href="mentions">Mentions</a></li>
-
                     </ul>
+
                 </nav><!-- #nav-menu-container -->
 
-                <div class="menu-social-icons">
-                    <a href="#"><i class="fa fa-facebook m-2"></i></a>
-
-                    <a href="#"><i class="fa fa-twitter m-2"></i></a>
-
-                </div>
             </div>
         </div>
-
-
-
     </header>
 
     <!-- mettre dans uen div juste pour les marges -->
-    <div class="container">
+    <div class=" container">
         <?= $content ?>
     </div>
 
@@ -192,18 +175,21 @@
                 <!-- grid -->
                 <div class="row col ms-auto ms-auto">
                     <div class="col  px-6 px-ml-auto font-weight-bold dark">Tarifs et remboursements</div>
-                    <div class="col text-primary py-6 ml-6">Nous Contacter</div>
+                    <div class="nav-items"><a class="nav-link"></a>Nous contacter</div>
                 </div>
                 <div class="w-100"></div>
-                <div class="row col ms-auto">
-                    <div class="col py-6 px-ml-auto font-weight-bold dark">Notre blog</div>
-                    <div class="col text-primary py-6 ml-6">Mentions légales</div>
-
+                <div class="row col ms-auto ms-auto">
+                    <div class="col  px-6 px-ml-auto font-weight-bold dark">Ma galerie</div>
+                    <div class="nav-items"><a class="nav-link" href="<? URL ?> mentions">Mentions légales</a>
+                    </div>
                 </div>
 
-                <div class="col-lg-4 col-sm-12 footer-social">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
+
+                <div class="menu-social-icons">
+                    <a href="#"><i class="fa fa-facebook float-center mb-4 m-4"></i></a>
+
+                    <a href="#"><i class="fa fa-twitter float-center mb-4 m-4"></i></a>
+
                 </div>
             </div>
 

@@ -1754,14 +1754,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   padding: 12px 20px;
 }
-.main-menu .menu-social-icons a {
-  color: #fff !important;
-  margin-right: 15px;
-  transition: all 0.3s ease 0s;
-}
-.main-menu .menu-social-icons a:hover {
-  color: #fff !important;
-}
+
 @media (max-width: 991px) {
   .main-menu {
     display: none;

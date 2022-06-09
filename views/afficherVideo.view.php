@@ -9,7 +9,7 @@
         Sorry, your browser doesn't support embedded videos.
     </video>
     <h6 class="text text-left">Id Vidéo:<?= URL ?><?= $video->getIdVideo(); ?></h6>
-    <h6 class="text text-left">Id Article:<?= URL ?><?= $video->getIdArticle(); ?></h6>
+
 </div>
 
 <?php

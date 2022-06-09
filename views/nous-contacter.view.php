@@ -15,7 +15,7 @@
                 <div class="d-flex">
 
                     <img src="public/asset/img/doctolib_logo.png" alt="doctolib_logo" class="m-3">
-                    <a href="https://www.doctolib.fr" class="mt-4 pt-4">Doctolib</a>
+                    <a href="hhttps://www.doctolib.fr/dentiste/antony/mohamed-ben-salah" class="mt-4 pt-4">Doctolib</a>
 
 
                 </div>
@@ -25,18 +25,15 @@
                     <img src="public/asset/img/telephone_mini.png" alt="telephone_mini" class="m-3 ">
 
                     <p class="mt-4 pt-4 text-primary">01 84 19 72 43</p>
+
                 </div>
 
                 <div class="d-flex">
 
                     <img src="public/asset/img/aerobas.png" alt="e-mail" class="m-3">
 
-
-                    <a href="mailto:cabinet-antony@hotmail.com? subject=subject text" class=" mt-4 pt-4">Cliquez ici
-                        pour
-                        nous
-                        envoyer un
-                        e-mail !</a>
+                    <a href="mailto::cabinet-antony@hotmail.com?subject=Titre&body=Exemple"
+                        class=" mt-4 pt-4">cabinet-antony@hotmail.com</a>
                 </div>
             </div>
 

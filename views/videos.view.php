@@ -21,7 +21,7 @@ ob_start();
         Sorry, your browser doesn't support embedded videos.
     </video>
     <h6 class="text-center mb-4 pb-4">Id Vidéo: </h6>
-    <h6 class="text-center">Id Article: </h6>
+
 
     <div class="text-center w-100  ">
         <a href="<?= URL ?>videos/a" class="btn btn-success d-block">Ajouter</a>

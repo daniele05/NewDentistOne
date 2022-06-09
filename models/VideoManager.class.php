@@ -39,7 +39,7 @@ class VideoManager extends Model
 
         foreach ($videos as $video) {
 
-            $v = new Video($video["title"], $video["imageName"], $video["lienVideo"], $video["idVideo"], $video["idArticle"]);
+            $v = new Video($video["title"], $video["imageName"], $video["lienVideo"], $video["idVideo"]);
             $this->ajouterVideo($v);
         }
     }
@@ -56,17 +56,17 @@ class VideoManager extends Model
         throw new Exception("cette vidéo n'existe pas dans notre base de données");
     }
 
-    public function ajouterVideoBd($title, $imageName, $lienVideo, $idVideo, $idArticle)
+    public function ajouterVideoBd($title, $imageName, $lienVideo, $idVideo)
     {
         $req = "
-        INSERT INTO videos (title,imageName,lienVideo,idVideo, idArticle)
-        values(:title, :imageName, :lienVideo, :idVideo, :idArticle)";
+        INSERT INTO videos (title,imageName,lienVideo,idVideo)
+        values(:title, :imageName, :lienVideo, :idVideo)";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->binValue(":title", $title, PDO::PARAM_STR);
         $stmt->binValue(":imageName", $imageName, PDO::PARAM_STR);
         $stmt->binValue(":lienVideo", $lienVideo, PDO::PARAM_STR);
         $stmt->binValue(":idVideo", $idVideo, PDO::PARAM_INT);
-        $stmt->binValue(":idArticle", $idArticle, PDO::PARAM_INT);
+
 
         $resultat = $stmt->execute();
         $stmt->closeCursor();
@@ -77,7 +77,7 @@ class VideoManager extends Model
         if ($resultat > 0) {
             // instancier une nouvelle insertion connexion patient si > 0
             // getBdd()->secondInsertId a a voir avec mon Idpatient non declaré jusque la car en auto increment
-            $video = new Video($title, $imageName, $lienVideo, $this->getBdd()->fourthInsertId(), $idArticle);
+            $video = new Video($title, $imageName, $lienVideo, $idVideo);
             // generer la liste de patient
             $this->ajouterVideo($video);
         }
@@ -103,11 +103,11 @@ class VideoManager extends Model
         }
     }
 
-    public function modificationVideoBD($title, $imageName, $lienVideo, $idVideo, $idArticle)
+    public function modificationVideoBD($title, $imageName, $lienVideo, $idVideo)
     {
         $req = "
          update video
-         set title = :title, set imageName= :imageName, set lienVideo = :lienVideo, set idVideo = :idVideo, set idArticle = :idArticle
+         set title = :title, set imageName= :imageName, set lienVideo = :lienVideo, set idVideo = :idVideo
          where idVideo = :idVideo";
 
         $stmt = $this->getBdd()->prepare($req);
@@ -115,7 +115,7 @@ class VideoManager extends Model
         $stmt->binValue(":imageName", $imageName, PDO::PARAM_STR);
         $stmt->binValue(":lienVideo", $lienVideo, PDO::PARAM_STR);
         $stmt->binValue(":idVideo", $idVideo, PDO::PARAM_INT);
-        $stmt->binValue(":idArticle", $idArticle, PDO::PARAM_INT);
+
         $resultat = $stmt->execute();
         $stmt->closeCursor();
 
@@ -126,7 +126,6 @@ class VideoManager extends Model
             $this->getVideoById($idVideo)->setImageName($imageName);
             $this->getVideoById($idVideo)->setLienVideo($lienVideo);
             $this->getVideoById($idVideo)->setIdVideo($idVideo);
-            $this->getVideoById($idVideo)->setIdArticle($idArticle);
         }
     }
 }

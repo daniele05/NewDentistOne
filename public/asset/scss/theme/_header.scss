@@ -49,20 +49,12 @@
     right: 0;
     padding: 12px 20px;
     @extend .p1-gradient-bg;
-    .menu-social-icons {
-        a {
-            color: #fff!important;
-            margin-right: 15px; 
-            @include transition();
-            &:hover{
-                color:$white!important;
-            }
-        }
-    }
+    
     @media(max-width:991px){
         display:none;
     }
 }
+.menu-social-icons a:hover{color:#fff !important}
 
 #header {
     padding: 0px 0px 24px 0px;
