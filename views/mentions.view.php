@@ -3,7 +3,7 @@
     <?php ob_start(); ?>
 
 
-    <p class="text-monospace m-4 p-4">ici ma page mentions légales</p>
+    <p class="text-monospace m-4 p-4 text-primary">ici ma page mentions légales</p>
 
     <!-- Start mention Area -->
     <section class="open-mention-area ">

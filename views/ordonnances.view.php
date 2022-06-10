@@ -2,6 +2,11 @@
 require "Ordonnance.class.php";
 ob_start(); ?>
 
+<p class="mb-5 pb-5 text-primary">
+    Ici mes ordonnances
+</p>
+
+
 <div class="row">
     <div class="col-6">
         <p class="#">Numéro Ordonnance: </p>

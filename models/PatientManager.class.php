@@ -3,7 +3,7 @@
 
 // Mise en lien avec nos differents fichiers Model et connexion.class
 
-require "Model.class.php";
+require_once "Model.class.php";
 require_once "Patient.class.php";
 
 

@@ -16,7 +16,7 @@
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title><?= $title; ?></title>
+    <title><?= $titre ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
@@ -56,7 +56,7 @@
 
 <body>
     <header id="header" id="home" class="mx-5 px-5 mb-5">
-        <div class="header-top">
+        <div class="header-top m-1">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
@@ -144,14 +144,9 @@
                                 <li><a class="btn" href="<?= URL ?>login">Login</a></li>
                             </ul>
                         </li> -->
-                        <li class="nav-items"><a class="nav-link" href="">
-
-                                <img src="public/asset/img/ps_padlock.png" alt="espace connexion"
-                                    class="text-white mb-2">
-                                <span class="-link hide-in-responsive text-white"><a class=" text-link text-white">
-                                        Mon <b class="text-link text-primary"> espace</a></span></a>
-
-                        </li>
+                        <li class="nav-link"><a href="<?= URL ?>login"><img src="public /asset/img/ps_padlock.png" alt="espace
+                                connexion" class="text-white mb-2"> Mon <font color="#007BFF"=""></font>espace
+                            </a></li>
                     </ul>
 
                 </nav><!-- #nav-menu-container -->

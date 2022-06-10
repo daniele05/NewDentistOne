@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 
-<p class="text-monospace m-3">ici ma page pédiatrie dentaire</p>
+<p class="text-monospace m-3 text-primary">ici ma page pédiatrie dentaire</p>
 
 <!-- Start open-hour Area -->
 <section class="notre_savoir_faire_2_area">

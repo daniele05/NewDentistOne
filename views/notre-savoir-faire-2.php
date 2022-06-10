@@ -1,4 +1,7 @@
 <!-- Start open-hour Area -->
+<?php ob_start(); ?>
+<p class=" text-monospace m-3 p-3 text-primary">ici ma page notre savoir-faire</p>
+
 <section class="notre_savoir_faire_2_area">
     <div class="container">
         <div class="row justify-content-center">

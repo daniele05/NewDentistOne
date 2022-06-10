@@ -3,7 +3,7 @@ require_once "models/Video.class.php";
 ob_start();
 ?>
 
-<p class="mb-5 pb-5 ">
+<p class="mb-5 pb-5 text-primary">
     Ici le contenu de mes vidéos
 </p>
 <div class="container">

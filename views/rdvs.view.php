@@ -1,7 +1,7 @@
 <?php ob_start(); ?>
 
 
-<h3 class="mb-4 py-5">Rendez-vous</h3>
+<h3 class="mb-4 py-5 text-primary">Rendez-vous</h3>
 <form class="border py-5">
     <div class="form-row py-5">
         <div class="col">Identité Rendez-vous:

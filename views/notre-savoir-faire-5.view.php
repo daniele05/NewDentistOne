@@ -2,15 +2,12 @@
 
 <?php ob_start(); ?>
 
-
-<p class="text-monospace m-3">ici ma page de consulation de routine</p>
-
 <!-- Temporisation par le bais du buffer -->
 
 <?php ob_start(); ?>
 
 
-<p class="text-monospace m-3 p-3">ici ma page consultation de routine</p>
+<p class="text-monospace m-3 p-3 text-primary">ici ma page consultation de routine</p>
 
 <!-- Start open-hour Area -->
 <section class="notre_histoire-area ">

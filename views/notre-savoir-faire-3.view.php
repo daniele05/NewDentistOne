@@ -2,8 +2,7 @@
 
 <?php ob_start(); ?>
 
-
-<p class="text-monospace m-3">ici ma page prothèses dentaires fixes ou amovibles</p>
+<p class="text-monospace m-3 text-primary">ici ma page prothèses dentaires fixes ou amovibles</p>
 
 <!-- Start open-hour Area -->
 <section class="notre_savoir_faire_2_area">

@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 
-<p class="text-monospace m-4 ">ici ma page d'accueil</p>
+<p class="text-monospace m-4 text-primary">ici ma page d'accueil</p>
 
 <!-- start banner Area -->
 <section class="banner-area relative" id="home">
@@ -12,13 +12,13 @@
         <div class="row fullscreen d-flex justify-content-center align-items-center">
             <div class=" banner-content col-lg-9 col-md-12 justify-content-center">
 
-                <h3 class="text-primary text-center mt-5 pt-3">
+                <h3 class="text-primary text-center mt-5">
                     Accueil
                 </h3>
 
                 <img src="public/asset/img/accueil-dentiste.png" alt="accueil-dentiste" class=" bg-image mt-3">
 
-                <h5 class=" text-dark mt-2">Votre dentiste, à votre écoute</h5>
+                <h5 class="text-dark mb-2">Votre dentiste, à votre écoute</h5>
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
             <div class="col-lg-12 open-hour-wrap p-0">
                 <h3 class="text-primary">Notre Histoire</h3>
                 <img src="public/asset/img/notre_histoire.png" alt="notre_histoire" class=" mt-3">
-                <p class=" text-justify">
+                <p class=" text-justify text-dark">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
@@ -67,7 +67,7 @@
 
                 <h4 class="text-primary">Tarifs</h4>
                 <h4 class="text-primary">Consultation 23€</h4>
-                <p class="text-justify">
+                <p class="text-justify text-dark">
                     Ces honoraires vous sont communiqués à titre indicatif par le praticien. Ils peuvent varier selon le
                     type de soins finalement réalisés en cabinet, le nombre de consultations et les actes additionnels
                     nécessaires.
@@ -173,30 +173,6 @@
 </section>
 <!-- End contact Area -->
 
-<!-- Start blog Area -->
-<section class="open-blog-area">
-    <div class="container">
-        <div class="row justify-content-center mb-4 pb-4">
-            <div class="col-lg-12 open-hour-wrap">
-                <h3 class="text-primary mb-4">Blog</h3>
-                <h4 class="text-dark"> L'importance de bien se brosser les dents.</h4>
-                <img src="public/asset/img/photo_blog.png" class="rounded mx-auto d-block position-relative"
-                    alt="Notre Blog">
-                <p class="text-justify dark mb-2 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor
-                    dapibus
-                    risus mi
-                    egestas enim quis faucibus....</p>
-
-                <a href="article" class="btn btn-light mt-2">En savoir <img src="public/asset/img/Vector (2).png"
-                        alt="arrow" class="m-2"></a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End blog Area -->
-
-
-
 <!-- Start Galery Area -->
 <section class="galery-area section-gap">
     <div class="container">
@@ -204,9 +180,9 @@
             <div class="menu-content pb-60 col-lg-12">
                 <div class="title text-center">
                     <h3 class="m-5 text-primary pb-3">Galérie</h3>
-                    <h4 class=" text-dark desc text-justify text-center">
+                    <h5 class=" text-dark desc text-justify text-center">
                         Votre bien-être est notre préoccupation.
-                    </h4>
+                    </h5>
                 </div>
             </div>
         </div>
@@ -242,7 +218,10 @@
 </section>
 <!-- End testomial Area -->
 
-
+<?php foreach ($users as $user) {
+    echo $user['login'] . "." . $user["mail"];
+}
+?>
 <!-- Start mention Area -->
 <section class="open-mention-area ">
     <div class="container">
@@ -305,9 +284,3 @@
 </section>
 <!-- End mention Area -->
 <!-- End mention Area -->
-
-<?php
-$content = ob_get_clean();
-$title = "Accueil";
-require "template.php";
-?>

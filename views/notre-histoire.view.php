@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 
-<p class="text-monospace m-4 py-4">ici ma page histoire</p>
+<p class="text-monospace m-4 py-4 text-primary">ici ma page histoire</p>
 
 <!-- Start open-hour Area -->
 <section class="notre_histoire-area">

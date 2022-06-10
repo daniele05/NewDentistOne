@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 
-<p class="text-monospace m-4 py-4">ici ma page de contact</p>
+<p class="text-monospace m-4 py-4 text-primary">ici ma page de contact</p>
 
 <!-- Start contact Area -->
 <section class="contact_area">

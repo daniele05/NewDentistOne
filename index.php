@@ -15,84 +15,102 @@ define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" :
 // role de routeur de index.php
 
 require_once("controllers/AbstractController.php");
-require_once("controllers/Visitor.controller.php");
-$visitorController = new VisitorController;
+
+require_once "controllers/Visitor/Visitor.controller.php";
+$visitor = new VisitorController;
 
 require_once("controllers/PagesStatiquesController.php");
-$pagesStatiquesController = new PagesStatiquesController;
+$pagesStatiques = new PagesStatiquesController;
 
 require_once("controllers/PatientController.php");
-$patientController = new PatientController;
+$patient = new PatientController;
 
 require_once("controllers/VideoController.php");
-$videoController = new VideoController;
+$video = new VideoController;
 
 require_once("controllers/OrdonnanceController.php");
-$ordonnanceController = new OrdonnanceController;
+$ordonnance = new OrdonnanceController;
 
 
 try {
     if (empty($_GET['page'])) {
-        require "views/home.view.php";
+        $visitor->home();
     } else {
         $url = explode("/", filter_var($_GET['page']), FILTER_SANITIZE_URL);
         $page = $url[0];
 
         switch ($page) {
             case "Home":
-                $pagesStatiquesController->afficherHome();
+                $visitor->home();
                 break;
-            case "notre-histoire":
-                $pagesStatiquesController->afficherNotreHistoire();
-                break;
-            case "notre-equipe":
-                $pagesStatiquesController->afficherNotreEquipe();
-                break;
-            case "leCabinetEnPhotos":
-                $pagesStatiquesController->afficherleCabinetEnPhotos();
-                break;
-
-            case "notre-savoir-faire-1":
-                $pagesStatiquesController->afficherNotreSavoirFaire_1();
-                break;
-            case "notre-savoir-faire-2":
-                $pagesStatiquesController->afficherNotreSavoirFaire_2();
-                break;
-            case "notre-savoir-faire-3":
-                $pagesStatiquesController->afficherNotreSavoirFaire_3();
-                break;
-            case "notre-savoir-faire-4":
-                $pagesStatiquesController->afficherNotreSavoirFaire_4();
-                break;
-            case "notre-savoir-faire-5":
-                $pagesStatiquesController->afficherNotreSavoirFaire_5();
-                break;
-            case "nous-contacter":
-                $pagesStatiquesController->afficherContact();
-                break;
-
             case "compte":
                 switch ($url[1]) {
                     case "profil":
-                        // $visitorController->afficherHome();
+                        $visitor->home();
                         break;
                 }
+            case "login":
+
+                $visitor->login();
+                break;
+            case "validation_Login":
+                if (!empty($_POST["login"]) && !$_POST["password"]) {
+                    // $visitor->validation_Login();
+                } else {
+                    AbstractController::ajouterMessageAlerte('login ou mot de passe non renseigné', AbstractController::ROUGE);
+                }
+                $_POST["login"] . "-" . $_POST["password"];
+
+                // $visitor->login();
+                break;
+
+            case "notre-histoire":
+                $pagesStatiques->afficherNotreHistoire();
+                break;
+            case "notre-equipe":
+                $pagesStatiques->afficherNotreEquipe();
+                break;
+            case "leCabinetEnPhotos":
+                $pagesStatiques->afficherleCabinetEnPhotos();
+                break;
+
+            case "notre-savoir-faire-1":
+                $pagesStatiques->afficherNotreSavoirFaire_1();
+                break;
+            case "notre-savoir-faire-2":
+                $pagesStatiques->afficherNotreSavoirFaire_2();
+                break;
+            case "notre-savoir-faire-3":
+                $pagesStatiques->afficherNotreSavoirFaire_3();
+                break;
+            case "notre-savoir-faire-4":
+                $pagesStatiques->afficherNotreSavoirFaire_4();
+                break;
+            case "notre-savoir-faire-5":
+                $pagesStatiques->afficherNotreSavoirFaire_5();
+                break;
+            case "nous-contacter":
+                $pagesStatiques->afficherContact();
+                break;
+            case "mentions":
+                $pagesStatiques->afficherMentions();
+                break;
 
             case "patients":
                 if (empty($url[1])) {
-                    $patientController->afficherPatients();
+                    $patient->afficherPatients();
                 } elseif ($url[1] === "p") {
-                    $patientController->afficherPatient($url[2]);
+                    $patient->afficherPatient($url[2]);
                 } elseif ($url[1] === "a") {
-                    $patientController->ajouterPatient();
+                    $patient->ajouterPatient();
                 } elseif ($url[1] === "m") {
-                    $patientController->modifierPatient($url[2]);
+                    $patient->modifierPatient($url[2]);
                 } elseif ($url[1] === "s") {
-                    $patientController->suppressionPatient($url[2]);
+                    $patient->suppressionPatient($url[2]);
                 } elseif ($url[1] === "av") {
-                    $patientController->ajoutPatientValidation();
+                    $patient->ajoutPatientValidation();
                 } elseif ($url[1] === "mv") {
-                    $patientController->modificationPatientValidation();
+                    $patient->modificationPatientValidation();
                 } else {
                     throw new Exception("La page n'existe pas");
                 }
@@ -100,17 +118,17 @@ try {
 
             case "ordonnances":
                 if (empty($url[1])) {
-                    $ordonnanceController->afficherOrdonnances();
+                    $ordonnance->afficherOrdonnances();
                 } elseif ($url[1] === "a") {
-                    $ordonnanceController->ajouterOrdonnance();
+                    $ordonnance->ajouterOrdonnance();
                 } elseif ($url[1] === "m") {
-                    $ordonnanceController->modifierOrdonnance($url[2]);
+                    $ordonnance->modifierOrdonnance($url[2]);
                 } elseif ($url[1] === "d") {
-                    $ordonnanceController->suppressionOrdonnance($url[2]);
+                    $ordonnance->suppressionOrdonnance($url[2]);
                 } elseif ($url[1] === "av") {
-                    $ordonnanceController->ajoutOrdonnanceValidation();
+                    $ordonnance->ajoutOrdonnanceValidation();
                 } elseif ($url[1] === "mv") {
-                    $ordonnanceController->modificationOrdonnanceValidation();
+                    $ordonnance->modificationOrdonnanceValidation();
                 } else {
                     throw new Exception("La page n'existe pas");
                 }
@@ -121,25 +139,23 @@ try {
                 break;
             case "videos":
                 if (empty($url[1])) {
-                    $videoController->afficherVideos();
+                    $video->afficherVideos();
                 } elseif ($url[1] === "a") {
-                    $videoController->ajouterVideo();
+                    $video->ajouterVideo();
                 } elseif ($url[1] === "m") {
-                    $videoController->modifierVideo($url[2]);
+                    $video->modifierVideo($url[2]);
                 } elseif ($url[1] === "d") {
-                    $videoController->suppressionVideo($url[2]);
+                    $video->suppressionVideo($url[2]);
                 } elseif ($url[1] === "av") {
-                    $videoController->ajoutVideoValidation();
+                    $video->ajoutVideoValidation();
                 } elseif ($url[1] === "mv") {
-                    $videoController->modificationVideoValidation();
+                    $video->modificationVideoValidation();
                 } else {
                     throw new Exception("La page n'existe pas");
                 }
                 break;
 
-            case "mentions":
-                $pagesStatiquesController->afficherMentions();
-                break;
+
             default:
                 throw new Exception("la page n'existe pas");
         }

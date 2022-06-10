@@ -16,8 +16,8 @@ if (!empty($_SESSION['alert'])) :
 endif;
 ?>
 
-<p class="mb-5 pb-5 ">
-    Ici le contenu de mon espace connexion
+<p class="mb-5 pb-5 text-primary">
+    Ici le contenu de mon espace Patients
 </p>
 
 <!-- tableau en dure -->
@@ -201,7 +201,7 @@ endif;
 <?php
 
 $content = ob_get_clean();
-$title = "Espace Patient";
+$titre = "Espace Patient";
 require "template.php"
 
 ?>

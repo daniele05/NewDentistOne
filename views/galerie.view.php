@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 
-<p class="text-monospace m-3">ici ma page Galerie</p>
+<p class="text-monospace m-3 text-primary">ici ma page Galerie</p>
 
 
 <!-- Start open-hour Area -->

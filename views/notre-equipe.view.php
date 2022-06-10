@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 
-<p class="text-monospace m-4 p-4">ici mon équipe médicale</p>
+<p class="text-monospace m-4 p-4 text-primary">ici mon équipe médicale</p>
 
 
 
