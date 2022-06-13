@@ -12,13 +12,13 @@
         <div class="row fullscreen d-flex justify-content-center align-items-center">
             <div class=" banner-content col-lg-9 col-md-12 justify-content-center">
 
-                <h3 class="text-primary text-center mt-5">
+                <h3 class="text-primary text-center mb-4">
                     Accueil
                 </h3>
 
-                <img src="public/asset/img/accueil-dentiste.png" alt="accueil-dentiste" class=" bg-image mt-3">
+                <img src="public/asset/img/accueil-dentiste.png" alt="accueil-dentiste" class=" bg-image mb-3">
 
-                <h5 class="text-dark mb-2">Votre dentiste, à votre écoute</h5>
+                <h5 class="text-dark mb-4 pb-3">Votre dentiste, à votre écoute</h5>
             </div>
         </div>
     </div>
@@ -28,9 +28,9 @@
 <!-- Start open-hour Area -->
 <section class="  notre_histoire-area">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 open-hour-wrap p-0">
-                <h3 class="text-primary">Notre Histoire</h3>
+        <div class="row justify-content-center mt-2">
+            <div class="col-lg-12 open-hour-wrap">
+                <h3 class="text-primary text-center">Notre Histoire</h3>
                 <img src="public/asset/img/notre_histoire.png" alt="notre_histoire" class=" mt-3">
                 <p class=" text-justify text-dark">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -218,10 +218,10 @@
 </section>
 <!-- End testomial Area -->
 
-<?php foreach ($users as $user) {
-    echo $user['login'] . "." . $user["mail"];
+<!-- <php foreach ($users as $user) {
+    // echo $user['login'] . "." . $user["mail"];
 }
-?>
+?> -->
 <!-- Start mention Area -->
 <section class="open-mention-area ">
     <div class="container">

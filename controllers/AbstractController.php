@@ -1,10 +1,8 @@
 <?php
-abstract class AbstractController
-{
-    const ROUGE = 'danger';
-    const ORANGE = 'warning';
-    const VERTE = 'success';
+require_once "models/Model.class.php";
 
+abstract class AbstractController extends Model
+{
 
     public function genererPage($data)
     {
@@ -25,14 +23,5 @@ abstract class AbstractController
             "template" => "views/template.php"
         ];
         $this->genererPage($data_page);
-    }
-
-
-    public static function ajouterMessageAlerte($message, $type)
-    {
-        $_SESSION['alert'][] = [
-            "message" => $message,
-            "type" => $type,
-        ];
     }
 }

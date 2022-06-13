@@ -1,10 +1,6 @@
-<?php
-$password = "kiki";
-$passwordHash = password_hash($password, PASSWORD_DEFAULT);
-// var_dump($password);
-// var_dump($passwordHash);
-// die();
-?>
+<!-- <php
+echo password_hash("test", PASSWORD_DEFAULT);
+?> -->
 
 <?php
 // Def const URL 
@@ -15,23 +11,20 @@ define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" :
 // role de routeur de index.php
 
 require_once("controllers/AbstractController.php");
-
+require_once "controllers/Toolbox.class.php";
+require_once "controllers/Securite.class.php";
 require_once "controllers/Visitor/Visitor.controller.php";
-$visitor = new VisitorController;
-
+require_once "controllers/User/User.controller.php";
 require_once("controllers/PagesStatiquesController.php");
-$pagesStatiques = new PagesStatiquesController;
-
 require_once("controllers/PatientController.php");
-$patient = new PatientController;
-
 require_once("controllers/VideoController.php");
-$video = new VideoController;
-
 require_once("controllers/OrdonnanceController.php");
+$user = new UserController;
+$visitor = new VisitorController;
+$patient = new PatientController;
 $ordonnance = new OrdonnanceController;
-
-
+$video = new VideoController;
+$pagesStatiques = new PagesStatiquesController;
 try {
     if (empty($_GET['page'])) {
         $visitor->home();
@@ -53,14 +46,16 @@ try {
 
                 $visitor->login();
                 break;
-            case "validation_Login":
-                if (!empty($_POST["login"]) && !$_POST["password"]) {
-                    // $visitor->validation_Login();
+            case "validation_login":
+                if (!empty($_POST["login"]) && !empty($_POST["password"])) {
+                    $login = Securite::secureHTML($_POST["login"]);
+                    $password = Securite::secureHTML($_POST["password"]);
+                    $user->validation_login($login, $password);
                 } else {
-                    AbstractController::ajouterMessageAlerte('login ou mot de passe non renseigné', AbstractController::ROUGE);
+                    Toolbox::ajouterMessageAlerte('login ou mot de passe non renseigné', Toolbox::ROUGE);
+                    // reroutage si pas de connexion 
+                    header('Location:' . URL . "login");
                 }
-                $_POST["login"] . "-" . $_POST["password"];
-
                 // $visitor->login();
                 break;
 
