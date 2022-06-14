@@ -33,7 +33,7 @@ try {
         $page = $url[0];
 
         switch ($page) {
-            case "Home":
+            case "home":
                 $visitor->home();
                 break;
             case "login":
@@ -54,15 +54,28 @@ try {
                     $user->validation_login($login, $password);
                 } else {
                     Toolbox::ajouterMessageAlerte('login ou mot de passe non renseigné', Toolbox::ROUGE);
+
                     // reroutage si pas de connexion 
-                    // header('Location:' . URL . "login");
-                    echo "test";
+                    header('Location:' . URL . "login");
+                    // echo "test";
                 }
                 break;
             case "creerCompte":
                 $visitor->creerCompte();
             case "validation_creerCompte":
-                echo "test";
+                if (!empty($_POST["login"]) && !empty($_POST["password"]) && !empty($_POST["mail"])) {
+                    $login = Securite::secureHTML($_POST["login"]);
+                    $password = Securite::secureHTML($_POST["password"]);
+                    $mail = Securite::secureHTML($_POST["mail"]);
+                    $user->validation_creerCompte($login, $password, $mail);
+                } else {
+                    Toolbox::ajouterMessageAlerte('Les trois champs sont obligatoires', Toolbox::ROUGE);
+                    header("Location:" . URL . "creerCompte");
+                }
+                break;
+                // else{
+                //     Toolbox::ajouterMessageAlerte('Login non disponible',Toolbox::ROUGE);
+                // }
 
             case "compte":
                 // Securite en plus avec la fonction estConnecte
@@ -74,9 +87,9 @@ try {
                         case "profil":
                             $user->profil();
                             break;
-                        case "déconnexion":
+                        case "deconnexion":
                             $user->deconnexion();
-                            var_dump("test");
+                            // var_dump("test");
 
                         default:
                             throw new Exception("la page n'existe pas");
