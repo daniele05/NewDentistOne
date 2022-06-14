@@ -1,6 +1,6 @@
-<p class="mb-5 pb-5 text-primary">page de connexion</p>
+<p class="mb-5 pb-5 text-primary">Création de compte</p>
 <div class="main-wrapper mb-4">
-    <form method="POST" action="<?= URL ?>validation_login">
+    <form method="POST" action="<?= URL ?>validation_creerCompte">
         <div class="form-cont-2">
             <p class="mb-2 pb-2">Login</p>
             <input type="text" name="login" id="login" />
@@ -13,7 +13,13 @@
             <input class="check" id="check-text" type="checkbox"></input>
             <label class="check-label" for="check-text">Remember me</label>
         </div>
-        <button type="submit" class="btn btn-primary">Connexion</button>
+        <div class="form-cont-3">
+            <div class="pass-cont">
+                <p>Mail</p>
+                <input type="mail" name="mail" id="mail" />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Créer !</button>
     </form>
     <div class="float circle c-1"></div>
     <div class="float circle c-2"></div>

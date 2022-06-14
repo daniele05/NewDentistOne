@@ -5,18 +5,20 @@ require_once "models/Patient.class.php";
 
 //  appel de la class Manager 
 ob_start();
-if (!empty($_SESSION['alert'])) :
+// if (!empty($_SESSION['alert'])) :
+// 
 ?>
-<div class="alert alert-<?= $_SESSION['alert']['type'] ?>" role="alert">
-    <?= $_SESSION['alert']['msg'] ?>
-</div>
+<!-- // <div class="alert alert-<= $_SESSION['alert']['type'] ?>" role="alert"> -->
+<!-- // <= $_SESSION['alert']['msg'] >
+        // </div> -->
 
-<?php
-    unset($_SESSION['alert']);
-endif;
-?>
+<!-- // <php
+    // unset($_SESSION['alert']);
+    // endif;
+    //
+    ?> -->
 
-<p class="mb-5 pb-5 text-primary">
+<p class="mt-5 pt-5 text-primary">
     Ici le contenu de mon espace Patients
 </p>
 

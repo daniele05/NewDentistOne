@@ -40,16 +40,18 @@
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/jquery-ui.css">
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/owl.carousel.css">
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/main.css">
-    <?php
+    <!-- <php
     if (!empty($page_css)) : ?>
-    <?php foreach ($page_css as $fichier_css) : ?>
-    <link href="<?= URL ?>public/asset/css/<? $fichier_css ?>" rel="stylesheet">
-    <?php endforeach; ?>
-    <?php endif; ?>
+    <php foreach ($page_css as $fichier_css) : ?>
+    <link href="<= URL ?>public/asset/css/< $fichier_css ?>" rel="stylesheet">
+    <php endforeach; ?>
+    <php endif; ?> -->
 
 
     <!-- css personnalisé -->
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/style.css">
+    <!--css login-->
+    <link rel="stylesheet" href="<? URL ?>public/asset/css/login.css">
 
 
 </head>
@@ -121,7 +123,7 @@
                         </li>
                         <!-- <li class="menu-has-children"><a href="#">Rendez-vous</a>
                             <ul>
-                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>rdvs"> Mes rendez-vous
+                                <li class="nav-items"><a class="nav-link" href="<= URL ?>rdvs"> Mes rendez-vous
                                     </a></li>
                             </ul>
                         </li> -->
@@ -138,15 +140,35 @@
 
                             </ul>
                         </li>
-                        <!-- <li class="nav-items"><a class="nav-items" href="<? URL ?>">Ordonnances</a>
+                        <!-- <li class="nav-items"><a class="nav-items" href="< URL ?>">Ordonnances</a>
                             <ul>
-                                <li><a class="btn" href="<?= URL ?>">Vous Connecter</a></li>
-                                <li><a class="btn" href="<?= URL ?>login">Login</a></li>
+                                <li><a class="btn" href="<= URL ?>">Vous Connecter</a></li>
+                                <li><a class="btn" href="<= URL ?>login">Login</a></li>
                             </ul>
                         </li> -->
-                        <li class="nav-link"><a href="<?= URL ?>login"><img src="public /asset/img/ps_padlock.png" alt="espace
-                                connexion" class="text-white mb-2"> Mon <font color="#007BFF"=""></font>espace
-                            </a></li>
+
+                        <!-- pas connecté  -->
+
+                        <?php if (empty($_SESSION['profil'])) : ?>
+                        <li class="menu-has-children"> <a class="nav-link" href="<?= URL ?>login"><img
+                                    src="public /asset/img/ps_padlock.png" alt="espace
+                                connexion" class="text-white mb-2"> Mon espace</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=<?= URL ?>creerCompte>CreerCompte
+                        </li>
+                        </li>
+                        <!-- si connecter  -->
+                        <?php else : ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= URL ?>compte/profil">Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= URL ?>compte/deconnexion">Se déconnecter</a>
+                        </li>
+                        <?php endif; ?>
+
+                        </li>
                     </ul>
 
                 </nav><!-- #nav-menu-container -->

@@ -7,7 +7,7 @@ class UserManager extends Model
     {
 
         //recup du password prpore au login via la req
-        $req = "SELECT password FROM user WHERE login = :login"; // req propre au PDO dou utilisation de binValue apres
+        $req = "SELECT password FROM users WHERE login = :login"; // req propre au PDO dou utilisation de binValue apres
         $stmt = $this->getBdd()->prepare($req);
         // securistaion de la req abvec binValue
         $stmt->bindValue(":login", $login, PDO::PARAM_STR);
@@ -26,13 +26,24 @@ class UserManager extends Model
 
     public function estCompteActive($login)
     {
-        $req = "SELECT est_valide FROM user WHERE login = :login"; // req propre au PDO dou utilisation de binValue apres
+        $req = "SELECT est_valide FROM users WHERE login = :login"; // req propre au PDO dou utilisation de binValue apres
         $stmt = $this->getBdd()->prepare($req);
         // securistaion de la req abvec binValue
         $stmt->bindValue(":login", $login, PDO::PARAM_STR);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
-        return ((int)$result['est_valide'] === 0) ? false : true;
+        return ((int)$result['est_valide'] === 1) ? true : false;
+    }
+    public function getUserInformation($login)
+    {
+        $req = "SELECT* FROM users WHERE login = :login"; // req propre au PDO dou utilisation de binValue apres
+        $stmt = $this->getBdd()->prepare($req);
+        // securistaion de la req abvec binValue
+        $stmt->bindValue(":login", $login, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $result;
     }
 }

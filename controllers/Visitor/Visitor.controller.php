@@ -15,14 +15,15 @@ class VisitorController extends AbstractController
 
     public function home()
     {
-        $users = $this->visitorManager->getUsers();
+        // $users = $this->visitorManager->getUsers();
         // print_r($users);
         // die();
 
         $data = [
             "titre" => "Cabinet dentaire d'Antony",
-            "users" => $users,
+            // "users" => $users,
             "view" => "views/Visitor/home.view.php"
+
         ];
         $this->genererPage($data);
     }
@@ -33,6 +34,17 @@ class VisitorController extends AbstractController
             //page_description et page_title
             "titre" => "connexion",
             "view" => "views/Visitor/login.view.php",
+            "template" => "views/template.php",
+        ];
+        $this->genererPage($data);
+    }
+    public function creerCompte()
+    {
+        $data = [
+            //page_description et page_title
+            "titre" => "page de création de compte",
+            "view" => "views/Visitor/creerCompte.view.php",
+
         ];
         $this->genererPage($data);
     }

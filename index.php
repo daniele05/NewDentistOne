@@ -36,27 +36,52 @@ try {
             case "Home":
                 $visitor->home();
                 break;
-            case "compte":
-                switch ($url[1]) {
-                    case "profil":
-                        $visitor->home();
-                        break;
-                }
             case "login":
-
                 $visitor->login();
                 break;
             case "validation_login":
+
+                // var_dump($_POST["login"]);
+                // var_dump($_POST["password"]);
+                // var_dump($_POST);
+                // var_dump($_POST["Password"]);
+
                 if (!empty($_POST["login"]) && !empty($_POST["password"])) {
                     $login = Securite::secureHTML($_POST["login"]);
+                    // var_dump($login);
+                    // die();
                     $password = Securite::secureHTML($_POST["password"]);
                     $user->validation_login($login, $password);
                 } else {
                     Toolbox::ajouterMessageAlerte('login ou mot de passe non renseigné', Toolbox::ROUGE);
                     // reroutage si pas de connexion 
-                    header('Location:' . URL . "login");
+                    // header('Location:' . URL . "login");
+                    echo "test";
                 }
-                // $visitor->login();
+                break;
+            case "creerCompte":
+                $visitor->creerCompte();
+            case "validation_creerCompte":
+                echo "test";
+
+            case "compte":
+                // Securite en plus avec la fonction estConnecte
+                if (!Securite::estConnecte()) {
+                    Toolbox::ajouterMessageAlerte("Veuillez vous connecter !", Toolbox::ROUGE);
+                    header("Location:" . URL . "login");
+                } else {
+                    switch ($url[1]) {
+                        case "profil":
+                            $user->profil();
+                            break;
+                        case "déconnexion":
+                            $user->deconnexion();
+                            var_dump("test");
+
+                        default:
+                            throw new Exception("la page n'existe pas");
+                    }
+                }
                 break;
 
             case "notre-histoire":

@@ -5,4 +5,9 @@ class Securite
     {
         return htmlentities($string);
     }
+    public static function estConnecte()
+    {
+        // retourne la session profil si existe ou non
+        return (!empty($_SESSION['profil']));
+    }
 }
