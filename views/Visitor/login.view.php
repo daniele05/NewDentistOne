@@ -1,5 +1,7 @@
 <p class="mb-5 pb-5 text-primary">page de connexion</p>
-<div><?= Toolbox::afficherMessageAlerte() ?></div>
+<div>
+    <?= Toolbox::afficherMessageAlerte() ?>
+</div>
 <div class="main-wrapper mb-4">
 
     <form method="POST" action="<?= URL ?>validation_login">

@@ -3,6 +3,7 @@ echo password_hash("test", PASSWORD_DEFAULT);
 ?> -->
 
 <?php
+// phpinfo();
 // Def const URL 
 // Const defint lien absolu depuis https ou http
 session_start();
@@ -19,6 +20,8 @@ require_once("controllers/PagesStatiquesController.php");
 require_once("controllers/PatientController.php");
 require_once("controllers/VideoController.php");
 require_once("controllers/OrdonnanceController.php");
+require_once("controllers/Admin/Admin.controller.php");
+$admin = new AdminController;
 $user = new UserController;
 $visitor = new VisitorController;
 $patient = new PatientController;
@@ -40,11 +43,6 @@ try {
                 $visitor->login();
                 break;
             case "validation_login":
-
-                // var_dump($_POST["login"]);
-                // var_dump($_POST["password"]);
-                // var_dump($_POST);
-                // var_dump($_POST["Password"]);
 
                 if (!empty($_POST["login"]) && !empty($_POST["password"])) {
                     $login = Securite::secureHTML($_POST["login"]);
@@ -96,6 +94,27 @@ try {
                     }
                 }
                 break;
+            case "administration":
+                if (!Securite::estConnecte()) {
+                    Toolbox::ajouterMessageAlerte("Vous devez vous connecter", Toolbox::ROUGE);
+                    header("Location:" . URL . $login);
+                } else if (!Securite::estAdministrateur("Vous ne pouvez pas vous connecter ici", Toolbox::ROUGE))
+                    header("Location:" . URL . $home);
+                else {
+                    switch ($url[1]) {
+                        case 'droits':
+                            $admin->droits();
+                            break;
+
+                        default:
+                            throw new Exception("la page n'existe pas");
+                    }
+                }
+                break;
+
+            default:
+                //     throw new Exception("la page n'existe pas");
+
 
             case "notre-histoire":
                 $pagesStatiques->afficherNotreHistoire();
@@ -196,4 +215,4 @@ try {
 } catch (Exception $e) {
     $msg = $e->getMessage();
     require "views/error.view.php";
-}
+};

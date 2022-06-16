@@ -19,8 +19,8 @@ class Toolbox
         if (isset($_SESSION['alert']) && !empty($_SESSION['alert'])) {
 
             foreach ($_SESSION['alert'] as $value) {
-                var_dump($value);
-                print '<p>' . $value["message"] . '</p>';
+                // var_dump($value);
+                print '<p class="p-2 bg-' . $value["type"] . ' text-white" >' . $value["message"] . '</p>';
             }
             unset($_SESSION['alert']);
         }

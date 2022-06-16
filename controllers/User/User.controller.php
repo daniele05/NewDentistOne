@@ -17,13 +17,13 @@ class UserController extends AbstractController
     {
         if ($this->userManager->isCombinaisonValide($login, $password)) {
             if ($this->userManager->estCompteActive($login)) {
-                Toolbox::ajouterMessageAlerte(" bon retour sur le site" . $login . "!", Toolbox::VERTE);
+                // Toolbox::ajouterMessageAlerte(" bon retour sur le site" . $login . "!", Toolbox::VERTE);
                 $_SESSION['profil'] = [
                     "login" => $login
                 ];
                 header("Location: " . URL . "compte/profil");
             } else {
-                Toolbox::ajouterMessageAlerte("le compte" . $login . " n'a pas été activé par mail", Toolbox::ROUGE);
+                Toolbox::ajouterMessageAlerte("le compte" . " " . $login . " n'a pas été activé par mail", Toolbox::ROUGE);
                 header("Location:" . URL . "login");
             }
         } else {
@@ -61,8 +61,13 @@ class UserController extends AbstractController
         if ($this->userManager->verifLoginAvailable($login)) {
             $passwordCrypte = password_hash($password, PASSWORD_DEFAULT);
             // compter avec rand le nombre de ligne 
-            $clef = rand(0, 9999);
-            if ($this->userManager->bdCreerCompte($login, $passwordCrypte, $mail, $clef)) {
+            $clef = rand(0, 9999); // servira pour la validation du mail de confirmation
+            $role = 1;
+            $est_valide = 0;
+
+            if ($this->userManager->bdCreerCompte($login, $passwordCrypte, $mail, $role, $est_valide)) {
+                Toolbox::ajouterMessageAlerte("Le compte a été crée, un mail de validation a été envoyé", Toolbox::VERTE);
+                header("Location:" . URL . "login");
             } else {
                 Toolbox::ajouterMessageAlerte("Erreur lors de la création du compte, recommencez !", Toolbox::ROUGE);
                 header("Location:" . URL . "creerCompte");

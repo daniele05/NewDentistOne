@@ -1,4 +1,7 @@
 <p class="mb-5 pb-5 text-primary">Création de compte</p>
+<div>
+    <?= Toolbox::afficherMessageAlerte() ?>
+</div>
 <div class="main-wrapper mb-4">
     <form method="POST" action="<?= URL ?>validation_creerCompte">
         <div class="form-cont-2">
@@ -10,8 +13,6 @@
                 <p>Mot de passe</p>
                 <input type="password" name="password" id="password" />
             </div>
-            <input class="check" id="check-text" type="checkbox"></input>
-            <label class="check-label" for="check-text">Remember me</label>
         </div>
         <div class="form-cont-3">
             <div class="pass-cont">
@@ -19,6 +20,7 @@
                 <input type="mail" name="mail" id="mail" />
             </div>
         </div>
+        <br>
         <button type="submit" class="btn btn-primary">Créer !</button>
     </form>
     <div class="float circle c-1"></div>
