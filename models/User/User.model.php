@@ -46,4 +46,27 @@ class UserManager extends Model
         $stmt->closeCursor();
         return $result;
     }
-}
+
+    public function bdCreerCompte($login, $passwordCrypte, $clef, $mail)
+    {
+        // $req = "INSERT INTO users(login, password, mail, est_valide, role,clef, image)
+        // VALUES(:login, :password, :mail, :0, :user, :clef, :'')";
+        // $stmt = $this->getBdd()->prepare($req);
+        // $stmt->bindValue(":login", $login, PDO::PARAM_STR);
+        // $stmt->bindValue(":password", $passwordCrypte, PDO::PARAM_STR);
+        // $stmt->bindValue(":mail", $mail, PDO::PARAM_STR);
+        // $stmt->bindValue(":clef", $clef, PDO::PARAM_INT);
+        // $stmt->execute();
+        // $estModifier = ($stmt->rowCount() > 0);  // > 0 c est vrai 
+        // $stmt->closeCursor(); // > 0 c est vrai 
+        // return $estModifier();
+    }
+
+    public function verifLoginAvailable($login)
+    {
+        // recupreration du $user de la getUserinfo du dessus 
+        $user = $this->getUserInformation($login);
+        // verif du nbre de ligne recupere
+        return empty($user);
+    }
+}// > 0 c est vrai 

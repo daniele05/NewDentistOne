@@ -56,6 +56,23 @@ class UserController extends AbstractController
         header("Location:" . URL . "home");
     }
 
+    public function validation_creerCompte($login, $password, $mail)
+    {
+        if ($this->userManager->verifLoginAvailable($login)) {
+            $passwordCrypte = password_hash($password, PASSWORD_DEFAULT);
+            // compter avec rand le nombre de ligne 
+            $clef = rand(0, 9999);
+            if ($this->userManager->bdCreerCompte($login, $passwordCrypte, $mail, $clef)) {
+            } else {
+                Toolbox::ajouterMessageAlerte("Erreur lors de la création du compte, recommencez !", Toolbox::ROUGE);
+                header("Location:" . URL . "creerCompte");
+            }
+        } else {
+            Toolbox::ajouterMessageAlerte("le login est déjà utilisé", Toolbox::ROUGE);
+            header("Location:" . URL . "creerCompte");
+        }
+    }
+
     public function pageErreur($msg)
     {
         // heriter de l apage parent pageErreur

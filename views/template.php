@@ -51,10 +51,12 @@
     <!-- css personnalisé -->
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/style.css">
     <!--css login-->
-    <link rel="stylesheet" href="<? URL ?>public/asset/css/login.css">
-
-
-</head>
+    <!-- <link rel="stylesheet" href="< URL ?>public/asset/css/login.css"> -->
+    <!-- <php (!empty($styles )) :?>
+    <php foreach($styles as $fichier_css) :?>
+        <link href="<=URL ?> public/asset/css <$fichier_css ?>" rel="stylesheet">
+        <php endforeach; ?>
+            <php endif; ?> -->
 
 <body>
     <header id="header" id="home" class="mx-5 px-5 mb-5">
@@ -81,7 +83,7 @@
             <div class="row align-items-center justify-content-between d-flex">
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li class="menu-active"><a href="<?= URL ?>Home">Home</a></li>
+                        <li class="menu-active"><a href="<?= URL ?>home">Home</a></li>
                         <li class="menu-has-children"><a href="<?= URL ?>notre-histoire">Notre Histoire</a>
 
                             <ul>
@@ -155,7 +157,7 @@
                                 connexion" class="text-white mb-2"> Mon espace</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href=<?= URL ?>creerCompte>CreerCompte
+                            <a class="nav-link" href="<?= URL ?>creerCompte">CreerCompte</a>
                         </li>
                         </li>
                         <!-- si connecter  -->

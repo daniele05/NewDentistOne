@@ -1,5 +1,6 @@
 <?php
 require_once "models/Model.class.php";
+require_once "controllers/Toolbox.class.php";
 
 abstract class AbstractController extends Model
 {
