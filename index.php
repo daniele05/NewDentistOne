@@ -20,8 +20,8 @@ require_once("controllers/PagesStatiquesController.php");
 require_once("controllers/PatientController.php");
 require_once("controllers/VideoController.php");
 require_once("controllers/OrdonnanceController.php");
-require_once("controllers/Admin/Admin.controller.php");
-$admin = new AdminController;
+require_once("controllers/Administrateur/Administrateur.controller.php");
+$administrateur = new AdministrateurController;
 $user = new UserController;
 $visitor = new VisitorController;
 $patient = new PatientController;
@@ -94,16 +94,17 @@ try {
                     }
                 }
                 break;
-            case "administration":
+            case "administrateur":
                 if (!Securite::estConnecte()) {
                     Toolbox::ajouterMessageAlerte("Vous devez vous connecter", Toolbox::ROUGE);
                     header("Location:" . URL . $login);
-                } else if (!Securite::estAdministrateur("Vous ne pouvez pas vous connecter ici", Toolbox::ROUGE))
+                } else if (!Securite::estAdministrateur()) {
+                    Toolbox::ajouterMessageAlerte("Vous ne pouvez pas vous connecter ici", Toolbox::ROUGE);
                     header("Location:" . URL . $home);
-                else {
+                } else {
                     switch ($url[1]) {
                         case 'droits':
-                            $admin->droits();
+                            $administrateur->droits();
                             break;
 
                         default:
@@ -113,8 +114,7 @@ try {
                 break;
 
             default:
-                //     throw new Exception("la page n'existe pas");
-
+                throw new Exception("la page n'existe pas");
 
             case "notre-histoire":
                 $pagesStatiques->afficherNotreHistoire();

@@ -13,20 +13,6 @@ class PatientManager extends Model
 
     private $patients; // tableau patients
 
-    public function ajouterPatient($patient)
-    {
-        // var_dump($patient);
-        // die();
-
-
-        $this->patients[] = $patient;
-    }
-
-    public function getPatients()
-    {
-        return $this->patients;
-    }
-
 
     public function chargementPatients()
     {
@@ -41,6 +27,24 @@ class PatientManager extends Model
             $this->ajouterPatient($p);
         }
     }
+    public function getPatients()
+    {
+        return $this->patients;
+    }
+
+    public function ajouterPatient($patient)
+    {
+        // var_dump($patient);
+        // die();
+
+
+        $this->patients[] = $patient;
+    }
+
+
+
+
+
 
     public function getPatientById($idPatient)
     {

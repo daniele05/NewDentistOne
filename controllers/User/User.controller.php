@@ -22,9 +22,6 @@ class UserController extends AbstractController
                     "login" => $login
                 ];
                 header("Location: " . URL . "compte/profil");
-            } else {
-                Toolbox::ajouterMessageAlerte("le compte" . " " . $login . " n'a pas été activé par mail", Toolbox::ROUGE);
-                header("Location:" . URL . "login");
             }
         } else {
             Toolbox::ajouterMessageAlerte("combinaison login/ mot de passe non valide", Toolbox::ROUGE);
@@ -66,7 +63,8 @@ class UserController extends AbstractController
             $est_valide = 0;
 
             if ($this->userManager->bdCreerCompte($login, $passwordCrypte, $mail, $role, $est_valide)) {
-                Toolbox::ajouterMessageAlerte("Le compte a été crée, un mail de validation a été envoyé", Toolbox::VERTE);
+                // function de d envoi 
+                Toolbox::ajouterMessageAlerte("Le compte a été crée avec succès", Toolbox::VERTE);
                 header("Location:" . URL . "login");
             } else {
                 Toolbox::ajouterMessageAlerte("Erreur lors de la création du compte, recommencez !", Toolbox::ROUGE);

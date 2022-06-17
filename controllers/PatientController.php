@@ -111,6 +111,7 @@ class PatientController
         ];
 
         header('Location:' . URL . "patient");
+        print_r($file);
     }
 
 

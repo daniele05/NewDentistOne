@@ -14,8 +14,6 @@
                 <p>Mot de passe</p>
                 <input type="password" name="password" id="password" />
             </div>
-            <input class="check" id="check-text" type="checkbox"></input>
-            <label class="check-label" for="check-text">Remember me</label>
         </div>
         <button type="submit" class="btn btn-primary">Connexion</button>
     </form>

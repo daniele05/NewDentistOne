@@ -87,7 +87,7 @@
 
     </div>
     <div class="text-center w-100  ">
-        <a href="" class="btn btn-success d-block">Valider</a>
+        <button class="btn btn-primary" type="submit">Valider</button>
     </div>
 </form>
 

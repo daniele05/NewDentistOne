@@ -15,7 +15,6 @@
         <p>Date d'Inscription Patient: <?= $patient->getDateIncriptionPatient(); ?></p>
         <p>Id Soins Dentaires: <?= $patient->getIdSoinsDentaires(); ?></p>
         <p>Id Ordonnance: <?= $patient->getIdOrdonnance(); ?></p>
-
     </div>
 
 
