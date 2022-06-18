@@ -26,6 +26,15 @@ class AdministrateurController extends AbstractController
         ];
         $this->genererPage($data);
     }
+    public function validation_modificationRole($login, $role)
+    {
+        if ($this->administrateurManager->bdModificationRoleUser($login, $role)) {
+            Toolbox::ajouterMessageAlerte("La modification a été prise en compte", Toolbox::VERTE);
+        } else {
+            Toolbox::ajouterMessageAlerte("La modification n'a pas été prise en compte", Toolbox::ROUGE);
+            header("Location:" . URL . "administrateur/droits");
+        }
+    }
     public function pageErreur($msg)
     {
         // heriter de l apage parent pageErreur

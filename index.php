@@ -41,7 +41,6 @@ try {
                 break;
             case "login":
                 $visitor->login();
-                break;
             case "validation_login":
 
                 if (!empty($_POST["login"]) && !empty($_POST["password"])) {
@@ -60,6 +59,7 @@ try {
                 break;
             case "creerCompte":
                 $visitor->creerCompte();
+                break;
             case "validation_creerCompte":
                 if (!empty($_POST["login"]) && !empty($_POST["password"]) && !empty($_POST["mail"])) {
                     $login = Securite::secureHTML($_POST["login"]);
@@ -87,10 +87,9 @@ try {
                             break;
                         case "deconnexion":
                             $user->deconnexion();
-                            // var_dump("test");
-
+                            // var_dump("test")
                         default:
-                            throw new Exception("la page n'existe pas");
+                            throw new Exception("la page de compte n'existe pas");
                     }
                 }
                 break;
@@ -106,15 +105,15 @@ try {
                         case 'droits':
                             $administrateur->droits();
                             break;
-
+                        case 'validation_modificationRole':
+                            $administrateur->validation_modificationRole($_POST['login'], $_POST['role']);
                         default:
-                            throw new Exception("la page n'existe pas");
+                            throw new Exception("la page droits n'est pas accessible");
                     }
                 }
                 break;
-
             default:
-                throw new Exception("la page n'existe pas");
+                throw new Exception("la page administrateur est introuvable");
 
             case "notre-histoire":
                 $pagesStatiques->afficherNotreHistoire();
@@ -159,12 +158,12 @@ try {
                     $patient->modifierPatient($url[2]);
                 } elseif ($url[1] === "s") {
                     $patient->suppressionPatient($url[2]);
-                } elseif ($url[1] === "av") {
+                } elseif ($url[1] == "av") {
                     $patient->ajoutPatientValidation();
                 } elseif ($url[1] === "mv") {
                     $patient->modificationPatientValidation();
                 } else {
-                    throw new Exception("La page n'existe pas");
+                    throw new Exception("La page patients est inexistante");
                 }
                 break;
 
@@ -182,7 +181,7 @@ try {
                 } elseif ($url[1] === "mv") {
                     $ordonnance->modificationOrdonnanceValidation();
                 } else {
-                    throw new Exception("La page n'existe pas");
+                    throw new Exception("La page ordonnances n'existe pas");
                 }
                 break;
 
@@ -203,13 +202,11 @@ try {
                 } elseif ($url[1] === "mv") {
                     $video->modificationVideoValidation();
                 } else {
-                    throw new Exception("La page n'existe pas");
+                    throw new Exception("La page video n'existe pas");
                 }
                 break;
-
-
             default:
-                throw new Exception("la page n'existe pas");
+                throw new Exception("Attention");
         }
     }
 } catch (Exception $e) {

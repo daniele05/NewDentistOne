@@ -24,10 +24,11 @@ class PatientController
     // Afficher un patient 
 
     // public function afficherPatient($idPatient)
-    public function afficherPatient()
+    public function afficherPatient($idPatient)
     {
-        // $patientManager = $this->patientManager;
-        // $patient = $patientManager->getPatientById($idPatient);
+
+        $patientManager = $this->patientManager->getPatientById($idPatient);
+
 
         // echo $patient->getIrstName();
 
@@ -68,10 +69,11 @@ class PatientController
         }
         $this->patientManager->modificationPatientBD($nomImageAjoute, $_POST['photo'], $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idOrdonnance']);
 
-        $_SESSION['alert'] = [
-            "type"  => "success",
-            "msg" => "Modification réalisée"
-        ];
+        // $_SESSION['alert'] = [
+        //     "type"  => "success",
+        //     "msg" => "Modification réalisée"
+        // ];
+        Toolbox::ajouterMessageAlerte("Modification réussie", Toolbox::VERTE);
 
         header('Location:' . URL . "patient");
     }
@@ -105,12 +107,14 @@ class PatientController
         $nomImageAjoute = $this->ajoutImage($file, $repertoire);
         $this->patientManager->ajouterPatientBd($nomImageAjoute, $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idOrdonnance']);
 
-        $_SESSION['alert'] = [
-            "type"  => "success",
-            "msg" => "Ajout réalisé"
-        ];
+        // $_SESSION['alert'] = [
+        //     "type"  => "success",
+        //     "msg" => "Ajout réalisé"
+        // ];
 
-        header('Location:' . URL . "patient");
+        Toolbox::ajouterMessageAlerte("Ajout réalisé", Toolbox::VERTE);
+
+        header('Location:' . URL);
         print_r($file);
     }
 

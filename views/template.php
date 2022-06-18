@@ -43,7 +43,7 @@
     <!-- <php
     if (!empty($page_css)) : ?>
     <php foreach ($page_css as $fichier_css) : ?>
-    <link href="<= URL ?>public/asset/css/< $fichier_css ?>" rel="stylesheet">
+    <link href="<?= URL ?>public/asset/css/< $fichier_css ?>" rel="stylesheet">
     <php endforeach; ?>
     <php endif; ?> -->
 
@@ -54,7 +54,7 @@
     <!-- <link rel="stylesheet" href="< URL ?>public/asset/css/login.css"> -->
     <!-- <php (!empty($styles )) :?>
     <php foreach($styles as $fichier_css) :?>
-        <link href="<=URL ?> public/asset/css <$fichier_css ?>" rel="stylesheet">
+        <link href="<?= URL ?> public/asset/css <$fichier_css ?>" rel="stylesheet">
         <php endforeach; ?>
             <php endif; ?> -->
 
@@ -118,8 +118,8 @@
                         </li>
                         <!-- <li class="nav-items"><a class="nav-items" href="< URL ?>">Ordonnances</a> -->
                         <!-- <ul>
-                                <li><a class="btn" href="<= URL ?>">Vous Connecter</a></li>
-                                <li><a class="btn" href="<= URL ?>login">Login</a></li>
+                                <li><a class="btn" href="<?= URL ?>">Vous Connecter</a></li>
+                                <li><a class="btn" href="<?= URL ?>login">Login</a></li>
                             </ul> -->
 
                         <!-- <li class="menu-has-children"><a href="blog">Blog</a></li> -->
@@ -178,7 +178,7 @@
                         </li>
                         <li class="menu-has-children"><a href="#">Rendez-vous</a>
                             <ul>
-                                <li class="nav-items"><a class="nav-link" href="<= URL ?>rdvs">
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>rdvs">
                                         Mes rendez-vous
                                     </a>
                                 </li>
@@ -224,7 +224,7 @@
                 <div class="w-100"></div>
                 <div class="row col ms-auto ms-auto">
                     <div class="col  px-6 px-ml-auto font-weight-bold dark">Ma galerie</div>
-                    <div class="nav-items"><a class="nav-link" href="<? URL ?> mentions">Mentions légales</a>
+                    <div class="nav-items"><a class="nav-link" href="<?= URL ?>mentions">Mentions légales</a>
                     </div>
                 </div>
 
@@ -263,6 +263,7 @@
         integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="<?= URL ?>public/asset/js/scripts.js"></script>
+    <!-- <script src="<?= URL ?>public/asset/js/profil.js"></script> -->
 </body>
 
 </html>

@@ -56,7 +56,7 @@ class UserManager extends Model
             $stmt->bindValue(":login", $login, PDO::PARAM_STR);
             $stmt->bindValue(":password", $passwordCrypte, PDO::PARAM_STR);
             $stmt->bindValue(":mail", $mail, PDO::PARAM_STR);
-            $stmt->bindValue(":role", $role, PDO::PARAM_INT);
+            $stmt->bindValue(":role", $role, PDO::PARAM_STR);
             $stmt->bindValue(":est_valide", $est_valide, PDO::PARAM_INT);
 
             $stmt->execute();

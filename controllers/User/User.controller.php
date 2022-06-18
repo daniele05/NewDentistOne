@@ -39,11 +39,10 @@ class UserController extends AbstractController
         $data = [
             "titre" => "page de profil",
             "user" => $datas,
+            "javascript" => ["profil.js"],
             "view" => "views/User/profil.view.php"
         ];
         $this->genererPage($data);
-        // print_r($datas);
-        // die();
     }
 
     public function deconnexion()

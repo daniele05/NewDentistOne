@@ -6,7 +6,7 @@
 
 <!-- start form -->
 
-<form method="POST" action="<?= URL ?> patient/av" enctype="multipart/form-data">
+<form method="POST" action="<?= URL ?>patient/av" enctype="multipart/form-data">
 
     <div class=" form-group">
         <label for="image">Image:</label>

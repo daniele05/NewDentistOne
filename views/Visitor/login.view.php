@@ -15,7 +15,10 @@
                 <input type="password" name="password" id="password" />
             </div>
         </div>
+        <br>
+
         <button type="submit" class="btn btn-primary">Connexion</button>
+
     </form>
     <div class="float circle c-1"></div>
     <div class="float circle c-2"></div>
