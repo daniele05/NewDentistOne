@@ -23,7 +23,7 @@ class PatientManager extends Model
         $req->closeCursor();
 
         foreach ($patients as $patient) {
-            $p = new Patient($patient["image"], $patient["idPatient"], $patient["istName"], $patient["lastName"], $patient["birthDate"], $patient["sex"], $patient["tel"], $patient["email"], $patient["address"], $patient["dateInscriptionPatient"], $patient["idSoinsDentaires"], $patient["idOrdonnance"]);
+            $p = new Patient($patient["image"], $patient["idPatient"], $patient["irstName"], $patient["lastName"], $patient["birthDate"], $patient["sex"], $patient["tel"], $patient["email"], $patient["address"], $patient["dateInscriptionPatient"], $patient["idSoinsDentaires"], $patient["idOrdonnance"]);
             $this->ajouterPatient($p);
         }
     }
@@ -63,20 +63,20 @@ class PatientManager extends Model
     public function ajouterPatientBd($image, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
     {
         $req = "
-        INSERT INTO patients (image,irstName,lastName,birthDate, sex, tel,email, address, dateInscriptionPatient,:idSoinsDentaires,  idOrdonnance)
+        INSERT INTO patients (image,irstName,lastName,birthDate, sex, tel,email, address, dateInscriptionPatient,idSoinsDentaires,  idOrdonnance)
         values(:image, :irstName, :lastName, :birthDate, :sex, :tel, :email, :address, :dateInscriptionPatient,:idSoinsDentaires, :idOrdonnance)";
         $stmt = $this->getBdd()->prepare($req);
-        $stmt->binValue(":image", $image, PDO::PARAM_STR);
-        $stmt->binValue(":irstName", $irstName, PDO::PARAM_STR);
-        $stmt->binValue(":lastName", $lastName, PDO::PARAM_STR);
-        $stmt->binValue(":birthDate", $birthDate, PDO::PARAM_INT);
-        $stmt->binValue(":sex", $sex, PDO::PARAM_STR);
-        $stmt->binValue(":tel", $tel, PDO::PARAM_INT);
-        $stmt->binValue(":email", $email, PDO::PARAM_STR);
-        $stmt->binValue(":address", $address, PDO::PARAM_STR);
-        $stmt->binValue(":dateInscriptionPatient", $dateInscriptionPatient, PDO::PARAM_INT);
-        $stmt->binValue(":idSoinsDentaires", $idSoinsDentaires, PDO::PARAM_INT);
-        $stmt->binValue(":idOrdonnance", $idOrdonnance, PDO::PARAM_INT);
+        $stmt->bindValue(":image", $image, PDO::PARAM_STR);
+        $stmt->bindValue(":irstName", $irstName, PDO::PARAM_STR);
+        $stmt->bindValue(":lastName", $lastName, PDO::PARAM_STR);
+        $stmt->bindValue(":birthDate", $birthDate, PDO::PARAM_INT);
+        $stmt->bindValue(":sex", $sex, PDO::PARAM_STR);
+        $stmt->bindValue(":tel", $tel, PDO::PARAM_INT);
+        $stmt->bindValue(":email", $email, PDO::PARAM_STR);
+        $stmt->bindValue(":address", $address, PDO::PARAM_STR);
+        $stmt->bindValue(":dateInscriptionPatient", $dateInscriptionPatient, PDO::PARAM_INT);
+        $stmt->bindValue(":idSoinsDentaires", $idSoinsDentaires, PDO::PARAM_INT);
+        $stmt->bindValue(":idOrdonnance", $idOrdonnance, PDO::PARAM_INT);
 
         $resultat = $stmt->execute();
         $stmt->closeCursor();
@@ -118,18 +118,18 @@ class PatientManager extends Model
          where idPatient = :idPatient";
 
         $stmt = $this->getBdd()->prepare($req);
-        $stmt->binValue(":image", $image, PDO::PARAM_STR);
-        $stmt->binValue(":idPatient", $idPatient, PDO::PARAM_INT);
-        $stmt->binValue(":irstName", $irstName, PDO::PARAM_STR);
-        $stmt->binValue(":lastName", $lastName, PDO::PARAM_STR);
-        $stmt->binValue(":birthDate", $birthDate, PDO::PARAM_INT);
-        $stmt->binValue(":sex", $sex, PDO::PARAM_STR);
-        $stmt->binValue(":tel", $tel, PDO::PARAM_INT);
-        $stmt->binValue(":email", $email, PDO::PARAM_STR);
-        $stmt->binValue(":address", $address, PDO::PARAM_STR);
-        $stmt->binValue(":dateInscriptionPatient", $dateInscriptionPatient, PDO::PARAM_INT);
-        $stmt->binValue(":idSoinsDentaires", $idSoinsDentaires, PDO::PARAM_INT);
-        $stmt->binValue(":idOrdonnance", $idOrdonnance, PDO::PARAM_INT);
+        $stmt->bindValue(":image", $image, PDO::PARAM_STR);
+        $stmt->bindValue(":idPatient", $idPatient, PDO::PARAM_INT);
+        $stmt->bindValue(":irstName", $irstName, PDO::PARAM_STR);
+        $stmt->bindValue(":lastName", $lastName, PDO::PARAM_STR);
+        $stmt->bindValue(":birthDate", $birthDate, PDO::PARAM_INT);
+        $stmt->bindValue(":sex", $sex, PDO::PARAM_STR);
+        $stmt->bindValue(":tel", $tel, PDO::PARAM_INT);
+        $stmt->bindValue(":email", $email, PDO::PARAM_STR);
+        $stmt->bindValue(":address", $address, PDO::PARAM_STR);
+        $stmt->bindValue(":dateInscriptionPatient", $dateInscriptionPatient, PDO::PARAM_INT);
+        $stmt->bindValue(":idSoinsDentaires", $idSoinsDentaires, PDO::PARAM_INT);
+        $stmt->bindValue(":idOrdonnance", $idOrdonnance, PDO::PARAM_INT);
 
         $resultat = $stmt->execute();
         $stmt->closeCursor();

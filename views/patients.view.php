@@ -17,7 +17,6 @@ ob_start();
 <table class="table text-center mb-3" width='100%'>
     <tr class="table -dark">
         <th>Image</th>
-        <th>Id</th>
         <th>Prenom</th>
         <th>Nom</th>
         <th>Date de naissance</th>
@@ -26,8 +25,7 @@ ob_start();
         <th>Email</th>
         <th>Addresse </th>
         <th>Date Inscription Patient</th>
-        <th>Id soins dentaires</th>
-        <th>Id Ordonnance</th>
+
         <th colspan="2">Actions</th>
 
 
@@ -61,22 +59,17 @@ ob_start();
                 onSubmit="return confirm('Voulez-vous vraiment supprimer ce patient ?');">
                 <button class="btn btn-danger" type="submit">Supprimer</button>
             </form>
-
-
             <?php endfor; ?>
-
-
+        </td>
+    </tr>
 </table>
+
+<a href="#" class="next round">&#8250;</a>
 
 <?php
 
 for ($i = 0; $i < count($patients); $i++) :
-?>
-
-<?php endfor; ?>
-
-
-
+?> <?php endfor; ?>
 <!-- end Area -->
 
 

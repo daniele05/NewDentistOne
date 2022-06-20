@@ -263,7 +263,7 @@
         integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="<?= URL ?>public/asset/js/scripts.js"></script>
-    <!-- <script src="<?= URL ?>public/asset/js/profil.js"></script> -->
+    <script src="<?= URL ?>public/asset/js/profil.js"></script>
 </body>
 
 </html>

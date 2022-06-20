@@ -75,4 +75,17 @@ class UserManager extends Model
         // verif du nbre de ligne recupere
         return empty($user);
     }
-}// > 0 c est vrai 
+    // > 0 c est vrai 
+
+    public function bdModificationMailUser($login, $mail)
+    {
+        $req = "UPDATE users set mail :mail where login :login";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->bindValue(":login", $login, PDO::PARAM_STR);
+        $stmt->bindValue(":mail", $mail, PDO::PARAM_STR);
+        $stmt->execute();
+        $estModifier = ($stmt->rowCount() > 0);  // > 0 c est vrai 
+        $stmt->closeCursor(); // > 0 c est vrai 
+        return $estModifier;
+    }
+}

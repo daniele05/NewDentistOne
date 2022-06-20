@@ -11,6 +11,9 @@
     </button>
 </div>
 <br>
+
+<!-- action modifMailpour cacher lela divpar rapport a mon js -->
+
 <div id="modificationMail" class="d-none">
     <!-- d-none permet de cacher le formulaire a remplir -->
 
@@ -24,7 +27,7 @@
                 <input type="mail" class="form-control" name="mail" value="<?= $user['mail'] ?>" />
             </div>
             <div class="col-2">
-                <button class="btn btn-success" id="btnValidModifMail">
+                <button class="btn btn-success" id="btnValidModifMail" type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-check" viewBox="0 0 16 16">
                         <path
@@ -35,4 +38,8 @@
         </div>
     </form>
 
+</div>
+<div>
+
+    <a href="<?= URL ?>compte/modificationPassword" class="btn btn-warning">Changer le mot de passe</a>
 </div>

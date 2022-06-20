@@ -36,10 +36,10 @@ class UserController extends AbstractController
         $datas = $this->userManager->getUserInformation($_SESSION["profil"]["login"]);
         // le role 
         $_SESSION['profil']["role"] = $datas['role'];
+
         $data = [
             "titre" => "page de profil",
             "user" => $datas,
-            "javascript" => ["profil.js"],
             "view" => "views/User/profil.view.php"
         ];
         $this->genererPage($data);
@@ -75,6 +75,28 @@ class UserController extends AbstractController
         }
     }
 
+    // login est pret dans la variable de session
+    public function validation_modificationMail($mail)
+    {
+        if ($this->usermanager->bdModificationMailUser($_SESSION['profil']['login'], $mail)) {
+            Toolbox::ajouterMessageAlerte("Modification effectuée", Toolbox::VERTE);
+        } else {
+            Toolbox::ajouterMessageAlerte("Aucune modification effectuée", Toolbox::ROUGE);
+            header("Location:" . URL . "compte/profil");
+        }
+    }
+
+    // creation function pour modification password
+    public function modificationPassword()
+    {
+        $data = [
+            "titre" => "page de modification password",
+            "view" => "views/User/modificationPassword.view.php",
+            "page_javascript" =>  ["modificationpassword.js"],
+        ];
+        $this->genererPage($data);
+    }
+    // Page erreur 
     public function pageErreur($msg)
     {
         // heriter de l apage parent pageErreur

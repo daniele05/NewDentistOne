@@ -103,9 +103,10 @@ class PatientController
     {
         $file = $_FILES['img'];
 
+
         $repertoire = "public/asset/img/";
         $nomImageAjoute = $this->ajoutImage($file, $repertoire);
-        $this->patientManager->ajouterPatientBd($nomImageAjoute, $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idOrdonnance']);
+        $this->patientManager->ajouterPatientBd($nomImageAjoute, $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idSoinsDentaires'], $_POST['idOrdonnance']);
 
         // $_SESSION['alert'] = [
         //     "type"  => "success",
@@ -124,18 +125,20 @@ class PatientController
 
     private function ajoutImage($file, $dir)
     {
-        if (isset($file['name']) || empty($file['name']))
+
+        if (!isset($file['name']) || empty($file['name']))
             throw new Exception("Vous devez indiquer une photo");
 
         if (!file_exists($dir)) mkdir($dir, 0777);
         $extension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
         $random = rand(0, 99999);
         $target_file = $dir . $random . "_" . $file['name'];
-
+        // var_dump($extension);
+        // die();
         if (!getimagesize($file["tmp_name"]))
             throw new Exception("le fichier n'est pas une image");
-        if ($extension !== "jpg" && $extension !== "jpeg" && $extension !== "png" && $extension !== "gif");
-        throw new Exception("l'extension du fichier n'est pas reconnue");
+        if ($extension !== "jpg" && $extension !== "jpeg" && $extension !== "png" && $extension !== "gif")
+            throw new Exception("l'extension du fichier n'est pas reconnue");
 
 
         if (file_exists($target_file))

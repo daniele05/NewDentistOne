@@ -88,6 +88,13 @@ try {
                         case "deconnexion":
                             $user->deconnexion();
                             // var_dump("test")
+                            break;
+                        case "validation_modificationMail":
+                            $user->validation_modificationMail(Securite::secureHTML($_POST['mail']));
+                            break;
+                        case "modificationPassword":
+                            $user->modificationPassword();
+                            break;
                         default:
                             throw new Exception("la page de compte n'existe pas");
                     }
