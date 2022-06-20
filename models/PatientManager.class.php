@@ -41,11 +41,6 @@ class PatientManager extends Model
         $this->patients[] = $patient;
     }
 
-
-
-
-
-
     public function getPatientById($idPatient)
     {
         for ($i = 0; $i < count($this->patients); $i++) {
@@ -59,22 +54,23 @@ class PatientManager extends Model
         throw new Exception("ce patient n'existe pas dans notre base de données");
     }
 
-
     public function ajouterPatientBd($image, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance)
     {
+        // var_dump($image, $irstName, $lastName, $birthDate, $sex, $tel, $email, $address, $dateInscriptionPatient, $idSoinsDentaires, $idOrdonnance);
+        // die();
         $req = "
-        INSERT INTO patients (image,irstName,lastName,birthDate, sex, tel,email, address, dateInscriptionPatient,idSoinsDentaires,  idOrdonnance)
+        INSERT INTO patient (image,irstName,lastName,birthDate, sex, tel,email, address, dateInscriptionPatient,idSoinsDentaires,  idOrdonnance)
         values(:image, :irstName, :lastName, :birthDate, :sex, :tel, :email, :address, :dateInscriptionPatient,:idSoinsDentaires, :idOrdonnance)";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(":image", $image, PDO::PARAM_STR);
         $stmt->bindValue(":irstName", $irstName, PDO::PARAM_STR);
         $stmt->bindValue(":lastName", $lastName, PDO::PARAM_STR);
-        $stmt->bindValue(":birthDate", $birthDate, PDO::PARAM_INT);
+        $stmt->bindValue(":birthDate", $birthDate, PDO::PARAM_STR);
         $stmt->bindValue(":sex", $sex, PDO::PARAM_STR);
-        $stmt->bindValue(":tel", $tel, PDO::PARAM_INT);
+        $stmt->bindValue(":tel", $tel, PDO::PARAM_STR);
         $stmt->bindValue(":email", $email, PDO::PARAM_STR);
         $stmt->bindValue(":address", $address, PDO::PARAM_STR);
-        $stmt->bindValue(":dateInscriptionPatient", $dateInscriptionPatient, PDO::PARAM_INT);
+        $stmt->bindValue(":dateInscriptionPatient", $dateInscriptionPatient, PDO::PARAM_STR);
         $stmt->bindValue(":idSoinsDentaires", $idSoinsDentaires, PDO::PARAM_INT);
         $stmt->bindValue(":idOrdonnance", $idOrdonnance, PDO::PARAM_INT);
 
