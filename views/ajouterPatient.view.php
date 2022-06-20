@@ -63,7 +63,7 @@
     <br>
     <div class="form-group">
         <label for="dateInscription">Date Inscription Patient:</label>
-        <input type="date" class="form-control" id="dateInscription" name="dateInscription">
+        <input type="date" class="form-control" id="dateInscription" name="dateInscriptionPatient">
 
     </div>
     <br>

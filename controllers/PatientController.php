@@ -1,6 +1,7 @@
 <?php
 
 require_once "models/PatientManager.class.php";
+require_once "controllers/Toolbox.class.php";
 
 
 class PatientController
@@ -91,6 +92,9 @@ class PatientController
 
         $this->patientManager->suppressionPatientBD($idPatient);
 
+        Toolbox::ajouterMessageAlerte("Suppression réussie", Toolbox::VERTE);
+
+        header('Location:' . URL . "patients");
 
         // $_SESSION['alert'] = [
         //     "type"  => "success",
@@ -106,7 +110,7 @@ class PatientController
 
         $repertoire = "public/asset/img/";
         $nomImageAjoute = $this->ajoutImage($file, $repertoire);
-        $this->patientManager->ajouterPatientBd($nomImageAjoute, $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idSoinsDentaires'], $_POST['idOrdonnance']);
+        $this->patientManager->ajouterPatientBd($nomImageAjoute, $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idSoinsDentaires'], $_POST['idOrdonnance']);
 
         // $_SESSION['alert'] = [
         //     "type"  => "success",

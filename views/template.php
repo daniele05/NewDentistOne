@@ -40,23 +40,13 @@
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/jquery-ui.css">
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/owl.carousel.css">
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/main.css">
-    <!-- <php
-    if (!empty($page_css)) : ?>
-    <php foreach ($page_css as $fichier_css) : ?>
-    <link href="<?= URL ?>public/asset/css/< $fichier_css ?>" rel="stylesheet">
-    <php endforeach; ?>
-    <php endif; ?> -->
+
 
 
     <!-- css personnalisé -->
     <link rel="stylesheet" href="<?= URL ?>public/asset/css/style.css">
     <!--css login-->
-    <!-- <link rel="stylesheet" href="< URL ?>public/asset/css/login.css"> -->
-    <!-- <php (!empty($styles )) :?>
-    <php foreach($styles as $fichier_css) :?>
-        <link href="<?= URL ?> public/asset/css <$fichier_css ?>" rel="stylesheet">
-        <php endforeach; ?>
-            <php endif; ?> -->
+
 
 <body>
     <header id="header" id="home" class="mx-5 px-5 mb-5">
@@ -88,7 +78,8 @@
 
                             <ul>
 
-                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-equipe">Notre équipe</a>
+                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-equipe">Notre
+                                        équipe</a>
                                 </li>
 
                             </ul>
@@ -163,7 +154,8 @@
                                 Administration
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?= URL ?>administrateur/droits">Gérer les droits</a>
+                                <li><a class="dropdown-item" href="<?= URL ?>administrateur/droits">Gérer les
+                                        droits</a>
 
                                 <li class="menu-has-children"><a href="#">Patients</a>
                                     <ul>

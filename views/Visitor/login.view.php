@@ -1,4 +1,5 @@
 <p class="mb-5 pb-5 text-primary">page de connexion</p>
+<!-- <link rel="stylesheet" href="<= URL ?>public/asset/css/login.css"> -->
 <div>
     <?= Toolbox::afficherMessageAlerte() ?>
 </div>

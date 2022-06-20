@@ -55,7 +55,7 @@ ob_start();
         <br></br>
 
         <td class="align-middle">
-            <form method="POST" action="<?= URL ?>patients /s/<?= $patients[$i]->getIdPatient(); ?>"
+            <form method="POST" action="<?= URL ?>patients/s/<?= $patients[$i]->getIdPatient(); ?>"
                 onSubmit="return confirm('Voulez-vous vraiment supprimer ce patient ?');">
                 <button class="btn btn-danger" type="submit">Supprimer</button>
             </form>
