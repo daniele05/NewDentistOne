@@ -4,7 +4,7 @@
 
 <!-- start form -->
 
-<form method="POST" action="<?= URL ?> patients/mv" enctype="multipart/form-data">
+<form method="POST" action="<?= URL ?>patients/mv" enctype="multipart/form-data">
 
     <h4 class="">Image: </h4>
 

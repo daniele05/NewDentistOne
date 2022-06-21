@@ -58,8 +58,10 @@ class PatientController
 
     public function modificationPatientValidation()
     {
-        $imageActuelle = $this->patientManager->getPatientById($_POST['identifiantPatient'])->getImage();
+        $imageActuelle = $this->patientManager->getPatientById($_POST['idPatient'])->getImage();
         $file = $_FILES['img'];
+        //    var_dump($imageActuelle);
+        // die();
 
         if ($file['size'] > 0) {
             unlink("public/asset/img/" . $imageActuelle);
@@ -68,7 +70,7 @@ class PatientController
         } else {
             $nomImageAjoute =  $imageActuelle;
         }
-        $this->patientManager->modificationPatientBD($nomImageAjoute, $_POST['img'], $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idSoinsDentaires'], $_POST['idOrdonnance']);
+        $this->patientManager->modificationPatientBD($nomImageAjoute, $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idSoinsDentaires'], $_POST['idOrdonnance']);
 
         // $_SESSION['alert'] = [
         //     "type"  => "success",
@@ -76,7 +78,7 @@ class PatientController
         // ];
         Toolbox::ajouterMessageAlerte("Modification réussie", Toolbox::VERTE);
 
-        header('Location:' . URL . "patient");
+        header('Location:' . URL . "patients");
     }
 
 
@@ -120,7 +122,7 @@ class PatientController
 
         Toolbox::ajouterMessageAlerte("Ajout réalisé", Toolbox::VERTE);
 
-        header('Location:' . URL);
+        header('Location:' . URL . "patients");
         print_r($file);
     }
 
