@@ -2,7 +2,7 @@
 
 <?php ob_start(); ?>
 
-<p class="text-monospace m-4">ici mon formulaire de contact</p>
+<p class="text-monospace text-primary m-4">ici mon formulaire de contact</p>
 
 <!-- start form -->
 

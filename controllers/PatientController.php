@@ -68,7 +68,7 @@ class PatientController
         } else {
             $nomImageAjoute =  $imageActuelle;
         }
-        $this->patientManager->modificationPatientBD($nomImageAjoute, $_POST['photo'], $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idOrdonnance']);
+        $this->patientManager->modificationPatientBD($nomImageAjoute, $_POST['img'], $_POST['idPatient'], $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idSoinsDentaires'], $_POST['idOrdonnance']);
 
         // $_SESSION['alert'] = [
         //     "type"  => "success",
@@ -106,7 +106,8 @@ class PatientController
     public function ajoutPatientValidation()
     {
         $file = $_FILES['img'];
-
+        // var_dump($_FILES);
+        // die();
 
         $repertoire = "public/asset/img/";
         $nomImageAjoute = $this->ajoutImage($file, $repertoire);
@@ -138,6 +139,10 @@ class PatientController
         $random = rand(0, 99999);
         $target_file = $dir . $random . "_" . $file['name'];
         // var_dump($extension);
+        // die();
+        // var_dump(getimagesize($file["tmp_name"]));
+        // var_dump($_FILES);
+
         // die();
         if (!getimagesize($file["tmp_name"]))
             throw new Exception("le fichier n'est pas une image");

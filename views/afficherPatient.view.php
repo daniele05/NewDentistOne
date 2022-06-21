@@ -5,6 +5,7 @@
         <img src="<?= URL ?>public/asset/img/<?= $patient->getImage(); ?>" width="100" height="100">
     </div>
     <div class="col-6">
+        <!-- <p>Identité du patient: < $patient->getIdPatient(); ?></p> -->
         <p>Prénom: <?= $patient->getIrstName(); ?></p>
         <p>Nom: <?= $patient->getLastName(); ?></p>
         <p>Date de naissance: <?= $patient->getBirthDate(); ?></p>

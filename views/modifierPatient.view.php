@@ -4,7 +4,7 @@
 
 <!-- start form -->
 
-<form method="POST" action="<?= URL ?> patient/mv" enctype="multipart/form-data">
+<form method="POST" action="<?= URL ?> patients/mv" enctype="multipart/form-data">
 
     <h4 class="">Image: </h4>
 
@@ -13,7 +13,7 @@
     <br>
     <div class="form-group">
         <label for="image">Changer l'image:</label>
-        <input type="file" class="form-control-file w-25" id="image" name="image">
+        <input type="file" class="form-control-file w-25" id="image" name="img">
     </div>
     <input type="hidden" name="identifiant" value="<?= $patient->getIdPatient() ?>">
     <br>

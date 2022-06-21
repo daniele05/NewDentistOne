@@ -17,6 +17,7 @@ ob_start();
 <table class="table text-center mb-3" width='100%'>
     <tr class="table -dark">
         <th>Image</th>
+        <th>Identité du Patient</th>
         <th>Prenom</th>
         <th>Nom</th>
         <th>Date de naissance</th>

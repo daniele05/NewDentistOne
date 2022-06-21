@@ -1,4 +1,4 @@
-<h4>Profil de <?= $user["login"] ?></h4>
+<h4 class="text-monospace text-primary m-4">Profil de <?= $user["login"] ?></h4>
 <div id="mail">
     Mail: <?= $user['mail'] ?>
 

@@ -1,4 +1,4 @@
-<h4>Page de gestion de droits des utilisateurs</h4>
+<h4 class="text-monospace text-primary m-4">Page de gestion de droits des utilisateurs</h4>
 <table class="table">
     <thead>
         <tr>
@@ -9,8 +9,8 @@
         </tr>
         <?php foreach ($users as $user) : ?>
         <tr>
-            <td><?= $user["login"] ?>< /td>
-            <td><?= $user["est_valide"] ?></td>
+            <td><?= $user["login"] ?></td>
+            <td><?= (int)$user["est_valide"] === 0 ?  "non validé" : "validé" ?></td>
             <td>
                 <?php if ($user['role'] === "administrateur") :  ?>
 
@@ -28,8 +28,8 @@
                     <!-- // si role user liste deroulante -->
                     <select class="form-select" name="role"
                         onchange="confirm('Confirmez-vous la modification ?') ? submit():document.location.reload()">
-                        <option value=" user <?= $user['role'] === "user" ? "selected" : "" ?>">Utilisateur</option>
-                        <option value=" Suser <?= $user['role'] === "Suser" ? "selected" : "" ?>"">SuperUtilisateur</option>
+                        <option value=" user <?= $user['role'] === "1" ? "selected" : "" ?>">Utilisateur</option>
+                        <option value=" Suser <?= $user['role'] === "10" ? "selected" : "" ?>"">SuperUtilisateur</option>
                         <option value=" administrateur <?= $user['role'] === "100" ? "selected" : "" ?>"">
                             Administrateur
                         </option>

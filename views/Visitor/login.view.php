@@ -1,8 +1,10 @@
 <p class="mb-5 pb-5 text-primary">page de connexion</p>
-<!-- <link rel="stylesheet" href="<= URL ?>public/asset/css/login.css"> -->
+
 <div>
     <?= Toolbox::afficherMessageAlerte() ?>
 </div>
+
+
 <div class="main-wrapper mb-4">
 
     <form method="POST" action="<?= URL ?>validation_login">
@@ -21,13 +23,4 @@
         <button type="submit" class="btn btn-primary">Connexion</button>
 
     </form>
-    <div class="float circle c-1"></div>
-    <div class="float circle c-2"></div>
-    <div class="float circle c-3"></div>
-    <div class="float line l-1"></div>
-    <div class="float line l-2"></div>
-    <div class="float line l-3"></div>
-</div>
-<div class="main-wrapper2">
-    <div class="border-line"></div>
 </div>
