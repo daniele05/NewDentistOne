@@ -17,15 +17,11 @@
         <p>Id Soins Dentaires: <?= $patient->getIdSoinsDentaires(); ?></p>
         <p>Id Ordonnance: <?= $patient->getIdOrdonnance(); ?></p>
     </div>
-
-
-
-
 </div>
 
 <?php
 $content = ob_get_clean();
-$titre = "Afficher patient";
+$titre = $patient->getLastName();
 require "template.php";
 
 ?>

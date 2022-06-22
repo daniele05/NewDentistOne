@@ -41,8 +41,11 @@
         <label for="sex">Sex:</label>
         <input type="text" class="form-control" id="sex" name="sex">
 
+
     </div>
     <br>
+
+    </select>
     <div class="form-group">
         <label for="tel">Tel:</label>
         <input type="number" class="form-control" id="tel" name="tel">

@@ -155,7 +155,7 @@ class PatientController
         if (file_exists($target_file))
             throw new Exception("le fichier existe déjà ");
 
-        if ($file['size'] > 500000)
+        if ($file['size'] > 50000000)
             throw new Exception("le fichier trop gros ");
 
         if (!move_uploaded_file($file['tmp_name'], $target_file))

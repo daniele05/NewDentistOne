@@ -14,7 +14,7 @@ class AdministrateurManager extends Model
 
     public function bdModificationRoleUser($login, $role)
     {
-        $req = "UPDATE users set role :role where login :login";
+        $req = "UPDATE users set role = :role where login = :login";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(":login", $login, PDO::PARAM_STR);
         $stmt->bindValue(":role", $role, PDO::PARAM_STR);

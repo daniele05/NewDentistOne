@@ -1,18 +1,11 @@
 <!-- Temporisation par le bais du buffer -->
-
 <?php
 require_once "models/Patient.class.php";
 ob_start();
 ?>
 
-<p class="text-primary">
-    Ici le contenu de mon espace Patients
-</p>
-
-<!-- tableau en dure -->
-
-
-<a href="<?= URL ?>patients/a" class="btn btn-success mt-3">Ajouter</a>
+<!-- tableau -->
+<a href="<?= URL ?>patients/a" class="btn btn-success mb-3">Ajouter</a>
 
 <table class="table text-center mb-3" width='100%'>
     <tr class="table -dark">
@@ -37,8 +30,13 @@ ob_start();
                 width=60px>
             <!-- <td class="align-middle"><= $patients[$i]->getIdPatient(); ?></td> -->
         <td class="align-middle"><?= $patients[$i]->getIrstName(); ?></td>
-        <td class="align-middle"><?= $patients[$i]->getLastName(); ?></td>
-        <td class="align-middle"><?= $patients[$i]->getBirthDate(); ?></td>
+        <td class="align-middle">
+            <a
+                href="<?= URL ?>patients/p/<?= $patients[$i]->getIdPatient(); ?>"><?= $patients[$i]->getLastName(); ?></a>
+
+        </td>
+        <td class=" align-middle"><?= $patients[$i]->getBirthDate(); ?>
+        </td>
         <!-- <td class="align-middle"><= $patients[$i]->getSex(); ?></td> -->
         <td class="align-middle"><?= $patients[$i]->getTel(); ?></td>
         <td class="align-middle"><?= $patients[$i]->getEmail(); ?></td>
@@ -51,27 +49,26 @@ ob_start();
             <a href="<?= URL ?>patients/m/<?= $patients[$i]->getIdPatient(); ?>"
                 class="btn btn-warning  mr-3 text-center ">Modifier</a>
         </td>
-        <br></br>
 
         <td class="align-middle">
-            <form method="POST" action="<?= URL ?>patients/s/<?= $patients[$i]->getIdPatient(); ?>"
-                onSubmit="return confirm('Voulez-vous vraiment supprimer ce patient ?');">
-                <button class="btn btn-danger" type="submit">Supprimer</button>
-            </form>
+            <a href="<?= URL ?>patients/s/<?= $patients[$i]->getIdPatient(); ?>"
+                onClick="return confirm('Voulez-vous vraiment supprimer ce patient ?');"
+                class="btn btn-danger">Supprimer
+            </a>
 
         </td>
     </tr>
     <?php endfor; ?>
 </table>
 <br>
-<div aria-label="Page navigation">
+<!-- <div aria-label="Page navigation">
     <ul class="pagination">
         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
         <li class="page-item"><a class="page-link" href="#">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
         <li class="page-item"><a class="page-link" href="#">Next</a></li>
     </ul>
-</div>
+</div> -->
 
 
 

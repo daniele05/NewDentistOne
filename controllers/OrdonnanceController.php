@@ -16,7 +16,7 @@ class OrdonnanceController
     {
         $ordonnanceManager = $this->ordonnanceManager;
         $ordonnances = $ordonnanceManager->getOrdonnances();
-        require "views/Visitor/ordonnances.view.php";
+        require "views/User/ordonnances.view.php";
     }
     // afficher une ordonnance
     public function afficherOrdonnance()

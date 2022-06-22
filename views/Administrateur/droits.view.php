@@ -28,9 +28,10 @@
                     <!-- // si role user liste deroulante -->
                     <select class="form-select" name="role"
                         onchange="confirm('Confirmez-vous la modification ?') ? submit():document.location.reload()">
-                        <option value=" user <?= $user['role'] === "1" ? "selected" : "" ?>">Utilisateur</option>
-                        <option value=" Suser <?= $user['role'] === "10" ? "selected" : "" ?>"">SuperUtilisateur</option>
-                        <option value=" administrateur <?= $user['role'] === "100" ? "selected" : "" ?>"">
+                        <option value="1" <?= $user['role'] === "1" ? "selected" : "" ?>>Utilisateur</option>
+                        <option value="10" <?= $user['role'] === "10" ? "selected" : "" ?>>SuperUtilisateur
+                        </option>
+                        <option value="100" <?= $user['role'] === "100" ? "selected" : "" ?>>
                             Administrateur
                         </option>
 

@@ -45,6 +45,7 @@ class PatientManager extends Model
     {
         for ($i = 0; $i < count($this->patients); $i++) {
             if ($this->patients[$i]->getIdPatient() === $idPatient) {
+                // le patient que je suis entrain de voir correspond t il au id mis en paremetrage ? si oui , il s agit donc du bon patient et je le retourne
                 return $this->patients[$i];
             }
         }

@@ -168,13 +168,13 @@
                                 </li>
 
                         </li>
-                        <li class="menu-has-children"><a href="#">Rendez-vous</a>
-                            <ul>
-                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>rdvs">
-                                        Mes rendez-vous
-                                    </a>
-                                </li>
-                            </ul>
+                        <li class="menu-has-children"><a href="#" Ordonnances</a>
+                                <ul>
+                                    <li class="nav-items"><a class="nav-link" href="<?= URL ?>ordonnances">
+                                            Mes ordonnances
+                                        </a>
+                                    </li>
+                                </ul>
                         </li>
 
 

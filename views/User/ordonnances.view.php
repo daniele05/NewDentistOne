@@ -1,5 +1,5 @@
 <?php
-require "Ordonnance.class.php";
+
 ob_start(); ?>
 
 <p class="mb-5 pb-5 text-primary">
