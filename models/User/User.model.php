@@ -79,10 +79,22 @@ class UserManager extends Model
 
     public function bdModificationMailUser($login, $mail)
     {
-        $req = "UPDATE users set mail :mail where login :login";
+        $req = "UPDATE users set mail :mail WHERE login :login";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(":login", $login, PDO::PARAM_STR);
         $stmt->bindValue(":mail", $mail, PDO::PARAM_STR);
+        $stmt->execute();
+        $estModifier = ($stmt->rowCount() > 0);  // > 0 c est vrai 
+        $stmt->closeCursor(); // > 0 c est vrai 
+        return $estModifier;
+    }
+
+    public function bdModificationPassword($login, $password)
+    {
+        $req = "UPDATE users set password :password WHERE login :login";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->bindValue(":login", $login, PDO::PARAM_STR);
+        $stmt->bindValue(":password", $password, PDO::PARAM_STR);
         $stmt->execute();
         $estModifier = ($stmt->rowCount() > 0);  // > 0 c est vrai 
         $stmt->closeCursor(); // > 0 c est vrai 

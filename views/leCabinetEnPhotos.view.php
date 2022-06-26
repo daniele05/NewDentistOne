@@ -8,7 +8,7 @@
 
 <!-- Start portfolio_images Area -->
 <div class="col-md-5 colTop py-3">
-    <h4 class="text-primary  m-3 py-3 mb-3">Le Cabinet en photos</h4>
+    <h3 class="text-center text-primary">Le Cabinet en photos</h3>
 </div>
 
 <section class="bg-light pt-4">

@@ -121,8 +121,8 @@
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>galerie">Interventions</a>
                                 </li>
 
-                                <li class="nav-items"><a class="nav-link" href="<?= URL ?>videos">Vidéos
-                                    </a></li>
+                                <!-- <li class="nav-items"><a class="nav-link" href="<= URL ?>videos">Vidéos
+                                    </a></li> -->
 
                             </ul>
                         </li>
@@ -168,14 +168,14 @@
                                 </li>
 
                         </li>
-                        <li class="menu-has-children"><a href="#" Ordonnances</a>
+                        <!-- <li class="menu-has-children"><a href="#" Ordonnances</a>
                                 <ul>
-                                    <li class="nav-items"><a class="nav-link" href="<?= URL ?>ordonnances">
+                                    <li class="nav-items"><a class="nav-link" href="<= URL ?>ordonnances">
                                             Mes ordonnances
                                         </a>
                                     </li>
                                 </ul>
-                        </li>
+                        </li> -->
 
 
                         </li>
@@ -256,6 +256,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="<?= URL ?>public/asset/js/scripts.js"></script>
     <script src="<?= URL ?>public/asset/js/profil.js"></script>
+    <script src="<?= URL ?>public/asset/js/modificationPassword.js"></script>
+
 </body>
 
 </html>

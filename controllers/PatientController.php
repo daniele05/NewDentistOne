@@ -115,11 +115,6 @@ class PatientController
         $nomImageAjoute = $this->ajoutImage($file, $repertoire);
         $this->patientManager->ajouterPatientBd($nomImageAjoute, $_POST['irstName'], $_POST['lastName'], $_POST['birthDate'], $_POST['sex'], $_POST['tel'], $_POST['email'], $_POST['address'], $_POST['dateInscriptionPatient'], $_POST['idSoinsDentaires'], $_POST['idOrdonnance']);
 
-        // $_SESSION['alert'] = [
-        //     "type"  => "success",
-        //     "msg" => "Ajout réalisé"
-        // ];
-
         Toolbox::ajouterMessageAlerte("Ajout réalisé", Toolbox::VERTE);
 
         header('Location:' . URL . "patients");

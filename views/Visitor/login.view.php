@@ -3,8 +3,6 @@
 <div>
     <?= Toolbox::afficherMessageAlerte() ?>
 </div>
-
-
 <div class="main-wrapper mb-4">
 
     <form method="POST" action="<?= URL ?>validation_login">

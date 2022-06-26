@@ -1,4 +1,4 @@
-<h4 class="text-monospace text-primary m-4">Profil de <?= $user["login"] ?></h4>
+<h4 class="text-monospace text-primary m-4">Profil <?= $user["login"] ?></h4>
 <div id="mail">
     Mail: <?= $user['mail'] ?>
 
@@ -18,7 +18,7 @@
     <!-- d-none permet de cacher le formulaire a remplir -->
 
     <!-- fonction js dans usercontrioller -->
-    <form method="POST" action="<?= URL ?>compte/validation_modificationMail"> -->
+    <form method="POST" action="<?= URL ?>compte/validation_modificationMail">
 
         <div class="row">
             <label for="mail" class="col-2 col-form-label">Mail</label>

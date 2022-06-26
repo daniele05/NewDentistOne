@@ -20,6 +20,8 @@ class UserController extends AbstractController
                 // Toolbox::ajouterMessageAlerte(" bon retour sur le site" . $login . "!", Toolbox::VERTE);
                 $_SESSION['profil'] = [
                     "login" => $login
+                    // "role"  => [1, 10, 100],
+
                 ];
                 header("Location: " . URL . "compte/profil");
             }
@@ -57,7 +59,7 @@ class UserController extends AbstractController
         if ($this->userManager->verifLoginAvailable($login)) {
             $passwordCrypte = password_hash($password, PASSWORD_DEFAULT);
             // compter avec rand le nombre de ligne 
-            $clef = rand(0, 9999); // servira pour la validation du mail de confirmation
+            // $clef = rand(0, 9999); // servira pour la validation du mail de confirmation
             $role = 1;
             $est_valide = 0;
 
@@ -78,7 +80,7 @@ class UserController extends AbstractController
     // login est pret dans la variable de session
     public function validation_modificationMail($mail)
     {
-        if ($this->usermanager->bdModificationMailUser($_SESSION['profil']['login'], $mail)) {
+        if ($this->userManager->bdModificationMailUser($_SESSION['profil']['login'], $mail)) {
             Toolbox::ajouterMessageAlerte("Modification effectuée", Toolbox::VERTE);
         } else {
             Toolbox::ajouterMessageAlerte("Aucune modification effectuée", Toolbox::ROUGE);
@@ -95,6 +97,31 @@ class UserController extends AbstractController
             "page_javascript" =>  ["modificationpassword.js"],
         ];
         $this->genererPage($data);
+    }
+
+    public function validation_modificationPassword($oldPassword, $newPassword, $confNewPassword)
+    {
+        if ($newPassword === $confNewPassword) {
+            // login et ancien password correspondance 
+            if ($this->userManager->isCombinaisonValide($_SESSION['profil']['login'], $oldPassword)) {
+                // cryptag nouveau password 
+                $passwordCrypte = password_hash($newPassword, PASSWORD_DEFAULT);
+                // veroif du password
+                if ($this->userManager->bdModificationPassword($_SESSION['profil']['login'], $passwordCrypte)) {
+                    Toolbox::ajouterMessageAlerte("Modification password a été prise en compte", Toolbox::VERTE);
+                    header("Location:" . URL . "compte/profil");
+                } else {
+                    Toolbox::ajouterMessageAlerte("Modification a échoué", Toolbox::ROUGE);
+                    header("Location:" . URL . "compte/modificationPassword");
+                }
+            } else {
+                Toolbox::ajouterMessageAlerte("La combinaison login et ancienpassword ne correspond pas", Toolbox::ROUGE);
+                header("Location:" . URL . "compte/modificationPassword");
+            }
+        } else {
+            Toolbox::ajouterMessageAlerte("Les password ne correspondent pas", Toolbox::ROUGE);
+            header("Location:" . URL . "compte/modificationPassword");
+        }
     }
     // Page erreur 
     public function pageErreur($msg)

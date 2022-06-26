@@ -1,18 +1,18 @@
 // recup des bton 
-const newpassword = document.querySelector("#newpassword");
-const confnewpassword =  document.querySelector("#confnewpassword");
+var newPassword = document.querySelector("#newPassword");
+var confNewPassword =  document.querySelector("#confNewPassword");
 
 // la comparaison entre le nouveau password et la conform ajouter un event 
-newpassword.addEventListener("change", function(){
+newPassword.addEventListener("keyup", function(){
     verificationPassword();
 })
 
-confnewpassword.addEventListener("change", function(){
+confNewPassword.addEventListener("keyup", function(){
     verificationPassword();
 })
 
 function verificationPassword(){
-    if(newpassword.value === confnewpassword.value){
+    if(newPassword.value === confNewPassword.value){
         document.querySelector("#btnValidation").disabled = false; 
         document.querySelector("#erreur").classList.add("d-none"); 
     }else{
