@@ -75,15 +75,11 @@
                     <ul class="nav-menu">
                         <li class="menu-active"><a href="<?= URL ?>home">Home</a></li>
                         <li class="menu-has-children"><a href="<?= URL ?>notre-histoire">Notre Histoire</a>
-
                             <ul>
-
                                 <li class="nav-items"><a class="nav-link" href="<?= URL ?>notre-equipe">Notre
                                         équipe</a>
                                 </li>
-
                             </ul>
-
                         </li>
                         <li class="menu-has-children m-0"><a href="#">Notre Savoir-faire</a>
                             <ul>

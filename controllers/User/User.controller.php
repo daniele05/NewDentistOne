@@ -16,7 +16,9 @@ class UserController extends AbstractController
     public function validation_login($login, $password)
     {
         if ($this->userManager->isCombinaisonValide($login, $password)) {
+
             if ($this->userManager->estCompteActive($login)) {
+                // die("kiki");
                 // Toolbox::ajouterMessageAlerte(" bon retour sur le site" . $login . "!", Toolbox::VERTE);
                 $_SESSION['profil'] = [
                     "login" => $login
@@ -26,6 +28,7 @@ class UserController extends AbstractController
                 header("Location: " . URL . "compte/profil");
             }
         } else {
+
             Toolbox::ajouterMessageAlerte("combinaison login/ mot de passe non valide", Toolbox::ROUGE);
             header("Location:" . URL . "login");
         }
@@ -61,7 +64,9 @@ class UserController extends AbstractController
             // compter avec rand le nombre de ligne 
             // $clef = rand(0, 9999); // servira pour la validation du mail de confirmation
             $role = 1;
-            $est_valide = 0;
+            // TODO mettre a 0 quand validation par mail sera faite.
+            $est_valide = 1;
+
 
             if ($this->userManager->bdCreerCompte($login, $passwordCrypte, $mail, $role, $est_valide)) {
                 // function de d envoi 
