@@ -39,6 +39,7 @@
                     break;
                 case "login":
                     $visitor->login();
+                    break;
                 case "validation_login":
 
                     if (!empty($_POST["login"]) && !empty($_POST["password"])) {
@@ -224,7 +225,7 @@
                     }
                     break;
                 default:
-                    throw new Exception("Attention");
+                    throw new Exception("la page n'existe pas");
             }
         }
     } catch (Exception $e) {
