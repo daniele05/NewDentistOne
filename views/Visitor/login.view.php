@@ -4,7 +4,6 @@
     <?= Toolbox::afficherMessageAlerte() ?>
 </div>
 <div class="main-wrapper mb-4">
-
     <form method="POST" action="<?= URL ?>validation_login">
         <div class="form-cont-2">
             <p class="mb-2 pb-2">Login</p>
@@ -17,8 +16,6 @@
             </div>
         </div>
         <br>
-
         <button type="submit" class="btn btn-primary">Connexion</button>
-
     </form>
 </div>
