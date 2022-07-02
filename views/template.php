@@ -179,13 +179,10 @@
                     </li>
                     </li>
                     </ul>
-
                     </li>
                     <?php endif; ?>
-
                     </li>
                     </ul>
-
                 </nav><!-- #nav-menu-container -->
 
             </div>
