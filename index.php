@@ -53,7 +53,7 @@
 
                         // reroutage si pas de connexion 
                         header('Location:' . URL . "login");
-                        exit();
+                        // exit();
                         // echo "test";
                     }
                     break;
