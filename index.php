@@ -10,10 +10,10 @@
     // role de routeur de index.php
 
     require_once("controllers/AbstractController.php");
-    require_once "controllers/Toolbox.class.php";
-    require_once "controllers/Securite.class.php";
-    require_once "controllers/Visitor/Visitor.controller.php";
-    require_once "controllers/User/User.controller.php";
+    require_once("controllers/Toolbox.class.php");
+    require_once("controllers/Securite.class.php");
+    require_once("controllers/Visitor/Visitor.controller.php");
+    require_once("controllers/User/User.controller.php");
     require_once("controllers/PagesStatiquesController.php");
     require_once("controllers/PatientController.php");
     require_once("controllers/VideoController.php");
@@ -224,8 +224,8 @@
                         throw new Exception("La page video n'existe pas");
                     }
                     break;
-                default:
-                    throw new Exception("la page n'existe pas");
+                    // default:
+                    //     throw new Exception("la page n'existe pas");
             }
         }
     } catch (Exception $e) {
