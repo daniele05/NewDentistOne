@@ -16,6 +16,7 @@
     require_once("controllers/User/User.controller.php");
     require_once("controllers/PagesStatiquesController.php");
     require_once("controllers/PatientController.php");
+    // require_once("controllers/PhotoController.php");
     require_once("controllers/VideoController.php");
     require_once("controllers/OrdonnanceController.php");
     require_once("controllers/Administrateur/Administrateur.controller.php");
@@ -24,6 +25,7 @@
     $visitor = new VisitorController;
     $patient = new PatientController;
     $ordonnance = new OrdonnanceController;
+    // $photo = new PhotoController;
     $video = new VideoController;
     $pagesStatiques = new PagesStatiquesController;
     try {
@@ -185,6 +187,14 @@
                         throw new Exception("La page patients est inexistante");
                     }
                     break;
+                case "photo":
+                    if (empty($url)) {
+                        $photo->afficherPhotos();
+                    } elseif ($url[1] === "p") {
+                        $photo->afficherPhoto($url[2]);
+                    } else {
+                        throw new Exception("La page photo est inexistante");
+                    }
 
                 case "ordonnances":
                     if (empty($url[1])) {
