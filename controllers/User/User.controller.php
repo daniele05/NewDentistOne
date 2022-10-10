@@ -19,12 +19,16 @@ class UserController extends AbstractController
 
             if ($this->userManager->estCompteActive($login)) {
                 // die("kiki");
-                // Toolbox::ajouterMessageAlerte(" bon retour sur le site" . $login . "!", Toolbox::VERTE);
+                Toolbox::ajouterMessageAlerte(" bon retour sur le site" . $login . "!", Toolbox::VERTE);
                 $_SESSION['profil'] = [
                     "login" => $login
                     // "role"  => [1, 10, 100],
 
                 ];
+                //  Sécurité avec le cookie 
+                // appel de la function securite avec le generer cookie 
+                Securite::genererCookieConnexion();
+
                 header("Location: " . URL . "compte/profil");
             }
         } else {
@@ -54,6 +58,8 @@ class UserController extends AbstractController
     {
         Toolbox::ajouterMessageAlerte("la déconnexion est effectuée", Toolbox::VERTE);
         unset($_SESSION['profil']);
+        //Etape de suppression du cookie a la deconnexion pour éviter des bugs
+        setcookie(Securite::COOKIE_NAME, "", time() - 3600);
         header("Location:" . URL . "home");
     }
 

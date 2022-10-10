@@ -7,7 +7,7 @@ abstract class Model
 
     private static function setBdd()
     {
-        self::$pdo = new PDO("mysql:host=localhost;dbname=cabinetdentaire;charset=utf8", "root", "18022013???");
+        self::$pdo = new PDO("mysql:host=localhost;dbname=cabinetdentaire;charset=utf8", "root", "root");
         self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     }
 
