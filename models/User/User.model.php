@@ -47,17 +47,19 @@ class UserManager extends Model
         return $result;
     }
 
-    public function bdCreerCompte($login, $passwordCrypte, $mail, $role, $est_valide)
+    public function bdCreerCompte($login, $passwordCrypte, $mail, $role, $est_valide, $clef, $image)
     {
         try {
-            $req = "INSERT INTO users(login, password, mail, role, est_valide)
-        VALUES(:login, :password, :mail,:role, :est_valide)";
+            $req = "INSERT INTO users(login, password, mail, role, est_valide, clef,image) VALUES (:login, :password, :mail, :role, :est_valide, :clef, :image)";
+
             $stmt = $this->getBdd()->prepare($req);
             $stmt->bindValue(":login", $login, PDO::PARAM_STR);
             $stmt->bindValue(":password", $passwordCrypte, PDO::PARAM_STR);
             $stmt->bindValue(":mail", $mail, PDO::PARAM_STR);
-            $stmt->bindValue(":role", $role, PDO::PARAM_STR);
+            $stmt->bindValue(":role", $role, PDO::PARAM_INT);
             $stmt->bindValue(":est_valide", $est_valide, PDO::PARAM_INT);
+            $stmt->bindValue(":clef", $clef, PDO::PARAM_INT);
+            $stmt->bindValue(":image", $image, PDO::PARAM_STR);
 
             $stmt->execute();
             $estModifier = ($stmt->rowCount() > 0);  // > 0 c est vrai 
@@ -95,6 +97,18 @@ class UserManager extends Model
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(":login", $login, PDO::PARAM_STR);
         $stmt->bindValue(":password", $password, PDO::PARAM_STR);
+        $stmt->execute();
+        $estModifier = ($stmt->rowCount() > 0);  // > 0 c est vrai 
+        $stmt->closeCursor(); // > 0 c est vrai 
+        return $estModifier;
+    }
+
+    public function bdAjoutImage($login, $image)
+    {
+        $req = "UPDATE users set image :image WHERE login :login";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->bindValue(":login", $login, PDO::PARAM_STR);
+        $stmt->bindValue(":image", $image, PDO::PARAM_STR);
         $stmt->execute();
         $estModifier = ($stmt->rowCount() > 0);  // > 0 c est vrai 
         $stmt->closeCursor(); // > 0 c est vrai 

@@ -113,6 +113,17 @@ try {
                             }
 
                             break;
+                        case "validation_modificationImage":
+                            // print_r($_FILES);
+                            // tester sur un eimage a deja été postée 
+                            if ($_FILES['image']['size'] > 0) {
+                                $user->validation_modificationImage($_FILES['image']);
+                            } else {
+                                Toolbox::ajouterMessageAlerte("Vous n'avez pas modifié l'image", Toolbox::ROUGE);
+                                header("Location:" . URL . "compte/profil");
+                            }
+                            break;
+
                         default:
                             throw new Exception("la page de compte n'existe pas");
                     }

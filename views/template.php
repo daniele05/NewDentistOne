@@ -159,17 +159,17 @@
                                     </a>
                                     <ul>
 
-                                        <li class="menu-has-children"><a href="#" Ordonnances</a>
-                                                <a class="nav-link" href="<= URL ?>ordonnances">
-                                                    Mes ordonnances
-                                                </a>
+                                        <li class="menu-has-children"><a href="#"></a>
+                                            <a class="nav-link" href="<= URL ?>ordonnances">
+                                                Mes ordonnances
+                                            </a>
 
                                         </li>
 
-                                        <li class="menu-has-children"><a href="#" Rendez-vous</a>
-                                                <a class="nav-link" href="<= URL ?>rdvs">
-                                                    Mes rendez-vous
-                                                </a>
+                                        <li class="menu-has-children"><a href="#"></a>
+                                            <a class="nav-link" href="<= URL ?>rdvs">
+                                                Mes rendez-vous
+                                            </a>
 
 
 

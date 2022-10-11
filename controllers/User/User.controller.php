@@ -49,7 +49,8 @@ class UserController extends AbstractController
         $data = [
             "titre" => "page de profil",
             "user" => $datas,
-            "view" => "views/User/profil.view.php"
+            "view" => "views/User/profil.view.php",
+            "js" => "public/asset/js/profil.js"
         ];
         $this->genererPage($data);
     }
@@ -72,9 +73,10 @@ class UserController extends AbstractController
             $role = 1;
             // TODO mettre a 0 quand validation par mail sera faite.
             $est_valide = 1;
+            $clef = rand(0, 9999);
 
-
-            if ($this->userManager->bdCreerCompte($login, $passwordCrypte, $mail, $role, $est_valide)) {
+            // Ajout image profil en bd 
+            if ($this->userManager->bdCreerCompte($login, $passwordCrypte, $mail, $role, $est_valide, $clef, "profils/profil.png")) {
                 // function de d envoi 
                 Toolbox::ajouterMessageAlerte("Le compte a été crée avec succès", Toolbox::VERTE);
                 header("Location:" . URL . "login");
@@ -134,6 +136,23 @@ class UserController extends AbstractController
             header("Location:" . URL . "compte/modificationPassword");
         }
     }
+
+    //  function de modif image 
+    public function validation_modificationImage($file)
+    {
+        $repertoire = "public/asset/img/profils/" . $_SESSION["profil"]["login"] . "/";
+        //  Appel de la function qui est dans toolbox
+        // recuperation de toolbox dan sune variable par rapport a la bd
+        $nomImage = Toolbox::ajoutImage($file, $repertoire);
+        $nomImageBD = "profils/" . $_SESSION["profil"]["login"] . "/" . $nomImage;
+        if ($this->userManager->bdAjoutImage($_SESSION["profil"]["login"], $nomImageBD)) {
+            Toolbox::ajouterMessageAlerte("Modification image a été prise en compte", Toolbox::VERTE);
+        } else {
+            Toolbox::ajouterMessageAlerte("Modification image a échoué", Toolbox::ROUGE);
+            header("Location:" . URL . "compte/profil");
+        }
+    }
+
     // Page erreur 
     public function pageErreur($msg)
     {
