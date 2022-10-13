@@ -1,11 +1,12 @@
-<div class="text-align">
+<div class="text-align-center">
 
     <h4 class="text-monospace text-primary m-4">Profil <?= $user["login"] ?></h4>
 
     <!-- Ajout image de profil  -->
     <div>
         <div>
-            <img src="<? URL; ?>public/asset/img/<?= $user['image'] ?>" width="100px" alt="photo de profil" />
+
+            <img src="<?= URL; ?>public/asset/img/<?= $user["image"] ?>" width="100px" alt="photo de profil" />
         </div>
         <!--form permettant le changement d image par le user -->
         <form method="POST" action="<?= URL ?>compte/validation_modificationImage" enctype="multipart/form-data">
