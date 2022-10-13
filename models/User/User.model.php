@@ -105,7 +105,7 @@ class UserManager extends Model
 
     public function bdAjoutImage($login, $image)
     {
-        $req = "UPDATE users set image :image WHERE login :login";
+        $req = "UPDATE users set image  :image WHERE login  :login";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(":login", $login, PDO::PARAM_STR);
         $stmt->bindValue(":image", $image, PDO::PARAM_STR);
